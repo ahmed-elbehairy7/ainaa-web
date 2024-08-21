@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import CardGen from "../components/CardGen";
 import { GEN1, GEN2 } from "../gens";
 import CardDevice from "../components/CardDevice";
-import { router, windows, mobile } from "../devices";
+import { router, windows, mobile } from "../data";
 
 function Page({ params }: { params: { gen: string } }) {
   if (!params || !params.gen) {

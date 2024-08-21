@@ -1,7 +1,29 @@
 import Image from "next/image";
 import React from "react";
 
-function Steps() {
+type Step = {
+  title: string;
+  description: string;
+  image: any;
+};
+
+type activeGenTypes = {
+  href: string;
+  title: string;
+  description: string[];
+  routerSteps: Step[];
+  windowsSteps: Step[];
+  mobileSteps: Step[];
+  device: {
+    title: string;
+    description: string[];
+    image: any;
+  }[];
+  gen: number;
+  genName: string;
+  genNameAr: string;
+};
+function Steps({ activeGen }: { activeGen: activeGenTypes }) {
   return (
     <section className="max-w-5xl mx-auto py-10" dir="ltr">
       <div>
