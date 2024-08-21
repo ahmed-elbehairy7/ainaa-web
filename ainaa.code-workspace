@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "root"
+		},
+		{ "path": "app" },
+		{
+			"path": "public",
+			"name": "assets"
+		},
+		{
+			"path": "app/components",
+			"name": "components"
+		}
+	],
+	"settings": {}
+}
