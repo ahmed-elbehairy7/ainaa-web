@@ -1,4 +1,4 @@
-import Card from "./components/CardGen";
+import CardGen from "./components/CardGen";
 import { GEN1, GEN2 } from "./gens";
 
 export default function Home() {
@@ -44,8 +44,8 @@ export default function Home() {
           </p>
         </div>
         <div className="relative grid  items-center grid-cols-2 gap-8 mb-8">
-          <Card gen={GEN1} />
-          <Card gen={GEN2} />
+          <CardGen gen={GEN1} />
+          <CardGen gen={GEN2} />
         </div>
       </div>
     </main>

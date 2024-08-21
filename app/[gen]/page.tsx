@@ -1,7 +1,9 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import Card from "../components/CardGen";
+import CardGen from "../components/CardGen";
 import { GEN1, GEN2 } from "../gens";
+import CardDevice from "../components/CardDevice";
+import { router, windows, mobile } from "../devices";
 
 function Page({ params }: { params: { gen: string } }) {
   if (!params || !params.gen) {
@@ -13,10 +15,15 @@ function Page({ params }: { params: { gen: string } }) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center mb-0 mt-8 mx-auto "
+      className="flex flex-col items-center justify-center mb-0 mt-8 mx-auto gap-8 "
       dir="rtl"
     >
-      <Card gen={params.gen == "gen1" ? GEN1 : GEN2} />
+      <CardGen gen={params.gen == "gen1" ? GEN1 : GEN2} />
+      <div className=" w-4/5 grid grid-cols-3 gap-4">
+        <CardDevice device={router} href={`/${params.gen}/Router`} />
+        <CardDevice device={windows} href={`/${params.gen}/windows`} />
+        <CardDevice device={mobile} href={`/${params.gen}/mobile`} />
+      </div>
     </div>
   );
 }
