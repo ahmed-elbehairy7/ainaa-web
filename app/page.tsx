@@ -1,5 +1,5 @@
 import CardGen from "./components/CardGen";
-import { GEN1, GEN2 } from "./gens";
+import { GEN1, GEN2 } from "./data";
 
 export default function Home() {
   return (

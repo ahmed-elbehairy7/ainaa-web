@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import CardGen from "../components/CardGen";
-import { GEN1, GEN2 } from "../gens";
+import { GEN1, GEN2 } from "../data";
 import CardDevice from "../components/CardDevice";
 import { router, windows, mobile } from "../data";
 
