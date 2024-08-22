@@ -4,6 +4,7 @@ import DeviceCard from "@/app/components/DeviceCard";
 import { gensParams } from "../genData";
 import { genName } from "@/app/appTypes";
 import setupGuideData, { genSetupGuideData } from "./setupGuideData";
+import LearnProtection from "@/app/components/LearnProtection";
 
 function Page({ params }: { params: { gen: genName } }) {
 	const g: genSetupGuideData = setupGuideData[params.gen];
@@ -20,6 +21,7 @@ function Page({ params }: { params: { gen: genName } }) {
 					<DeviceCard {...d} key={i} />
 				))}
 			</div>
+			<LearnProtection {...{ gen: params.gen }} />
 		</div>
 	);
 }

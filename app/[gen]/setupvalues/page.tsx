@@ -1,31 +1,31 @@
 import { genName } from "@/app/appTypes";
 import React from "react";
 import { genData, gensParams } from "@/app/[gen]/genData";
-import setupValuesData from "./setupValuesData";
+import setupValuesData, { levelSetupValues } from "./setupValuesData";
+
+// TODO: implement an appropriate design
 
 const SetupValuesPage = ({ params }: { params: { gen: genName } }) => {
-	const setupValues = setupValuesData[params.gen as "gen1"];
-	const generation = genData[params.gen];
+	const setupValues = setupValuesData[params.gen];
+	const gen = genData[params.gen];
 	return (
 		<div>
-			<h1>{generation.ar}</h1>
+			<h1>{gen.ar}</h1>
 			<div className="flex-row flex">
-				<div>
-					<h3>{setupValues.low.ar.title}</h3>
-					<h3>{setupValues.low.subdomain + ".mafazaa.com"}</h3>
-					<h3>categories</h3>
-					{setupValues.low.categories.map((e) => (
-						<p>{e}</p>
-					))}
-				</div>
-				<div>
-					{setupValues.high.ar.title}
-					<h3>{setupValues.high.subdomain + ".mafazaa.com"}</h3>
-					<h3>categories</h3>
-					{setupValues.high.categories.map((e) => (
-						<p>{e}</p>
-					))}
-				</div>
+				{Object.keys(setupValues).map((valuesKey) => {
+					const values: levelSetupValues =
+						setupValues[valuesKey as "high" | "low"];
+					return (
+						<div>
+							<h3>{values.ar.title}</h3>
+							<h3>{values.subdomain + ".mafazaa.com"}</h3>
+							<h3>categories</h3>
+							{values.categories.map((e, i) => (
+								<p key={i}>{e}</p>
+							))}
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);

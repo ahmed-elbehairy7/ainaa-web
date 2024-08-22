@@ -3,7 +3,12 @@ import Link from "next/link";
 import React from "react";
 import { deviceParams } from "../[gen]/setupguide/[device]/deviceData";
 
-function DeviceCard({ device, gen }: deviceParams) {
+// TODO: cards similar to this link: https://www.opendns.com/setupguide/
+// TODO: have proper icons for linux and ios
+// TODO: make icon style only outlines like the link above
+// TODO: implement the comming soon card
+
+function DeviceCard({ device, gen, soon }: deviceParams) {
 	return (
 		<Link
 			href={`/${gen}/setupguide/${device}`}
@@ -23,6 +28,7 @@ function DeviceCard({ device, gen }: deviceParams) {
 				/>
 
 				<h3 className="text-lg font-bold  capitalize">{device}</h3>
+				{soon && <p>comming soon</p>}
 			</div>
 		</Link>
 	);

@@ -5,11 +5,36 @@ import { deviceParams } from "./[device]/deviceData";
 const setupGuideData: { gen1: genSetupGuideData; gen2: genSetupGuideData } = {
 	gen1: {
 		genProps: genData.gen1,
-		devices: generateDevices("gen1"),
+		devices: [
+			{
+				device: "router",
+				gen: "gen1",
+			},
+			{
+				device: "windows",
+				gen: "gen1",
+			},
+			{
+				device: "android",
+				gen: "gen1",
+				soon: true,
+			},
+
+			{
+				device: "linux",
+				gen: "gen1",
+				soon: true,
+			},
+			{
+				device: "ios",
+				gen: "gen1",
+				soon: true,
+			},
+		],
 	},
 	gen2: {
 		genProps: genData.gen2,
-		devices: generateDevices("gen2"),
+		devices: [],
 	},
 };
 
@@ -19,12 +44,3 @@ export type genSetupGuideData = {
 	genProps: genProps;
 	devices: deviceParams[];
 };
-
-function generateDevices(gen: genName) {
-	return (
-		["router", "windows", "android", "linux", "ios"] as deviceName[]
-	).map((device) => ({
-		device,
-		gen,
-	}));
-}

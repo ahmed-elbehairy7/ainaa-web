@@ -1,6 +1,5 @@
-import { genName } from "@/app/appTypes";
 import setupGuideData from "../setupGuideData";
-import { deviceName, genParam } from "../../genData";
+import { deviceName, genParam } from "@/app/[gen]/genData";
 
 export type deviceParam = { device: deviceName };
 

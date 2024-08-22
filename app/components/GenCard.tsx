@@ -2,11 +2,11 @@ import Link from "next/link";
 import React from "react";
 import { genProps } from "../[gen]/genData";
 
-function GenCard({ name, ar, description, soon }: genProps) {
+function GenCard({ gen, ar, description, soon }: genProps) {
 	// TODO: make a better design for comming soon gen2
 	return (
 		<Link
-			href={`/${name}/setupguide/`}
+			href={`/${gen}/setupguide/`}
 			className="p-5 lg:px-12 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2 text-center cursor-pointer hover:bg-slate-50 active:shadow-inner"
 		>
 			<p className="text-lg font-bold leading-5 mb-2">{ar}</p>

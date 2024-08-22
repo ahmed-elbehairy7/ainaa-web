@@ -3,6 +3,9 @@ import CardDevice from "@/app/components/DeviceCard";
 import deviceData, { deviceParams } from "./deviceData";
 import { genName } from "@/app/appTypes";
 import { deviceName, genParam, gensParams } from "../../genData";
+import LearnProtection from "@/app/components/LearnProtection";
+
+// TODO: add an iframe for the uploaded video and let the user choose between the two options
 
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
 	return (
@@ -11,6 +14,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
 			<div className="w-full ">
 				{/* <Steps activeGen={params.gen} /> */}
 			</div>
+			<LearnProtection {...{ gen: params.gen }} />
 		</div>
 	);
 }

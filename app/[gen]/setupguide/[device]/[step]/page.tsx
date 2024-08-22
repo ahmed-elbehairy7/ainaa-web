@@ -1,24 +1,25 @@
 import { genName } from "@/app/appTypes";
 import React from "react";
-import stepData, { deviceSteps, Step, stepName, Steps } from "./stepData";
+import stepData, { Step, stepName } from "./stepData";
 import { deviceName } from "@/app/[gen]/genData";
 import Image from "next/image";
 
-//TODO implement an appropriate design with the inputed data
+//TODO: implement an appropriate design with the inputed data
+//TODO: implement a 
 
 const StepPage = ({
 	params,
 }: {
 	params: { step: stepName; gen: genName; device: deviceName };
 }) => {
-	const steps: Step[] = (stepData.gen1 as any)[params.device][params.step];
+	const substeps: Step[] = (stepData.gen1 as any)[params.device][params.step];
 	return (
 		<div>
-			{steps.map((s) =>
+			{substeps.map((s, i) =>
 				s.type == "text" ? (
-					<p>{s.data}</p>
+					<p key={i}>{s.data}</p>
 				) : (
-					<Image {...{ alt: "step", src: s.data }} />
+					<Image {...{ alt: "step alt", src: s.data, key: i }} />
 				)
 			)}
 		</div>
