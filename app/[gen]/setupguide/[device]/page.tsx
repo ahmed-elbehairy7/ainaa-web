@@ -20,7 +20,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
 				<p>إبدأ في الخطوات</p>
 			</Link>
 
-			<LearnProtection {...{ gen: params.gen }} />
+			<LearnProtection />
 		</div>
 	);
 }

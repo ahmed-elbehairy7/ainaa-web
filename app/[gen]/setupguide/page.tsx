@@ -22,7 +22,7 @@ function Page({ params }: { params: { gen: genName } }) {
 					<DeviceCard {...d} key={i} />
 				))}
 			</div>
-			<LearnProtection {...{ gen: params.gen }} />
+			<LearnProtection />
 		</div>
 	);
 }

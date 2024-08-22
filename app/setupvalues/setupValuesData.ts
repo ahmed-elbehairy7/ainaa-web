@@ -39,9 +39,9 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
 			ar: {
 				title: "الحماية المنخفضة",
 			},
-			subdomain: "low-dns",
-			primary: "157.241.6.180",
-			secondary: "157.241.47.209",
+			subdomain: "low-proxy",
+			primary: "{primary ip address}",
+			secondary: "{secondary ip address}",
 			categories: [
 				"Adware",
 				"Dating",
@@ -63,9 +63,9 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
 			ar: {
 				title: "الحماية العالية",
 			},
-			subdomain: "high-dns",
-			primary: "15.184.191.201",
-			secondary: "15.184.243.155",
+			subdomain: "high-proxy",
+			primary: "{primary ip address}",
+			secondary: "{secondary ip address}",
 			categories: ["All Low Categories", "Music", "Movies"],
 		},
 	},
