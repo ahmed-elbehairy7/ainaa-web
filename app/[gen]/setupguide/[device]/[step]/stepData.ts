@@ -65,6 +65,20 @@ const stepData: { gen1: deviceSteps } = {
 					type: "text",
 				},
 			],
+			step3: [
+				{
+					data: "this is windows' step3's first step",
+					type: "text",
+				},
+				{
+					data: "this is windows' step3's second step",
+					type: "text",
+				},
+				{
+					data: "this is windows' step3's third step",
+					type: "text",
+				},
+			],
 		},
 		android: {
 			step1: [

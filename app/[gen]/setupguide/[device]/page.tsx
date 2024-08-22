@@ -4,6 +4,7 @@ import deviceData, { deviceParams } from "./deviceData";
 import { genName } from "@/app/appTypes";
 import { deviceName, genParam, gensParams } from "../../genData";
 import LearnProtection from "@/app/components/LearnProtection";
+import Link from "next/link";
 
 // TODO: add an iframe for the uploaded video and let the user choose between the two options
 
@@ -14,6 +15,11 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
 			<div className="w-full ">
 				{/* <Steps activeGen={params.gen} /> */}
 			</div>
+			<p>iframe somewhere here...</p>
+			<Link href={`/${params.gen}/setupguide/${params.device}/step1`}>
+				<p>إبدأ في الخطوات</p>
+			</Link>
+
 			<LearnProtection {...{ gen: params.gen }} />
 		</div>
 	);
