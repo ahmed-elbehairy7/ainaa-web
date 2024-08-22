@@ -1,6 +1,6 @@
 import { genName } from "@/app/appTypes";
 import React from "react";
-import { genData, gens } from "@/app/[gen]/genData";
+import { genData, gensParams } from "@/app/[gen]/genData";
 import setupValuesData from "./setupValuesData";
 
 const SetupValuesPage = ({ params }: { params: { gen: genName } }) => {
@@ -34,5 +34,5 @@ const SetupValuesPage = ({ params }: { params: { gen: genName } }) => {
 export default SetupValuesPage;
 
 export function generateStaticParams() {
-	return gens;
+	return gensParams;
 }

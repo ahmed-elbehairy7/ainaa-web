@@ -1,20 +1,21 @@
-import { genCards } from "@/app/appData";
-import { GenCardProps } from "@/app/components/GenCard";
-import { deviceCardProps } from "@/app/components/DeviceCard";
-import { deviceName } from "@/app/appTypes";
+import { gens } from "../appData";
+import { genName } from "../appTypes";
+
+export type genParam = { gen: genName };
+export const gen1: genParam = { gen: "gen1" };
+export const gen2: genParam = { gen: "gen2" };
+export const gensParams = [gen1, gen2];
 
 export const genData: { gen1: genProps; gen2: genProps } = {
-	gen1: {
-		...genCards[0],
-		devices: (["android", "router", "windows"] as deviceName[]).map((d) => {
-			return { name: d, gen: "gen1" };
-		}),
-	},
-	gen2: { ...genCards[1], devices: [] },
+	gen1: { ...gens[0] },
+	gen2: { ...gens[1] },
 };
 
-export interface genProps extends GenCardProps {
-	devices: deviceCardProps[];
+export interface genProps {
+	name: genName;
+	ar: string;
+	description: string;
+	soon?: true;
 }
 
-export const gens = [{ gen: "gen1" }, { gen: "gen2" }];
+export type deviceName = "windows" | "linux" | "router" | "android" | "ios";

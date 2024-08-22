@@ -1,11 +1,16 @@
-import { deviceCardProps } from "@/app/components/DeviceCard";
-import { genData } from "../../genData";
+import { genName } from "@/app/appTypes";
+import setupGuideData from "../setupGuideData";
+import { deviceName, genParam } from "../../genData";
 
-const deviceData: { gen1: deviceProps[]; gen2: deviceProps[] } = {
-	gen1: [...(genData.gen1.devices as deviceProps[])],
-	gen2: [...(genData.gen2.devices as deviceProps[])],
+export type deviceParam = { device: deviceName };
+
+const deviceData: { gen1: any; gen2: any } = {
+	gen1: setupGuideData.gen1.devices,
+	gen2: setupGuideData.gen2.devices,
 };
 
 export default deviceData;
 
-export interface deviceProps extends deviceCardProps {}
+export interface deviceParams extends genParam {
+	device: deviceName;
+}

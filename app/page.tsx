@@ -1,5 +1,5 @@
 import GenCard from "@/app/components/GenCard";
-import { genCards } from "./appData";
+import { gens } from "./appData";
 
 export default function Home() {
 	return (
@@ -45,8 +45,9 @@ export default function Home() {
 					</p>
 				</div>
 				<div className="relative grid  items-center grid-cols-2 gap-8 mb-8">
-					<GenCard {...genCards[0]} />
-					<GenCard {...genCards[1]} />
+					{gens.map((card, i) => (
+						<GenCard {...card} key={i} />
+					))}
 				</div>
 			</div>
 		</main>

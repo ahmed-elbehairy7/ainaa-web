@@ -1,34 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { genName } from "../appTypes";
+import { deviceParams } from "../[gen]/setupguide/[device]/deviceData";
 
-function DeviceCard({ name, gen }: deviceCardProps) {
+function DeviceCard({ device, gen }: deviceParams) {
 	return (
 		<Link
-			href={`/${gen}/setupguide/${name}`}
+			href={`/${gen}/setupguide/${device}`}
 			className="p-5 lg:px-12 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2 text-center cursor-pointer hover:bg-slate-50 active:shadow-inner flex flex-col gap-4"
 		>
 			<div className=" flex justify-center items-center gap-4">
 				<Image
-					src={require(`@/public/${name}.svg`)}
-					alt={name}
+					src={
+						["android", "windows", "router"].includes(device)
+							? require(`@/public/${device}.svg`)
+							: require(`@/public/wifi.svg`)
+					}
+					alt={device}
 					className=" "
 					width={25}
 					height={25}
 				/>
 
-				<h3 className="text-lg font-bold  capitalize">{name}</h3>
+				<h3 className="text-lg font-bold  capitalize">{device}</h3>
 			</div>
 		</Link>
 	);
 }
 
 export default DeviceCard;
-
-export type deviceCardProps = {
-	name: deviceName;
-	gen: genName;
-};
-
-export type deviceName = "windows" | "linux" | "router" | "android" | "ios";

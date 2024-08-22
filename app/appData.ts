@@ -1,7 +1,6 @@
-import { genParams } from "@/app/appTypes";
-import { GenCardProps } from "./components/GenCard";
+import { genProps } from "./[gen]/genData";
 
-export const genCards: GenCardProps[] = [
+export const gens: genProps[] = [
 	{
 		name: "gen1",
 		ar: "الجيل الأول",

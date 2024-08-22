@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import { genName } from "../appTypes";
+import { genProps } from "../[gen]/genData";
 
-function GenCard({ name, ar, description, soon }: GenCardProps) {
+function GenCard({ name, ar, description, soon }: genProps) {
 	// TODO: make a better design for comming soon gen2
 	return (
 		<Link
@@ -19,10 +19,3 @@ function GenCard({ name, ar, description, soon }: GenCardProps) {
 }
 
 export default GenCard;
-
-export type GenCardProps = {
-	name: genName;
-	ar: string;
-	description: string;
-	soon?: true;
-};
