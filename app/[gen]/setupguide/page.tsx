@@ -5,7 +5,6 @@ import { gensParams } from "../genData";
 import { genName } from "@/app/appTypes";
 import setupGuideData, { genSetupGuideData } from "./setupGuideData";
 import LearnProtection from "@/app/components/LearnProtection";
-import Link from "next/link";
 
 function Page({ params }: { params: { gen: genName } }) {
   const genGuide: genSetupGuideData = setupGuideData[params.gen];
@@ -19,7 +18,7 @@ function Page({ params }: { params: { gen: genName } }) {
         أي جهاز تريد أن تحمي؟
       </h1>
 
-      <div className=" w-4/5 grid grid-cols-3 gap-4">
+      <div className=" w-4/5 grid grid-cols-2 lg:grid-cols-3 gap-4">
         {genGuide.devices.map((device, i) => (
           <DeviceCard {...device} key={i} />
         ))}
