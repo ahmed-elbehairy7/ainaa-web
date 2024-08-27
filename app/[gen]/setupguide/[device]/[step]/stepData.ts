@@ -35,6 +35,20 @@ const stepData: { gen1: deviceSteps } = {
 					type: "text",
 				},
 			],
+			step3: [
+				{
+					data: "this is router's step3's first step",
+					type: "text",
+				},
+				{
+					data: "this is router's step3's second step",
+					type: "text",
+				},
+				{
+					data: "this is router's step3's third step",
+					type: "text",
+				},
+			],
 		},
 		windows: {
 			step1: [

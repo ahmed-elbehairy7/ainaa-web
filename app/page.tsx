@@ -44,7 +44,7 @@ export default function Home() {
 						ipsa quae.
 					</p>
 				</div>
-				<div className="relative grid  items-center grid-cols-2 gap-8 mb-8">
+				<div className="relative grid items-center grid-cols-2 gap-8 mb-8">
 					{gens.map((card, i) => (
 						<GenCard {...card} key={i} />
 					))}

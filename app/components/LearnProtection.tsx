@@ -1,12 +1,13 @@
 import { genName } from "../appTypes";
-import Link from "next/link";
+import Button from "./LinkButton";
 
 const LearnProtection = () => {
-	return (
-		<Link href={`/setupvalues`}>
-			<p>اضغط هنا لمعرفة المزيد عن مستويات الحماية المتاحة</p>
-		</Link>
-	);
+  return (
+    <Button
+      link={`/setupvalues`}
+      content="اضغط هنا لمعرفة المزيد عن مستويات الحماية المتاحة"
+    />
+  );
 };
 
 export default LearnProtection;
