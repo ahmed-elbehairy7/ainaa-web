@@ -5,8 +5,7 @@ import { genName } from "@/app/appTypes";
 import { deviceName, genParam, gensParams } from "../../genData";
 import LearnProtection from "@/app/components/LearnProtection";
 import Link from "next/link";
-
-// TODO: add an iframe for the uploaded video and let the user choose between the two options
+import setupGuideData, { genSetupGuideData } from "../setupGuideData";
 
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
   return (

@@ -8,7 +8,7 @@ import { deviceParams } from "../[gen]/setupguide/[device]/deviceData";
 function DeviceCard({ device, gen, soon }: deviceParams) {
   return (
     <Link
-      href={`/${gen}/setupguide/${device}`}
+      href={soon === true ? `/commingSoon` : `/${gen}/setupguide/${device}`}
       className="p-5 lg:px-8 duration-300 transform bg-white border border-[#434356] text-[#434356] shadow-sm hover:-translate-y-2 text-center cursor-pointer hover:bg-slate-50 active:shadow-inner flex flex-col gap-4  justify-center items-center "
     >
       <div className=" flex flex-col justify-center items-center gap-4">

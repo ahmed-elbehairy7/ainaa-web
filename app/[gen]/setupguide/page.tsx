@@ -20,8 +20,8 @@ function Page({ params }: { params: { gen: genName } }) {
       </h1>
 
       <div className=" w-4/5 grid grid-cols-3 gap-4">
-        {genGuide.devices.map((d, i) => (
-          <DeviceCard {...d} key={i} />
+        {genGuide.devices.map((device, i) => (
+          <DeviceCard {...device} key={i} />
         ))}
       </div>
       <LearnProtection />
