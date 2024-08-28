@@ -9,7 +9,9 @@ const stepData: { gen1: deviceSteps } = {
     router: {
       step1: [
         {
-          data: "حضرتك هتخش على صفحة الراوتر بتاعت البيت الصفحة اللي هي 192.168.1.1",
+          data: `حضرتك هتخش على صفحة الراوتر بتاعت البيت الصفحة اللي هي :
+          <br/>
+          192.168.1.1`,
           type: "text",
         },
         {
@@ -21,14 +23,10 @@ const stepData: { gen1: deviceSteps } = {
           ده لينك فيه ازاي تعمل حاجة زي كده للمعظم انواع الراوترات ان شاء الله مفيد بس خلي بالك انك هتحط الرقمين اللي قولنا عليهم مش الرقمين اللي ع الويبسايت`,
           type: "text",
         },
-        {
-          data: "في حالة ان حضرتك معرفتش تعملها ده شئ طبيعي جدا و الحل ساعتها تتواصل معانا و تبعت سكرين شوت لصفحات الwireless و الlan و الwan و لو حضرتك بعتت كلو يكون افضل",
-          type: "text",
-        },
       ],
       step2: [
         {
-          data: `:حط فيها الرقمين دول على طول بإذن الله`,
+          data: `حط فيها الرقمين دول على طول بإذن الله :`,
           type: "text",
         },
         {
@@ -97,16 +95,17 @@ low-dns.mafazaa.com`,
           type: "text",
         },
         {
-          data: "هتدوس right click عليه و تختار open as administrator",
+          data: `هتدوس right click عليه و تختار 
+          <br/>
+          "open as administrator"`,
           type: "text",
         },
       ],
       step2: [
         {
-          data: `\nهتكتب اول حاجة :
-
-
-          \n etsh interface ip show interfaces`,
+          data: `هتكتب اول حاجة :
+          <br/>
+          etsh interface ip show interfaces`,
           type: "text",
         },
         {
@@ -147,7 +146,9 @@ low-dns.mafazaa.com`,
           type: "text",
         },
         {
-          data: `المفروض كده ان شاء الله اشتغل لو كتبت كل حاجة صح، ممكن تختبره بالأمر الآتي netsh interface ip show dns`,
+          data: `المفروض كده ان شاء الله اشتغل لو كتبت كل حاجة صح، ممكن تختبره بالأمر الآتي :
+          <br/>
+          netsh interface ip show dns`,
           type: "text",
         },
         {

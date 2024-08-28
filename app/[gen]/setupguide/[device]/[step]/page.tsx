@@ -51,15 +51,22 @@ const StepPage = ({
               >
                 <div className="flex items-center justify-start">
                   <span className="sr-only">User info</span>
-                  <h3 className="font-medium">
-                    {i + 1}. {step.data}
-                  </h3>
+                  <h3
+                    className="font-medium"
+                    dangerouslySetInnerHTML={{
+                      __html: `${i + 1}. ${step.data}`,
+                    }}
+                  />
                 </div>
               </div>
             </li>
           ) : (
             // eslint-disable-next-line react/jsx-key
-            <Image {...{ alt: "step alt", src: step.data, key: i }} />
+            <Image
+              {...{ alt: "step alt", src: step.data, key: i }}
+              width={500}
+              height={300}
+            />
           )
         )}
       </ol>
