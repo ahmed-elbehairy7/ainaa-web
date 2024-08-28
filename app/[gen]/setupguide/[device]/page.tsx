@@ -12,11 +12,12 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
     <div className="flex flex-col items-center justify-center my-8 gap-8 ">
       <CardDevice {...params} />
       {/* <div className="w-full "><Steps activeGen={params.gen} /></div> */}
-      <div className="flex justify-center items-center w-full h-full">
+      <div className="flex justify-center items-center">
         <iframe
+          src="https://player.vimeo.com/video/1003172023?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           id="player"
-          className=" w-fit h-fit "
-          src="https://www.youtube.com/embed/tUL52ecE508"
+          className="w-full md:w-[500px] lg:w-[750px] h-full md:h-72 lg:h-96 "
           title="YouTube video player"
           allowFullScreen
         ></iframe>
