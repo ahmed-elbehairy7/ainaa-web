@@ -1,11 +1,3 @@
-import stepOne from "@/public/setupguide/windows/stepOne.png";
-import stepThree from "@/public/setupguide/windows/stepThree.png";
-import stepThree2 from "@/public/setupguide/windows/stepThree2.png";
-import stepFour from "@/public/setupguide/windows/stepFour.png";
-import stepFour2 from "@/public/setupguide/windows/stepFour2.png";
-import stepFive from "@/public/setupguide/windows/stepFive.png";
-import stepFive2 from "@/public/setupguide/windows/stepFive2.png";
-
 import { Steps } from "./stepData";
 
 const windowsSteps: { gen1: Steps } = {
@@ -25,7 +17,7 @@ const windowsSteps: { gen1: Steps } = {
 			},
 			{
 				type: "screenshot",
-				data: stepOne,
+				data: 0,
 			},
 		],
 		step2: [
@@ -43,7 +35,7 @@ const windowsSteps: { gen1: Steps } = {
 				type: "text",
 				data: "netsh interface ip show interfaces",
 			},
-			{ type: "screenshot", data: stepThree },
+			{ type: "screenshot", data: 0 },
 			{
 				type: "text",
 				data: "بعد كده هتدوس enter",
@@ -54,7 +46,7 @@ const windowsSteps: { gen1: Steps } = {
 			},
 			{
 				type: "screenshot",
-				data: stepThree2,
+				data: 1,
 			},
 			{
 				type: "text",
@@ -82,7 +74,7 @@ const windowsSteps: { gen1: Steps } = {
 
 			{
 				type: "screenshot",
-				data: stepFour,
+				data: 0,
 			},
 			{
 				type: "text",
@@ -94,7 +86,7 @@ const windowsSteps: { gen1: Steps } = {
 			},
 			{
 				type: "screenshot",
-				data: stepFour2,
+				data: 1,
 			},
 		],
 		step5: [
@@ -108,7 +100,7 @@ const windowsSteps: { gen1: Steps } = {
 			},
 			{
 				type: "screenshot",
-				data: stepFive,
+				data: 0,
 			},
 			{
 				type: "text",
@@ -120,7 +112,7 @@ const windowsSteps: { gen1: Steps } = {
 			},
 			{
 				type: "screenshot",
-				data: stepFive2,
+				data: 1,
 			},
 		],
 		step6: [

@@ -43,7 +43,7 @@ export type Step = {
 	type: "text" | "screenshot" | "link";
 	data:
 		| string
-		| StaticImageData
+		| number
 		| {
 				href: string;
 				text: string;

@@ -60,7 +60,7 @@ const StepPage = ({
 						<Image
 							{...{
 								alt: "screenshot",
-								src: step.data as StaticImageData,
+								src: require(`@/public/setupguide/${params.gen}/${params.device}/${params.step}_${step.data}.png`),
 								key: i,
 							}}
 						/>

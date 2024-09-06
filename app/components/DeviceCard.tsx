@@ -13,7 +13,7 @@ function DeviceCard({ device, gen, soon }: deviceParams) {
 		>
 			<div className=" flex flex-col justify-center items-center gap-4">
 				<Image
-					src={require(`@/public/${device}.svg`)}
+					src={require(`@/public/devices/${device}.svg`)}
 					alt={device}
 					className="object-contain "
 					width={100}

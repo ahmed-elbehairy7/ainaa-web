@@ -1,6 +1,3 @@
-import stepOne from "@/public/setupguide/router/stepOne.png";
-import stepTwo from "@/public/setupguide/router/stepTwo.png";
-import stepTwo2 from "@/public/setupguide/router/stepTwo2.jpeg";
 import { Steps } from "./stepData";
 
 const routerSteps: { gen1: Steps } = {
@@ -11,7 +8,7 @@ const routerSteps: { gen1: Steps } = {
 				type: "text",
 			},
 			{
-				data: stepOne,
+				data: 0,
 				type: "screenshot",
 			},
 		],
@@ -21,7 +18,7 @@ const routerSteps: { gen1: Steps } = {
 				type: "text",
 			},
 			{
-				data: stepTwo,
+				data: 0,
 				type: "screenshot",
 			},
 			{
@@ -29,7 +26,7 @@ const routerSteps: { gen1: Steps } = {
 				type: "text",
 			},
 			{
-				data: stepTwo2,
+				data: 1,
 				type: "screenshot",
 			},
 
