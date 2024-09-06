@@ -12,4 +12,9 @@ export default deviceData;
 
 export interface deviceParams extends genParam {
 	device: deviceName;
+	embeddedVideo?: {
+		title: string;
+		allow: string;
+		src: string;
+	};
 }
