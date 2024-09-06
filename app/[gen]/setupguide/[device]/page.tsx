@@ -7,7 +7,7 @@ import LearnProtection from "@/app/components/LearnProtection";
 import Link from "next/link";
 
 function Page({ params }: DevicePageProps) {
-	const dev = (deviceData[params.gen] as Array<deviceParams>).find(
+	const dev = (deviceData[params.gen] as deviceParams[]).find(
 		(value) => value.device === params.device
 	) as deviceParams;
 	return (

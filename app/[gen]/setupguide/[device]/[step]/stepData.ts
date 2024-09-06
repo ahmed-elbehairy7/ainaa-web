@@ -1,129 +1,15 @@
-import { deviceName } from "@/app/[gen]/genData";
+import { StaticImageData } from "next/image";
 import { deviceParams } from "../deviceData";
+import routerSteps from "./routerSteps";
+import windowsSteps from "./windowsSteps";
 
 export type stepName = "step1" | "step2" | "step3" | "step4";
 export type stepParam = { step: stepName };
 
 const stepData: { gen1: deviceSteps } = {
 	gen1: {
-		router: {
-			step1: [
-				{
-					data: "this is router's step1's first step",
-					type: "text",
-				},
-				{
-					data: "this is router's step1's second step",
-					type: "text",
-				},
-				{
-					data: "this is router's step1's third step",
-					type: "text",
-				},
-			],
-			step2: [
-				{
-					data: "this is router's step2's first step",
-					type: "text",
-				},
-				{
-					data: "this is router's step2's second step",
-					type: "text",
-				},
-				{
-					data: "this is router's step2's third step",
-					type: "text",
-				},
-			],
-			step3: [
-				{
-					data: "this is router's step3's first step",
-					type: "text",
-				},
-				{
-					data: "this is router's step3's second step",
-					type: "text",
-				},
-				{
-					data: "this is router's step3's third step",
-					type: "text",
-				},
-			],
-		},
-		windows: {
-			step1: [
-				{
-					data: "this is windows' step1's first step",
-					type: "text",
-				},
-				{
-					data: "this is windows' step1's second step",
-					type: "text",
-				},
-				{
-					data: "this is windows' step1's third step",
-					type: "text",
-				},
-			],
-			step2: [
-				{
-					data: "this is windows' step2's first step",
-					type: "text",
-				},
-				{
-					data: "this is windows' step2's second step",
-					type: "text",
-				},
-				{
-					data: "this is windows' step2's third step",
-					type: "text",
-				},
-			],
-			step3: [
-				{
-					data: "this is windows' step3's first step",
-					type: "text",
-				},
-				{
-					data: "this is windows' step3's second step",
-					type: "text",
-				},
-				{
-					data: "this is windows' step3's third step",
-					type: "text",
-				},
-			],
-		},
-		android: {
-			step1: [
-				{
-					data: "this is android's step1's first step",
-					type: "text",
-				},
-				{
-					data: "this is android's step1's second step",
-					type: "text",
-				},
-				{
-					data: "this is android's step1's third step",
-					type: "text",
-				},
-			],
-			step2: [
-				{
-					data: "this is android's step2's first step",
-					type: "text",
-				},
-				{
-					data: "this is android's step2's second step",
-					type: "text",
-				},
-				{
-					data: "this is android's step2's third step",
-					type: "text",
-				},
-			],
-		},
+		router: routerSteps.gen1,
+		windows: windowsSteps.gen1,
 	},
 };
 
@@ -144,12 +30,19 @@ export type deviceSteps = {
 
 export type Steps = {
 	step1: Step[];
-	step2?: Step[];
-	step3?: Step[];
+	step2: Step[];
+	step3: Step[];
 	step4?: Step[];
+	step5?: Step[];
 };
 
 export type Step = {
-	type: "text" | "screenshot";
-	data: string;
+	type: "text" | "screenshot" | "link";
+	data:
+		| string
+		| StaticImageData
+		| {
+				href: string;
+				text: string;
+		  };
 };
