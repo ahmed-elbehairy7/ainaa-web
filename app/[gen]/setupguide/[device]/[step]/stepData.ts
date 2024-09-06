@@ -34,6 +34,9 @@ export type Steps = {
 	step3: Step[];
 	step4?: Step[];
 	step5?: Step[];
+	step6?: Step[];
+	step7?: Step[];
+	step8?: Step[];
 };
 
 export type Step = {
