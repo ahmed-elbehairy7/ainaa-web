@@ -10,6 +10,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
 	const dev = (deviceData[params.gen] as deviceParams[]).find(
 		(value) => value.device === params.device
 	) as deviceParams;
+
 	return (
 		<div className="flex flex-col items-center justify-center my-8 gap-8 ">
 			<DeviceCard {...params} />
@@ -20,7 +21,6 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
 						allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
 						id="player"
 						className="w-full md:w-[500px] lg:w-[750px] h-full md:h-72 lg:h-96 "
-						title="YouTube video player"
 						allowFullScreen
 					></iframe>
 				</div>
