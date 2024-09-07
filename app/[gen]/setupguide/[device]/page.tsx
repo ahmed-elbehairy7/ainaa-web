@@ -9,7 +9,7 @@ import Link from "next/link";
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
   return (
     <div className="flex flex-col items-center justify-center my-8 gap-8 ">
-      <CardDevice {...params} />
+      <DeviceCard {...params} />
       {/* <div className="w-full "><Steps activeGen={params.gen} /></div> */}
       <div className="flex justify-center items-center">
         <iframe

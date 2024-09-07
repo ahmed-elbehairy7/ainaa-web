@@ -23,12 +23,12 @@ const StepPage = ({
       dir="rtl"
     >
       <DeviceCard {...{ device: params.device, gen: params.gen }} />
-      <ol className="space-y-4 w-72">
+      <ol className="space-y-4 w-8/12">
         {substeps.map((step, i) =>
           step.type == "text" ? (
             <li key={i}>
               <div
-                className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50"
+                className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50"
                 role="alert"
               >
                 <div className="flex items-center justify-between">
@@ -42,7 +42,7 @@ const StepPage = ({
           ) : step.type === "link" ? (
             <div
               key={i}
-              className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50"
+              className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50"
               role="alert"
             >
               <div className="flex items-center justify-between">
