@@ -1,10 +1,16 @@
-import { deviceName } from "@/app/[gen]/genData";
+import { StaticImageData } from "next/image";
 import { deviceParams } from "../deviceData";
+import routerSteps from "./routerSteps";
+import windowsSteps from "./windowsSteps";
 
 export type stepName = "step1" | "step2" | "step3" | "step4";
 export type stepParam = { step: stepName };
 
 const stepData: { gen1: deviceSteps } = {
+  gen1: {
+    router: routerSteps.gen1,
+    windows: windowsSteps.gen1,
+  },
   gen1: {
     router: {
       step1: [
@@ -177,12 +183,28 @@ export type deviceSteps = {
 
 export type Steps = {
   step1: Step[];
+  step2: Step[];
+  step3: Step[];
+  step4?: Step[];
+  step5?: Step[];
+  step6?: Step[];
+  step7?: Step[];
+  step8?: Step[];
+  step1: Step[];
   step2?: Step[];
   step3?: Step[];
   step4?: Step[];
 };
 
 export type Step = {
+  type: "text" | "screenshot" | "link";
+  data:
+    | string
+    | number
+    | {
+        href: string;
+        text: string;
+      };
   type: "text" | "screenshot " | "link";
   data: string;
 };

@@ -1,11 +1,10 @@
 import React from "react";
-import CardDevice from "@/app/components/DeviceCard";
-import deviceData, { deviceParams } from "./deviceData";
+import DeviceCard from "@/app/components/DeviceCard";
+import deviceData, { deviceParam, deviceParams } from "./deviceData";
 import { genName } from "@/app/appTypes";
 import { deviceName, genParam, gensParams } from "../../genData";
 import LearnProtection from "@/app/components/LearnProtection";
 import Link from "next/link";
-import setupGuideData, { genSetupGuideData } from "../setupGuideData";
 
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
   return (
@@ -33,6 +32,13 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
     </div>
   );
 }
+
+type DevicePageProps = {
+  params: {
+    device: deviceName;
+    gen: genName;
+  };
+};
 
 export default Page;
 

@@ -2,7 +2,7 @@ import { genName } from "@/app/appTypes";
 import React from "react";
 import stepData, { Step, stepName } from "./stepData";
 import { deviceName } from "@/app/[gen]/genData";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import DeviceCard from "@/app/components/DeviceCard";
 
@@ -15,57 +15,54 @@ const StepPage = ({
   const substeps: Step[] = devSteps[params.step];
   const last = Object.keys(devSteps).length;
   const current = Number.parseInt(params.step.charAt(4));
+  let currentStep = 0;
+
   return (
     <div
       className="flex flex-col items-center justify-center my-8 mx-auto gap-8"
       dir="rtl"
     >
       <DeviceCard {...{ device: params.device, gen: params.gen }} />
-      <ol className="space-y-4 w-72 md:w-96">
+      <ol className="space-y-4 w-72">
         {substeps.map((step, i) =>
-          step.type == "link" ? (
+          step.type == "text" ? (
             <li key={i}>
               <div
-                className="w-full p-2 md:p-4 text-blue-700 border border-blue-300 rounded-lg bg-blue-50"
+                className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50"
                 role="alert"
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-between">
                   <span className="sr-only">User info</span>
                   <h3 className="font-medium">
-                    {i + 1}.{" "}
-                    <a
-                      href={step.data}
-                      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                    >
-                      {step.data}
-                    </a>
+                    {++currentStep}. {step.data as string}
                   </h3>
                 </div>
               </div>
             </li>
-          ) : step.type == "text" ? (
-            <li key={i}>
-              <div
-                className="w-full p-2 md:p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50"
-                role="alert"
-              >
-                <div className="flex items-center justify-start">
-                  <span className="sr-only">User info</span>
-                  <h3
-                    className="font-medium"
-                    dangerouslySetInnerHTML={{
-                      __html: `${i + 1}. ${step.data}`,
-                    }}
-                  />
-                </div>
+          ) : step.type === "link" ? (
+            <div
+              key={i}
+              className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50"
+              role="alert"
+            >
+              <div className="flex items-center justify-between">
+                <Link
+                  href={(step.data as any).href}
+                  target="_blank"
+                  className="underline"
+                >
+                  {(step.data as any).text}
+                </Link>
               </div>
-            </li>
+            </div>
           ) : (
             // eslint-disable-next-line react/jsx-key
             <Image
-              {...{ alt: "step alt", src: step.data, key: i }}
-              width={500}
-              height={300}
+              {...{
+                alt: "screenshot",
+                src: require(`@/public/setupguide/${params.gen}/${params.device}/${params.step}_${step.data}.png`),
+                key: i,
+              }}
             />
           )
         )}
