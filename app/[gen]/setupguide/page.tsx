@@ -14,10 +14,13 @@ function Page({ params }: { params: { gen: genName } }) {
       dir="rtl"
     >
       <CardGen {...genGuide.genProps} />
-      <h1 className="inline-block p-4 mb-4 text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-400">
-        أي جهاز تريد أن تحمي؟
+      <h1 className="inline-block px-4 py-2 text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-400">
+        بأي جهاز ستبدأ إن شاء الله؟
       </h1>
-
+      <p className="text-center md:font-semibold text-sm md:text-lg bg-purple-50 border border-purple-300 text-purple-700 p-4 rounded-lg w-3/4">
+        نوصي بتفعيل الحماية على جميع الأجهزة و عدم الإكتفاء بجهاز واحد فلا يوجد
+        حماية 100% ولكم هي طبقات
+      </p>
       <div className=" w-4/5 grid grid-cols-2 lg:grid-cols-3 gap-4">
         {genGuide.devices.map((device, i) => (
           <DeviceCard {...device} key={i} />
