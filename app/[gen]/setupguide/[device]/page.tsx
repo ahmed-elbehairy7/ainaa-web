@@ -5,6 +5,7 @@ import { genName } from "@/app/appTypes";
 import { deviceName, genParam, gensParams } from "../../genData";
 import LearnProtection from "@/app/components/LearnProtection";
 import Link from "next/link";
+import Header from "@/app/components/Header";
 
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
   const dev = (deviceData[params.gen] as deviceParams[]).find(

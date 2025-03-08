@@ -5,6 +5,7 @@ import { gensParams } from "../genData";
 import { genName } from "@/app/appTypes";
 import setupGuideData, { genSetupGuideData } from "./setupGuideData";
 import LearnProtection from "@/app/components/LearnProtection";
+import Header from "@/app/components/Header";
 
 function Page({ params }: { params: { gen: genName } }) {
   const genGuide: genSetupGuideData = setupGuideData[params.gen];
@@ -25,7 +26,7 @@ function Page({ params }: { params: { gen: genName } }) {
         حماية 100%، ولكنها طبقات متعددة ترفع من مستوى الأمان.
       </p>
 
-      <div className="w-full max-w-5xl grid grid-cols-auto-fit gap-6">
+      <div className="w-full max-w-5xl grid grid-cols-2 gap-6">
         {genGuide.devices.map((device, i) => (
           <DeviceCard {...device} key={i} />
         ))}

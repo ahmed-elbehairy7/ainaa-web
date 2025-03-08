@@ -17,42 +17,43 @@ function Table({
   categories,
 }: TableDataTypes) {
   return (
-    <div className="max-w-screen-xl w-full mx-auto px-4 md:px-8 ">
+    <div className="max-w-screen-xl w-full mx-auto px-4 md:px-8">
       {/* Table layout for larger screens */}
-      <div className="hidden md:block mt-8 shadow-sm border rounded-lg overflow-x-auto">
-        <table className="min-w-full table-auto text-sm text-center border-collapse">
-          <thead className="bg-gray-50 text-gray-600 font-medium border-b border-gray-200">
+      <div className="hidden md:block mt-8 overflow-hidden border rounded-lg shadow-sm">
+        <table className="min-w-full text-sm text-center border-collapse">
+          <thead className="bg-gray-100 text-gray-700 font-medium border-b">
             <tr>
-              <th className="py-3 px-6 border-l border-gray-200">Title</th>
-              <th className="py-3 px-6 border-l border-gray-200">Domain</th>
-              <th className="py-3 px-6 border-l border-gray-200">
-                Primary DNS address
-              </th>
-              <th className="py-3 px-6 border-l border-gray-200">
-                Secondary DNS address
-              </th>
-              <th className="py-3 px-6">Categories</th>
+              {[
+                "Title",
+                "Domain",
+                "Primary DNS",
+                "Secondary DNS",
+                "Categories",
+              ].map((header, i) => (
+                <th
+                  key={i}
+                  scope="col"
+                  className="py-3 px-6 border-l last:border-none"
+                >
+                  {header}
+                </th>
+              ))}
             </tr>
           </thead>
-          <tbody className="text-gray-600">
-            <tr>
-              <td className="px-6 font-bold py-4 whitespace-nowrap border-l border-gray-200">
-                {title}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap border-l border-gray-200">
-                {domain}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap border-l border-gray-200">
-                {primary}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap border-l border-gray-200">
-                {secondary}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap flex gap-1 flex-wrap">
+          <tbody className="text-gray-700 bg-white">
+            <tr className="hover:bg-gray-50 transition">
+              <td className="px-6 py-4 font-bold border-l">{title}</td>
+              <td className="px-6 py-4 border-l">{domain}</td>
+              <td className="px-6 py-4 border-l">{primary}</td>
+              <td className="px-6 py-4 border-l">{secondary}</td>
+              <td className="px-6 py-4 flex flex-wrap justify-right gap-1">
                 {categories.map((category, i) => (
-                  <p key={i} className="mb-1">
-                    {`${category}${i === categories.length - 1 ? "." : ","}`}
-                  </p>
+                  <span
+                    key={i}
+                    className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full"
+                  >
+                    {category}
+                  </span>
                 ))}
               </td>
             </tr>
@@ -62,28 +63,29 @@ function Table({
 
       {/* Card layout for smaller screens */}
       <div className="md:hidden mt-12 space-y-4">
-        <div className="border rounded-lg p-4 shadow-sm">
-          <div className="flex flex-col space-y-2">
-            <div className="font-semibold text-lg">{title}</div>
-            <div className="text-gray-600">
-              <strong>Domain:</strong> {domain}
-            </div>
-            <div className="text-gray-600">
-              <strong>Primary DNS address:</strong> {primary}
-            </div>
-            <div className="text-gray-600">
-              <strong>Secondary DNS address:</strong> {secondary}
-            </div>
-            <div className="flex flex-wrap gap-1">
-              {categories.map((category, i) => (
-                <span
-                  key={i}
-                  className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-sm"
-                >
-                  {category}
-                </span>
-              ))}
-            </div>
+        <div className="border rounded-lg p-4 shadow-sm bg-white">
+          <h2 className="font-semibold text-lg mb-2">{title}</h2>
+          <div className="text-gray-600 space-y-1">
+            <p>
+              <strong className="text-gray-800">Domain:</strong> {domain}
+            </p>
+            <p>
+              <strong className="text-gray-800">Primary DNS:</strong> {primary}
+            </p>
+            <p>
+              <strong className="text-gray-800">Secondary DNS:</strong>{" "}
+              {secondary}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-1 mt-2">
+            {categories.map((category, i) => (
+              <span
+                key={i}
+                className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-sm"
+              >
+                {category}
+              </span>
+            ))}
           </div>
         </div>
       </div>

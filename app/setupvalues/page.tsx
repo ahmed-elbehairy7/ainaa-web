@@ -2,14 +2,15 @@ import { genName } from "@/app/appTypes";
 import React from "react";
 import setupValuesData, { levelSetupValues } from "./setupValuesData";
 import Table from "../components/Table";
+import Header from "../components/Header";
 
 const SetupValuesPage = () => {
   const setupLevels = setupValuesData.gen1;
 
   return (
-    <div className="my-12 flex flex-col items-center px-4">
+    <div className=" my-12 flex flex-col items-center px-4">
       <h1 className="text-center text-4xl font-bold mb-8 text-gray-800">
-        🔒 تفاصيل مستويات الحماية
+        تفاصيل مستويات الحماية 🔒
       </h1>
 
       <h2 className="text-center text-3xl px-6 py-2 mb-6 font-semibold tracking-wide uppercase text-white rounded-full shadow-lg bg-gradient-to-r from-teal-500 to-teal-700">

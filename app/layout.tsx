@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Tajawal } from "next/font/google"; // 🏷️ استبدال الخط ليدعم العربية بشكل أفضل
 import "./globals.css";
+import Header from "./components/Header";
 
 const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
@@ -27,7 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className={tajawal.className}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main className="mt-24 bg-gray-50" dir="rtl">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
