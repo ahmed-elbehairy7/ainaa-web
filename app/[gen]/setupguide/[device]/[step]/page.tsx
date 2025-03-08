@@ -2,7 +2,7 @@ import { genName } from "@/app/appTypes";
 import React from "react";
 import stepData, { Step, stepName } from "./stepData";
 import { deviceName } from "@/app/[gen]/genData";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import DeviceCard from "@/app/components/DeviceCard";
 
@@ -11,86 +11,79 @@ const StepPage = ({
 }: {
   params: { step: stepName; gen: genName; device: deviceName };
 }) => {
-  const devSteps = (stepData.gen1 as any)[params.device];
-  const substeps: Step[] = devSteps[params.step];
-  const last = Object.keys(devSteps).length;
-  const current = Number.parseInt(params.step.charAt(4));
-  let currentStep = 0;
+  const devSteps = (stepData.gen1 as any)?.[params.device];
+
+  if (!devSteps) {
+    return (
+      <p className="text-red-500 text-center">⚠️ لا توجد بيانات لهذا الجهاز.</p>
+    );
+  }
+
+  const substeps: Step[] = devSteps[params.step] || [];
+  const totalSteps = Object.keys(devSteps).length;
+  const currentStep = Number(params.step.replace("step", ""));
 
   return (
     <div
       className="flex flex-col items-center justify-center my-8 mx-auto gap-8"
       dir="rtl"
     >
-      <DeviceCard {...{ device: params.device, gen: params.gen }} />
+      <DeviceCard device={params.device} gen={params.gen} />
+
       <ol className="space-y-4 w-8/12">
-        {substeps.map((step, i) =>
-          step.type == "text" ? (
-            <li key={i}>
-              <div
-                className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50"
-                role="alert"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="sr-only">User info</span>
-                  <h3 className="font-medium">
-                    {++currentStep}. {step.data as string}
-                  </h3>
-                </div>
+        {substeps.map((step, index) => (
+          <li key={index}>
+            {step.type === "text" ? (
+              <div className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50 shadow-md">
+                <h3 className="font-semibold">
+                  {currentStep}. {step.data as string}
+                </h3>
               </div>
-            </li>
-          ) : step.type === "link" ? (
-            <div
-              key={i}
-              className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50"
-              role="alert"
-            >
-              <div className="flex items-center justify-between">
+            ) : step.type === "link" ? (
+              <div className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50 shadow-md">
                 <Link
                   href={(step.data as any).href}
                   target="_blank"
-                  className="underline"
+                  className="underline text-purple-900 hover:text-purple-600"
                 >
                   {(step.data as any).text}
                 </Link>
               </div>
-            </div>
-          ) : (
-            // eslint-disable-next-line react/jsx-key
-            <Image
-              {...{
-                alt: "screenshot",
-                src: require(`@/public/setupguide/${params.gen}/${params.device}/${params.step}_${step.data}.png`),
-                key: i,
-              }}
-            />
-          )
-        )}
+            ) : (
+              <Image
+                alt="screenshot"
+                src={require(`@/public/setupguide/${params.gen}/${params.device}/${params.step}_${step.data}.png`)}
+                className="rounded-lg shadow-lg border border-gray-200"
+              />
+            )}
+          </li>
+        ))}
       </ol>
-      <div className="grid grid-cols-2 justify-between items-center gap-6 w-1/2">
-        {current > 1 ? (
+
+      <div className="flex justify-between w-3/4 md:w-1/2">
+        {currentStep > 1 ? (
           <Link
-            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple hover:bg-purple-700 focus:shadow-outline focus:outline-none"
             href={`/${params.gen}/setupguide/${params.device}/step${
-              current - 1
+              currentStep - 1
             }`}
+            className="flex-1 flex items-center justify-center px-6 py-3 text-white text-xl font-medium bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 rounded-lg shadow-md transition-all duration-300 mx-2"
           >
-            السابق
+            ➡️ السابق
           </Link>
         ) : (
-          <div />
+          <div className="flex-1" />
         )}
-        {current < last ? (
+        {currentStep < totalSteps ? (
           <Link
-            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple hover:bg-purple-700 focus:shadow-outline focus:outline-none"
             href={`/${params.gen}/setupguide/${params.device}/step${
-              current + 1
+              currentStep + 1
             }`}
+            className="flex-1 flex items-center justify-center px-6 py-3 text-white text-xl font-medium bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 rounded-lg shadow-md transition-all duration-300 mx-2"
           >
-            التالي
+            التالي ⬅️
           </Link>
         ) : (
-          <div />
+          <div className="flex-1" />
         )}
       </div>
     </div>
@@ -100,13 +93,11 @@ const StepPage = ({
 export default StepPage;
 
 export function generateStaticParams() {
-  return Object.keys(stepData.gen1).flatMap((devName: string) =>
-    Object.keys(stepData.gen1[devName as deviceName] as any).map(
-      (stepName) => ({
-        gen: "gen1",
-        device: devName,
-        step: stepName,
-      })
-    )
+  return Object.keys(stepData.gen1).flatMap((device) =>
+    Object.keys(stepData.gen1[device as deviceName] || {}).map((step) => ({
+      gen: "gen1",
+      device,
+      step,
+    }))
   );
 }

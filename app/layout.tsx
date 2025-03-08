@@ -1,23 +1,33 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Tajawal } from "next/font/google"; // 🏷️ استبدال الخط ليدعم العربية بشكل أفضل
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const tajawal = Tajawal({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "700"],
+});
 
 export const metadata: Metadata = {
-	title: "عينا سلسبيلا",
-	description:
-		"مشروع يحجب و يمنع المواقع الإباحية والتيك توك والأغاني  والأفلام والكرتون و كل ما يغضب الله سبحانه و تعالى ",
+  title: "عَيْنًا سَلْسَبِيلًا - حماية إسلامية متكاملة",
+  description:
+    "مشروع إسلامي لحجب المواقع الإباحية والتيك توك والأغاني والأفلام والكرتون وكل ما يغضب الله سبحانه وتعالى.",
+  keywords:
+    "حجب المواقع الإباحية, حماية الإنترنت, تصفية المحتوى, فلترة الإنترنت, أمان الأطفال",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en" dir="rtl">
-			<body className={inter.className}>{children}</body>
-		</html>
-	);
+  return (
+    <html lang="ar" dir="rtl" className={tajawal.className}>
+      <body>{children}</body>
+    </html>
+  );
 }

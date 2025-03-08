@@ -1,127 +1,126 @@
 import { Steps } from "./stepData";
 
 const windowsSteps: { gen1: Steps } = {
-	gen1: {
-		step1: [
-			{
-				type: "text",
-				data: "أول حاجة هتدوس على زرار الويندوز من الكيبورد و تفتح الstart menu",
-			},
-			{
-				type: "text",
-				data: "بعد كده هتكتب 'cmd' في السيرش لحد مايظهر البرنامج",
-			},
-			{
-				type: "text",
-				data: "بعد كده هتدوس 'run as administrator' زي الصورة تحت عشان يشتغل",
-			},
-			{
-				type: "screenshot",
-				data: 0,
-			},
-		],
-		step2: [
-			{
-				type: "text",
-				data: "من هنا الخطوات هتبقى صعبة شوية ف خلي بالك كويس و ركز في التفاصيل الدقيقة اوي لإن الغلطة هنا ممكن تخلي النت ميشتغلش ع اللاب",
-			},
-		],
-		step3: [
-			{
-				type: "text",
-				data: "أول حاجة هتكتبها بعد ما يفتح هي الطلاسم دي: ",
-			},
-			{
-				type: "text",
-				data: "netsh interface ip show interfaces",
-			},
-			{ type: "screenshot", data: 0 },
-			{
-				type: "text",
-				data: "بعد كده هتدوس enter",
-			},
-			{
-				type: "text",
-				data: "بعد ما تدوس enter المفروض يظهرلك جدول بالشكل ده",
-			},
-			{
-				type: "screenshot",
-				data: 1,
-			},
-			{
-				type: "text",
-				data: " هتلاقي جدول ظهرلك، احنا ان شاء الله مش محتاجين منه غير خانة الname... المفروض ان شاء الله اللي هنحتاجهم Wi-Fi و Ethernet",
-			},
-			{
-				type: "text",
-				data: "- الخطوات الجاية دي هتعملها ان شاء الله لكل interface بتستعملها و في الغالب هتلاقي جمب اسمها ف الجدول connected لو انت متصل بيها",
-			},
-		],
-		step4: [
-			{
-				type: "text",
-				data: `- كل ما تلاقي كلمة 'interface' بين قوسين بالشكل ده { interface } في الكلام الجاي هتستبدلها بإسم الinterface بتاعتك و تكتبها بين (") زي كده مثلا: "Wi-Fi"`,
-			},
-			{
-				type: "text",
-				data: "- هتستبدل primary_dns بالprimary dns الخاص بمحتوى الحماية اللي انت مختاره و نفس الكلام على الsecondary",
-			},
-			{ type: "text", data: "أول حاجة هتكتب الكلام ده" },
-			{
-				type: "text",
-				data: "netsh interface ip set dns { interface } static { primary_dns }",
-			},
-
-			{
-				type: "screenshot",
-				data: 0,
-			},
-			{
-				type: "text",
-				data: "خلينا نفترض مثلا انك عايز تفعل الحماية على الinterface بتاعت الwifi و عايز حماية عالية يبقى هتكتب الأمر بالشكل ده:",
-			},
-			{
-				type: "text",
-				data: 'netsh interface ip set dns "Wi-Fi" static 15.184.191.201',
-			},
-			{
-				type: "screenshot",
-				data: 1,
-			},
-		],
-		step5: [
-			{
-				type: "text",
-				data: "دلوقتي مطلوب تكتب الأمر ده و تدوس enter",
-			},
-			{
-				type: "text",
-				data: "netsh interface ip add dns name={ interface } { secondary_dns } index=2",
-			},
-			{
-				type: "screenshot",
-				data: 0,
-			},
-			{
-				type: "text",
-				data: "لو افترضنا انك اخترت الحماية العالية و عايز تعملها لinterface ال wifi هيكون الأمر شكله كالتالي",
-			},
-			{
-				type: "text",
-				data: 'netsh interface ip add dns name="Wi-Fi" 15.164.243.155 index=2',
-			},
-			{
-				type: "screenshot",
-				data: 1,
-			},
-		],
-		step6: [
-			{
-				type: "text",
-				data: "لو مشيت على الخطوات دي صح ف ألب مبروك عليك فعلت الحماية على جهاز الويندوز",
-			},
-		],
-	},
+  gen1: {
+    step1: [
+      {
+        type: "text",
+        data: "أولاً، اضغط على زر الويندوز من لوحة المفاتيح لفتح قائمة Start.",
+      },
+      {
+        type: "text",
+        data: "بعد ذلك، اكتب 'cmd' في خانة البحث حتى يظهر البرنامج.",
+      },
+      {
+        type: "text",
+        data: "ثم، اضغط على 'Run as administrator' كما هو موضح في الصورة لتشغيله بالصلاحيات اللازمة.",
+      },
+      {
+        type: "screenshot",
+        data: 0,
+      },
+    ],
+    step2: [
+      {
+        type: "text",
+        data: "من هذه النقطة، ستصبح الخطوات أكثر تحدياً، لذا انتبه جيداً وركز في التفاصيل الدقيقة لأن أي خطأ قد يؤدي إلى توقف الإنترنت على اللابتوب.",
+      },
+    ],
+    step3: [
+      {
+        type: "text",
+        data: "أولاً، اكتب الأمر التالي بعد فتح النافذة:",
+      },
+      {
+        type: "text",
+        data: "netsh interface ip show interfaces",
+      },
+      { type: "screenshot", data: 0 },
+      {
+        type: "text",
+        data: "بعد ذلك، اضغط Enter.",
+      },
+      {
+        type: "text",
+        data: "بعد الضغط على Enter، يجب أن يظهر لك جدول بالشكل التالي:",
+      },
+      {
+        type: "screenshot",
+        data: 1,
+      },
+      {
+        type: "text",
+        data: "سيظهر لك جدول؛ نحن نحتاج فقط إلى خانة 'Name'. المفروض أن الواجهات التي سنحتاجها هي Wi-Fi و Ethernet.",
+      },
+      {
+        type: "text",
+        data: "يُرجى تطبيق الخطوات التالية على كل واجهة تستخدمها، وفي الغالب ستجد أنها تظهر كـ 'Connected' إذا كنت متصلاً بها.",
+      },
+    ],
+    step4: [
+      {
+        type: "text",
+        data: "عند رؤية الكلمة '{ interface }' بين قوسين في التعليمات التالية، استبدلها باسم الواجهة الخاصة بك واكتبها بين علامتي اقتباس، مثل: \"Wi-Fi\".",
+      },
+      {
+        type: "text",
+        data: "كما ستستبدل 'primary_dns' بـ primary dns الخاص بمستوى الحماية الذي اخترته، و'secondary_dns' بالثاني.",
+      },
+      { type: "text", data: "أولاً، اكتب الأمر التالي:" },
+      {
+        type: "text",
+        data: "netsh interface ip set dns { interface } static { primary_dns }",
+      },
+      {
+        type: "screenshot",
+        data: 0,
+      },
+      {
+        type: "text",
+        data: "على سبيل المثال، إذا كنت تريد تطبيق الحماية العالية على واجهة Wi-Fi، سيكون الأمر كالتالي:",
+      },
+      {
+        type: "text",
+        data: 'netsh interface ip set dns "Wi-Fi" static 15.184.191.201',
+      },
+      {
+        type: "screenshot",
+        data: 1,
+      },
+    ],
+    step5: [
+      {
+        type: "text",
+        data: "الآن، اكتب الأمر التالي واضغط Enter:",
+      },
+      {
+        type: "text",
+        data: "netsh interface ip add dns name={ interface } { secondary_dns } index=2",
+      },
+      {
+        type: "screenshot",
+        data: 0,
+      },
+      {
+        type: "text",
+        data: "على سبيل المثال، إذا اخترت الحماية العالية على واجهة Wi-Fi، سيكون الأمر كالتالي:",
+      },
+      {
+        type: "text",
+        data: 'netsh interface ip add dns name="Wi-Fi" 15.164.243.155 index=2',
+      },
+      {
+        type: "screenshot",
+        data: 1,
+      },
+    ],
+    step6: [
+      {
+        type: "text",
+        data: "إذا اتبعت هذه الخطوات بدقة، فمبروك! لقد قمت بتفعيل الحماية على جهاز الويندوز بنجاح.",
+      },
+    ],
+  },
 };
 
 export default windowsSteps;

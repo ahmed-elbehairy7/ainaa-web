@@ -1,51 +1,52 @@
 import GenCard from "@/app/components/GenCard";
 import { gens } from "./appData";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="" dir="rtl">
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 ">
-          <p className="inline-block px-4 py-px mb-4 text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-400">
-            عَيْنًا سَلْسَبِيلًا
-          </p>
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-            <span className="relative inline-block">
-              <svg
-                viewBox="0 0 52 24"
-                fill="currentColor"
-                className="absolute top-0 right-0 z-0 hidden w-32 -mt-12 -mr-24 text-blue-gray-100 lg:w-32 lg:-mr-36 lg:-mt-12 sm:block"
-              >
-                <defs>
-                  <pattern
-                    id="d0d83814-78b6-480f-9a5f-7f637616b267"
-                    x="0"
-                    y="0"
-                    width=".135"
-                    height=".30"
-                  >
-                    <circle cx="1" cy="1" r=".7" />
-                  </pattern>
-                </defs>
-                <rect
-                  fill="url(#d0d83814-78b6-480f-9a5f-7f637616b267)"
-                  width="52"
-                  height="24"
-                />
-              </svg>
-            </span>
-            احمي طفلك من الاباحية
-          </h2>
-          <p className="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
-          </p>
+    <main
+      className="min-h-screen flex flex-col items-center justify-center bg-gray-50"
+      dir="rtl"
+    >
+      <div className="px-6 py-16 text-center mx-auto max-w-screen-md">
+        <p className="inline-block px-6 py-2 text-xl font-semibold tracking-wide text-white uppercase rounded-full bg-gradient-to-r from-teal-500 to-teal-700 shadow-md">
+          عَيْنًا سَلْسَبِيلًا
+        </p>
+        <h2 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
+          احمي طفلك من الإباحية
+        </h2>
+        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+          نؤمن بأن الحماية من المحتوى الإباحي تبدأ بتوفير بيئة آمنة على
+          الإنترنت. اكتشف كيف يمكنك تأمين جميع أجهزتك بسهولة.
+        </p>
+
+        {/* <div className="mt-6">
+          <img src="/shield-icon.png" alt="حماية" className="mx-auto w-32" />
+        </div> */}
+
+        <div className="mt-8 grid gap-6 grid-cols-1 sm:grid-cols-2">
+          <div className="p-6 bg-white shadow-md rounded-lg">
+            <h3 className="text-xl font-bold text-gray-900">✅ حماية شاملة</h3>
+            <p className="text-gray-600 mt-2">
+              يحميك من المواقع الإباحية والمحتوى الضار.
+            </p>
+          </div>
+          <div className="p-6 bg-white shadow-md rounded-lg">
+            <h3 className="text-xl font-bold text-gray-900">
+              ⚡ سهولة الإعداد
+            </h3>
+            <p className="text-gray-600 mt-2">
+              بخطوات بسيطة يمكنك تأمين جميع أجهزتك.
+            </p>
+          </div>
         </div>
-        <div className="relative grid items-center grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          {gens.map((card, i) => (
-            <GenCard {...card} key={i} />
-          ))}
-        </div>
+
+        <Link
+          href={"/gen1/setupguide"}
+          className="mt-8 px-8 py-4 bg-teal-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300 block "
+        >
+          ابدأ الآن 🚀
+        </Link>
       </div>
     </main>
   );
