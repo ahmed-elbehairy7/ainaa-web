@@ -49,7 +49,7 @@ export default function Home() {
       </section>
 
       {/* زر البدء */}
-      <section id="start" className="pt-6 max-w-screen-md">
+      <section id="start" className="pt-6 block max-w-screen-lg">
         <Link
           href="/gen1/setupguide"
           className="px-8 py-4 bg-teal-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300 block active:scale-90 active:shadow-2xl"
@@ -79,7 +79,7 @@ export default function Home() {
             </p>
             <ul className="mt-2 text-teal-700">
               <li>📌 فودافون كاش: 01005286073</li>
-              <li>📌 إنستاباي: 01203250103</li>
+              <li>📌 إنستاباي: ahmed-elbehairy@instapay</li>
             </ul>
           </div>
 
