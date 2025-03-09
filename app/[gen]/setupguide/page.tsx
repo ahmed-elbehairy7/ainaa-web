@@ -21,7 +21,7 @@ function Page({ params }: { params: { gen: genName } }) {
         بأي جهاز ستبدأ إن شاء الله؟
       </h1>
 
-      <p className="text-center md:font-semibold text-sm md:text-lg bg-purple-50 border border-purple-300 text-purple-700 p-4 rounded-lg max-w-screen-md">
+      <p className="text-center md:font-semibold text-sm md:text-lg bg-teal-50 border border-teal-300 text-teal-700 p-4 rounded-lg max-w-screen-md">
         نوصي بتفعيل الحماية على جميع الأجهزة وعدم الاكتفاء بجهاز واحد، فلا توجد
         حماية 100%، ولكنها طبقات متعددة ترفع من مستوى الأمان.
       </p>

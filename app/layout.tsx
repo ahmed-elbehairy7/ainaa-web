@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" className={tajawal.className}>
       <body>
         <Header />
-        <main className="mt-24 bg-gray-50" dir="rtl">
+        <main className="pt-24" dir="rtl">
           {children}
         </main>
       </body>

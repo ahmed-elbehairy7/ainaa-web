@@ -31,20 +31,20 @@ const StepPage = ({
       <DeviceCard device={params.device} gen={params.gen} />
 
       <ol className="space-y-4 w-8/12">
-        {substeps.map((step, index) => (
+        {substeps?.map((step, index) => (
           <li key={index}>
             {step.type === "text" ? (
-              <div className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50 shadow-md">
+              <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
                 <h3 className="font-semibold">
                   {currentStep}. {step.data as string}
                 </h3>
               </div>
             ) : step.type === "link" ? (
-              <div className="w-full p-4 text-purple-700 border border-purple-300 rounded-lg bg-purple-50 shadow-md">
+              <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
                 <Link
                   href={(step.data as any).href}
                   target="_blank"
-                  className="underline text-purple-900 hover:text-purple-600"
+                  className="underline text-teal-900 hover:text-teal-600"
                 >
                   {(step.data as any).text}
                 </Link>
@@ -66,7 +66,7 @@ const StepPage = ({
             href={`/${params.gen}/setupguide/${params.device}/step${
               currentStep - 1
             }`}
-            className="flex-1 flex items-center justify-center px-6 py-3 text-white text-xl font-medium bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 rounded-lg shadow-md transition-all duration-300 mx-2"
+            className="flex-1 flex items-center justify-center px-6 py-3 text-white text-xl font-medium bg-gradient-to-r from-teal-600 to-teal-800 hover:from-teal-700 hover:to-teal-900 rounded-lg shadow-md transition-all duration-300 mx-2"
           >
             ➡️ السابق
           </Link>
