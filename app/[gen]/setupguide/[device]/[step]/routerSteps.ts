@@ -78,23 +78,9 @@ const routerSteps: { gen1: Steps } = {
     ],
     // جرب الخدمة
     step5: checkActivationStep,
-    // نجحت في تشغيل الخدمة مبارك
-    step6: [
-      {
-        type: "text",
-        data: "مبروك، الحمدلله! لقد تم تفعيل الحماية بنجاح.",
-      },
-      {
-        type: "link",
-        data: {
-          href: "/gen1/setupguide",
-          text: "هل تريد الانتقال إلى الجهاز التالي؟",
-        },
-      },
-    ],
-    step7: customerSupportStep,
+    step6: customerSupportStep,
     // ادعمنا
-    step8: supportUsStep,
+    step7: supportUsStep,
   },
 };
 

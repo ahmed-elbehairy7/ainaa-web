@@ -54,7 +54,14 @@ export const checkActivationStep: Step[] = [
 	},
 	{
 		type: "text",
-		data: "استخدم أداة التحقق مثل SafeSearch أو أي موقع يقدم هذه الخدمة. 🔍",
+		data: "تحقق من أن الخدمة تعمل بشكل جيد عن طريق الرابط التالي: 🔍",
+	},
+	{
+		type: "link",
+		data: {
+			href: "http://check.ainaa.mafazaa.com",
+			text: "تعليمات تفعيل الحماية",
+		},
 	},
 	{
 		type: "text",
