@@ -5,7 +5,6 @@ import { FaGlobe, FaWhatsapp } from "react-icons/fa";
 export default function About() {
 	return (
 		<section className="px-6 py-6 max-w-screen-md mx-auto text-center">
-			{/* ✅ عنوان الصفحة */}
 			<h1 className="text-4xl font-bold text-teal-700 sm:text-5xl mb-4">
 				عَيْنًا سَلْسَبِيلَا
 			</h1>
@@ -14,13 +13,12 @@ export default function About() {
 			</h2>
 			{/* ✅ مقدمة تعريفية */}
 			<p className="mt-6 text-lg text-gray-700 leading-relaxed">
-				عَيْنُ سَلْسَبِيلَا هو خدمة مجانية لحجب المواقع الإباحية تمامًا
+				عَيْنًا سَلْسَبِيلَا هو خدمة مجانية لحجب المواقع الإباحية تمامًا
 				من منزلك، لحماية أطفالك ونفسك من هذه الآفة المدمرة. بفضل الله،
 				وفرنا طريقة سهلة وفعالة تتيح لك تأمين الإنترنت في بيتك دون
 				الحاجة لبرامج مدفوعة أو معقدة.
 			</p>
 
-			{/* ✅ لماذا تحتاج هذه الخدمة؟ */}
 			<div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
 				<h2 className="text-2xl font-bold text-gray-900">
 					📌 لماذا تحتاج هذه الخدمة؟
@@ -36,7 +34,6 @@ export default function About() {
 				</ul>
 			</div>
 
-			{/* ✅ كيف تعمل الخدمة؟ */}
 			<div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
 				<h2 className="text-2xl font-bold text-gray-900">
 					📌 كيف تعمل الخدمة؟
@@ -49,7 +46,6 @@ export default function About() {
 				</p>
 			</div>
 
-			{/* ✅ كيف يمكنك التفعيل؟ */}
 			<div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
 				<h2 className="text-2xl font-bold text-gray-900">
 					📌 كيف يمكنك التفعيل؟
@@ -69,7 +65,6 @@ export default function About() {
 				</div>
 			</div>
 
-			{/* ✅ جروب الواتساب */}
 			<div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
 				<h2 className="text-2xl font-bold text-gray-900">
 					📌 انضم لجروب الواتساب
@@ -80,7 +75,7 @@ export default function About() {
 				</p>
 				<div className="mt-4 flex justify-center gap-4">
 					<a
-						href="https://mafazaa.com/comm"
+						href="https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="px-6 py-3 flex items-center gap-2 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-700 transition-all"
@@ -90,7 +85,6 @@ export default function About() {
 				</div>
 			</div>
 
-			{/* ✅ كيف يمكنك دعم المشروع؟ */}
 			<div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
 				<h2 className="text-2xl font-bold text-gray-900">
 					📌 كيف يمكنك دعم المشروع؟
@@ -113,7 +107,6 @@ export default function About() {
 				</p>
 			</div>
 
-			{/* ✅ زر العودة إلى الصفحة الرئيسية */}
 			<div className="mt-10">
 				<Link
 					href="/"

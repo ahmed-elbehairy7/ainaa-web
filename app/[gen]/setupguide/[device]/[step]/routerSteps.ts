@@ -7,6 +7,7 @@ import { Steps } from "./stepData";
 
 const routerSteps: { gen1: Steps } = {
   gen1: {
+    // تحتاج لمساعدة؟
     step1: customerSupportStep,
     //  الدخول لصفحة الراوتر
     step2: [
@@ -42,7 +43,6 @@ const routerSteps: { gen1: Steps } = {
         type: "text",
       },
     ],
-
     // اعرف نوع المودل الخاص بالراوتر وكيف تفعل الحماية
     step4: [
       {
@@ -76,7 +76,10 @@ const routerSteps: { gen1: Steps } = {
         },
       },
     ],
-    step5: [
+    // جرب الخدمة
+    step5: checkActivationStep,
+    // نجحت في تشغيل الخدمة مبارك
+    step6: [
       {
         type: "text",
         data: "مبروك، الحمدلله! لقد تم تفعيل الحماية بنجاح.",
@@ -89,8 +92,9 @@ const routerSteps: { gen1: Steps } = {
         },
       },
     ],
-    step6: checkActivationStep,
-    step7: supportUsStep,
+    step7: customerSupportStep,
+    // ادعمنا
+    step8: supportUsStep,
   },
 };
 
