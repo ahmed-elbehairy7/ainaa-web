@@ -106,20 +106,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔹 قسم الجروب */}
-      <section id="whatsapp-group" className="pb-12 max-w-screen-md mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">انضم لجروبنا 💬</h2>
+      {/* 🔹 قسم الجروب والقناة*/}
+      <section id="community" className="pb-12 max-w-screen-md mx-auto">
+        <h2 className="text-3xl font-bold text-gray-900">انضم لمجتمعنا 💬</h2>
         <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          احصل على آخر التحديثات وكن جزءًا من مجتمع الحماية عبر الجروب.
+          احصل على آخر التحديثات وكن جزءًا من مجتمع الحماية عبر الجروب والقناة
         </p>
-
-        <Link
-          href="https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO"
-          target="_blank"
-          className="mt-6 inline-block px-6 py-3 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
-        >
-          انضم الآن 📢
-        </Link>
+        <div className="flex gap-4 items-center justify-center">
+          <Link
+            href="https://whatsapp.com/channel/0029VakgzRJ5kg7BkQFSJK36"
+            target="_blank"
+            className="mt-6 inline-block px-6 py-3 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
+          >
+            انضم الآن للقناة 📢
+          </Link>
+          <Link
+            href="https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO"
+            target="_blank"
+            className="mt-6 inline-block px-6 py-3 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
+          >
+            انضم الآن للجروب 📢
+          </Link>
+        </div>
       </section>
     </article>
   );
