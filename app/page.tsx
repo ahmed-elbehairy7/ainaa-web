@@ -1,19 +1,12 @@
-"use client";
-import GenCard from "@/app/components/GenCard";
-import { gens } from "./appData";
 import Link from "next/link";
-import { useState } from "react";
-import Header from "./components/Header";
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <article className="px-6 flex flex-col items-center justify-center text-center">
       <section id="about" className="px-6 mx-auto max-w-screen-md">
-        <span className="inline-block px-6 py-2 text-xl font-semibold tracking-wide text-white uppercase rounded-full bg-gradient-to-r from-teal-500 to-teal-700 shadow-teal-300 shadow-md">
+        <h1 className="inline-block px-6 py-2 text-xl font-semibold tracking-wide text-white uppercase rounded-full bg-gradient-to-r from-teal-500 to-teal-700 shadow-teal-300 shadow-md">
           عَيْنًا سَلْسَبِيلًا
-        </span>
+        </h1>
         <h2 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
           احمي طفلك من الإباحية 🛡️
         </h2>

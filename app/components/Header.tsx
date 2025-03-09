@@ -8,7 +8,6 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-gradient-to-l from-teal-500 to-teal-700  shadow-lg shadow-teal-300/30 py-4 px-6 z-50 backdrop-blur-md transition-all">
       <div className="container mx-auto flex items-center justify-between max-w-5xl">
-        {/* Logo */}
         <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-wide">
           <Link href="/">عَيْنًا سَلْسَبِيلًا</Link>
         </h1>
