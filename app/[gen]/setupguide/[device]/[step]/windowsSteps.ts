@@ -1,4 +1,4 @@
-import { customerSupportStep } from "./commonSteps";
+import { checkActivationStep, customerSupportStep } from "./commonSteps";
 import { Steps } from "./stepData";
 
 const windowsSteps: { gen1: Steps } = {
@@ -116,12 +116,7 @@ const windowsSteps: { gen1: Steps } = {
 				data: 1,
 			},
 		],
-		step7: [
-			{
-				type: "text",
-				data: "إذا اتبعت هذه الخطوات بدقة، فمبروك! لقد قمت بتفعيل الحماية على جهاز الويندوز بنجاح.",
-			},
-		],
+		step7: checkActivationStep,
 	},
 };
 

@@ -26,7 +26,12 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
 			subdomain: "high-dns",
 			primary: "15.184.191.201",
 			secondary: "15.184.243.155",
-			categories: ["كل مافي الحماية المنخفضة", "الموسيقى", "الأفلام"],
+			categories: [
+				"كل مافي الحماية المنخفضة",
+				"الموسيقى",
+				"الأفلام",
+				"التيك توك",
+			],
 		},
 	},
 	gen2: {

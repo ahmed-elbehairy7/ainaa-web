@@ -20,11 +20,6 @@ const StepPage = ({
     "الخامسة",
     "السادسة",
     "السابعة",
-    "الثامنة",
-    "التاسعة",
-    "العاشرة",
-    "الحادية عشرة",
-    "الثانية عشرة",
   ];
   if (!devSteps) {
     return (
@@ -46,8 +41,11 @@ const StepPage = ({
       <DeviceCard device={params.device} gen={params.gen} />
       {/* رقم الخطوة في الأعلى */}
       <h2 className="text-3xl md:text-4xl font-extrabold text-teal-700 bg-teal-100 px-6 py-3 rounded-lg shadow-md">
-        الخطوة {arabicNumbers[currentStep - 1]} (
-        {currentStep.toLocaleString("ar-EG")})
+        {currentStep === totalSteps
+          ? "طرق دعمنا"
+          : `الخطوة ${
+              arabicNumbers[currentStep - 1]
+            } (${currentStep.toLocaleString("ar-EG")})`}
       </h2>
 
       <ol className="space-y-4 w-8/12">

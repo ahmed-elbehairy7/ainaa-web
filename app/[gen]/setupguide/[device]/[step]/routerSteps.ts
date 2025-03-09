@@ -1,87 +1,94 @@
 import {
-  checkActivationStep,
-  customerSupportStep,
-  supportUsStep,
+	checkActivationStep,
+	customerSupportStep,
+	supportUsStep,
 } from "./commonSteps";
 import { Steps } from "./stepData";
 
 const routerSteps: { gen1: Steps } = {
-  gen1: {
-    // تحتاج لمساعدة؟
-    step1: customerSupportStep,
-    //  الدخول لصفحة الراوتر
-    step2: [
-      {
-        data: "ابدأ بالدخول إلى صفحة الراوتر في منزلك: افتح المتصفح واكتب في شريط العنوان 192.168.1.1.",
-        type: "text",
-      },
-      {
-        data: 0,
-        type: "screenshot",
-      },
-    ],
-    // تسجيل الدخول لصفحة الراوتر
-    step3: [
-      {
-        data: "عند دخولك لصفحة الراوتر، سيُطلب منك إدخال اسم المستخدم وكلمة المرور. غالبًا ما تكون القيم الافتراضية هي: username: 'admin' و password: 'admin'. جربهما أولاً.",
-        type: "text",
-      },
-      {
-        data: 0,
-        type: "screenshot",
-      },
-      {
-        data: "إذا لم تنجح البيانات الافتراضية، ابحث عن بيانات الدخول المطبوعة على ظهر الراوتر أو العلبة واستخدمها.",
-        type: "text",
-      },
-      {
-        data: 1,
-        type: "screenshot",
-      },
-      {
-        data: "وإذا لم تنجح حتى بعد ذلك، فهذا يعني أن بيانات الدخول قد تم تغييرها، ويجب عليك الرجوع إلى الشخص المسؤول عن الشبكة.",
-        type: "text",
-      },
-    ],
-    // اعرف نوع المودل الخاص بالراوتر وكيف تفعل الحماية
-    step4: [
-      {
-        type: "text",
-        data: "ادخل على الرابط التالي وابحث عن موديل الراوتر الخاص بك لمعرفة كيفية تفعيل الحماية بشكل صحيح:",
-      },
-      {
-        type: "link",
-        data: {
-          href: "https://support.opendns.com/hc/en-us/sections/206253667-Individual-Router-Configurations",
-          text: "تعليمات تفعيل الحماية",
-        },
-      },
-      {
-        type: "text",
-        data: "اختر مستوى الحماية الذي يناسب احتياجاتك:",
-      },
-      {
-        type: "text",
-        data: "• الحماية المنخفضة: primary: 157.241.6.180 , secondary: 157.241.47.209",
-      },
-      {
-        type: "text",
-        data: "• الحماية العالية: primary: 15.184.191.201 , secondary: 15.184.243.155",
-      },
-      {
-        type: "link",
-        data: {
-          href: "/setupvalues",
-          text: "للمزيد من التفاصيل حول كلا المستويين، اضغط هنا ➡️",
-        },
-      },
-    ],
-    // جرب الخدمة
-    step5: checkActivationStep,
-    step6: customerSupportStep,
-    // ادعمنا
-    step7: supportUsStep,
-  },
+	gen1: {
+		// تحتاج لمساعدة؟
+		step1: customerSupportStep,
+		//  الدخول لصفحة الراوتر
+		step2: [
+			{
+				data: "ابدأ بالدخول إلى صفحة الراوتر في منزلك: افتح المتصفح واكتب في شريط العنوان 192.168.1.1.",
+				type: "text",
+			},
+			{
+				data: 0,
+				type: "screenshot",
+			},
+		],
+		// تسجيل الدخول لصفحة الراوتر
+		step3: [
+			{
+				data: "عند دخولك لصفحة الراوتر، سيُطلب منك إدخال اسم المستخدم وكلمة المرور. غالبًا ما تكون القيم الافتراضية هي: username: 'admin' و password: 'admin'. جربهما أولاً.",
+				type: "text",
+			},
+			{
+				data: 0,
+				type: "screenshot",
+			},
+			{
+				data: "إذا لم تنجح البيانات الافتراضية، ابحث عن بيانات الدخول المطبوعة على ظهر الراوتر أو العلبة واستخدمها.",
+				type: "text",
+			},
+			{
+				data: 1,
+				type: "screenshot",
+			},
+			{
+				data: "وإذا لم تنجح حتى بعد ذلك، فهذا يعني أن بيانات الدخول قد تم تغييرها، ويجب عليك الرجوع إلى الشخص المسؤول عن الشبكة.",
+				type: "text",
+			},
+		],
+		// اعرف نوع المودل الخاص بالراوتر وكيف تفعل الحماية
+		step4: [
+			{
+				type: "text",
+				data: "📌 عند البحث في إعدادات الراوتر، تأكد من العثور على خيارات **Primary DNS** و **Secondary DNS** أو قد تجدها تحت مسميات مثل **DNS Server 1** و **DNS Server 2**.",
+			},
+			{
+				type: "text",
+				data: "⚠️ إذا لم تجد هذه الإعدادات أو كانت مختلفة، لا تتردد في التواصل مع الدعم الفني لمساعدتك!",
+			},
+			{
+				type: "text",
+				data: "ادخل على الرابط التالي وابحث عن موديل الراوتر الخاص بك لمعرفة كيفية تفعيل الحماية بشكل صحيح:",
+			},
+			{
+				type: "link",
+				data: {
+					href: "https://support.opendns.com/hc/en-us/sections/206253667-Individual-Router-Configurations",
+					text: "تعليمات تفعيل الحماية",
+				},
+			},
+			{
+				type: "text",
+				data: "اختر مستوى الحماية الذي يناسب احتياجاتك:",
+			},
+			{
+				type: "text",
+				data: "• الحماية المنخفضة: primary: 157.241.6.180 , secondary: 157.241.47.209",
+			},
+			{
+				type: "text",
+				data: "• الحماية العالية: primary: 15.184.191.201 , secondary: 15.184.243.155",
+			},
+			{
+				type: "link",
+				data: {
+					href: "/setupvalues",
+					text: "للمزيد من التفاصيل حول كلا المستويين، اضغط هنا ➡️",
+				},
+			},
+		],
+		// جرب الخدمة
+		step5: checkActivationStep,
+		// ادعمنا
+		step6: supportUsStep,
+	},
 };
 
 export default routerSteps;
