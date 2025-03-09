@@ -12,10 +12,25 @@ const StepPage = ({
   params: { step: stepName; gen: genName; device: deviceName };
 }) => {
   const devSteps = (stepData.gen1 as any)?.[params.device];
-
+  const arabicNumbers = [
+    "الأولى",
+    "الثانية",
+    "الثالثة",
+    "الرابعة",
+    "الخامسة",
+    "السادسة",
+    "السابعة",
+    "الثامنة",
+    "التاسعة",
+    "العاشرة",
+    "الحادية عشرة",
+    "الثانية عشرة",
+  ];
   if (!devSteps) {
     return (
-      <p className="text-red-500 text-center">⚠️ لا توجد بيانات لهذا الجهاز.</p>
+      <p className="text-red-500 text-center font-bold text-lg">
+        ⚠️ لا توجد بيانات لهذا الجهاز.
+      </p>
     );
   }
 
@@ -29,6 +44,11 @@ const StepPage = ({
       dir="rtl"
     >
       <DeviceCard device={params.device} gen={params.gen} />
+      {/* رقم الخطوة في الأعلى */}
+      <h2 className="text-3xl md:text-4xl font-extrabold text-teal-700 bg-teal-100 px-6 py-3 rounded-lg shadow-md">
+        الخطوة {arabicNumbers[currentStep - 1]} (
+        {currentStep.toLocaleString("ar-EG")})
+      </h2>
 
       <ol className="space-y-4 w-8/12">
         {substeps?.map((step, index) => (
@@ -36,7 +56,7 @@ const StepPage = ({
             {step.type === "text" ? (
               <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
                 <h3 className="font-semibold">
-                  {currentStep}. {step.data as string}
+                  {index + 1}. {step.data as string}
                 </h3>
               </div>
             ) : step.type === "link" ? (
@@ -46,7 +66,7 @@ const StepPage = ({
                   target="_blank"
                   className="underline text-teal-900 hover:text-teal-600"
                 >
-                  {(step.data as any).text}
+                  {index + 1}. {(step.data as any).text}
                 </Link>
               </div>
             ) : (
@@ -60,6 +80,7 @@ const StepPage = ({
         ))}
       </ol>
 
+      {/* أزرار التنقل بين الخطوات */}
       <div className="flex justify-between w-3/4 md:w-1/2">
         {currentStep > 1 ? (
           <Link
