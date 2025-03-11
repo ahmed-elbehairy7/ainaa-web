@@ -1,12 +1,22 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi"; // ✅ استيراد الأيقونات
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // قائمة الروابط
+  const navLinks = [
+    { label: "ابدأ الآن", href: "/gen1/setupguide/" },
+    { label: "مستويات الحماية", href: "/setupvalues/" },
+    { label: "عن المشروع", href: "/about" },
+    { label: "التبرع لنا", href: "https://mafazaa.com/support_us" },
+    { label: "الدعم الفني", href: "/support" },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-l from-teal-500 to-teal-700  shadow-lg shadow-teal-300/30 py-4 px-6 z-50 backdrop-blur-md transition-all">
+    <header className="fixed top-0 left-0 w-full bg-gradient-to-l from-teal-500 to-teal-700 shadow-lg shadow-teal-300/30 py-4 px-4 z-50 backdrop-blur-md transition-all">
       <div className="container mx-auto flex items-center justify-between max-w-5xl">
         <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-wide">
           <Link href="/">عَيْنًا سَلْسَبِيلًا</Link>
@@ -15,51 +25,34 @@ function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex">
           <ul className="flex gap-x-6">
-            {["ابدأ الآن", "مستويات الحماية", "عن المشروع"].map(
-              (text, index) => (
-                <li key={index}>
-                  <Link
-                    href={
-                      index === 2
-                        ? "/about"
-                        : index === 1
-                        ? "/setupvalues/"
-                        : "/gen1/setupguide/"
-                    }
-                    className="relative text-white text-lg font-semibold transition-all duration-300 
+            {navLinks.map(({ label, href }, index) => (
+              <li key={index}>
+                <Link
+                  target={
+                    href === "https://mafazaa.com/support_us"
+                      ? "_blank"
+                      : "_self"
+                  }
+                  href={href}
+                  className="relative text-white text-lg font-semibold transition-all duration-300 
                     before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-green-300 before:to-teal-500 
                     before:transition-all before:duration-300 hover:before:w-full 
                     hover:text-gray-100 hover:drop-shadow-lg active:scale-95"
-                  >
-                    {text}
-                  </Link>
-                </li>
-              )
-            )}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - React Icons */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2 relative z-50"
+          className="md:hidden p-0 text-white text-3xl z-50"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              menuOpen ? "rotate-45 translate-y-1.5" : ""
-            }`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-1.5" : ""
-            }`}
-          />
+          {menuOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>
 
@@ -70,23 +63,17 @@ function Header() {
         } origin-top`}
       >
         <ul className="flex flex-col gap-y-3 text-center py-4">
-          {["ابدأ الآن", "مستويات الحماية", "عن المشروع"].map((text, index) => (
+          {navLinks.map(({ label, href }, index) => (
             <li key={index}>
               <Link
-                href={
-                  index === 2
-                    ? "/about"
-                    : index === 1
-                    ? "/setupvalues/"
-                    : "/gen1/setupguide/"
-                }
+                href={href}
                 className="relative text-white text-lg font-semibold transition-all duration-300 
                 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-green-300 before:to-teal-500 
                 before:transition-all before:duration-300 hover:before:w-full 
                 hover:text-gray-100 hover:drop-shadow-lg active:scale-95"
                 onClick={() => setMenuOpen(false)}
               >
-                {text}
+                {label}
               </Link>
             </li>
           ))}

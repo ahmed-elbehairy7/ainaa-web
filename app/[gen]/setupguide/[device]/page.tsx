@@ -13,7 +13,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
   ) as deviceParams;
 
   return (
-    <div className="flex flex-col items-center gap-10 my-10 px-4">
+    <div className="flex flex-col items-center gap-10 mb-10 px-4">
       <DeviceCard {...params} />
       {dev.embeddedVideo !== undefined && (
         <div className="flex justify-center items-center">
