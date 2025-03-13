@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { FaGlobe, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaGlobe, FaWhatsapp } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -13,35 +13,46 @@ export default function About() {
       </h2>
       <p className="mt-6 text-lg text-gray-700 leading-relaxed">
         عَيْنًا سَلْسَبِيلَا هو خدمة مجانية لحجب المواقع الإباحية تمامًا من
-        منزلك، لحماية أطفالك ونفسك من هذه الآفة المدمرة. بفضل الله، وفرنا طريقة
-        سهلة وفعالة تتيح لك تأمين الإنترنت في بيتك دون الحاجة لبرامج مدفوعة أو
-        معقدة.
+        منزلك، لحماية أطفالك ونفسك من هذه الآفة المدمرة...
       </p>
 
-      <div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
+      {/* لماذا تحتاج هذه الخدمة؟ */}
+      <div
+        className="relative mt-8 p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
+          hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 
+          before:bg-gradient-to-br before:from-blue-400 before:to-cyan-300 before:rounded-2xl before:opacity-20"
+      >
         <h2 className="text-2xl font-bold text-gray-900">
           📌 لماذا تحتاج هذه الخدمة؟
         </h2>
         <ul className="mt-4 text-lg text-gray-700 leading-relaxed space-y-3">
           <li>🔹 لحماية أبنائك من الانحراف الأخلاقي.</li>
           <li>🔹 للحفاظ على طهارة القلب والعقل.</li>
-          <li>🔹 للوقاية من الإدمان المدمر الذي يضيع الأوقات ويفسد العقول.</li>
-          <li>🔹 لأن الله أمرك بغض البصر وحفظ نفسك وأهلك.</li>
+          <li>🔹 للوقاية من الإدمان المدمر.</li>
+          <li>🔹 لأن الله أمرك بغض البصر.</li>
         </ul>
       </div>
 
-      <div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
+      {/* كيف تعمل الخدمة؟ */}
+      <div
+        className="relative mt-8 p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
+          hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 
+          before:bg-gradient-to-br before:from-green-400 before:to-teal-300 before:rounded-2xl before:opacity-20"
+      >
         <h2 className="text-2xl font-bold text-gray-900">
           📌 كيف تعمل الخدمة؟
         </h2>
         <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          نحن نوفر إعدادات بسيطة يمكنك تطبيقها في جهاز الراوتر الخاص بك لمنع
-          المواقع الإباحية نهائيًا. هذه الإعدادات تمنع أي جهاز متصل بشبكتك من
-          الوصول إلى المحتوى الفاسد، مما يوفر حماية شاملة لكل أفراد الأسرة.
+          نحن نوفر إعدادات بسيطة يمكنك تطبيقها في جهاز الراوتر الخاص بك...
         </p>
       </div>
 
-      <div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
+      {/* كيف يمكنك التفعيل؟ */}
+      <div
+        className="relative mt-8 p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
+          hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 
+          before:bg-gradient-to-br before:from-purple-400 before:to-indigo-300 before:rounded-2xl before:opacity-20"
+      >
         <h2 className="text-2xl font-bold text-gray-900">
           📌 كيف يمكنك التفعيل؟
         </h2>
@@ -52,7 +63,6 @@ export default function About() {
           <a
             href="https://ainaa.mafazaa.com/gen1/setupguide/"
             target="_blank"
-            rel="noopener noreferrer"
             className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all"
           >
             <FaGlobe size={24} /> تفعيل الحماية 🔒
@@ -60,41 +70,86 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
+      {/* انضم لقناة الواتس و الفيسبوك الواتساب */}
+      <div
+        className="relative mt-8 p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
+          hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 
+          before:bg-gradient-to-br before:from-yellow-400 before:to-orange-300 before:rounded-2xl before:opacity-20"
+      >
         <h2 className="text-2xl font-bold text-gray-900">
-          📌 انضم لجروب الواتساب
+          📌 انضم لقناة الواتساب
         </h2>
         <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          تابع آخر التحديثات والأخبار حول المشروع عبر جروب واتساب الخاص بنا.
+          تابع آخر التحديثات والأخبار عبر قناة الواتساب الخاص بنا.
         </p>
         <div className="mt-4 flex justify-center gap-4">
-          <a
-            href="https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO"
+          <Link
+            href="https://whatsapp.com/channel/0029VakgzRJ5kg7BkQFSJK36"
             target="_blank"
-            rel="noopener noreferrer"
             className="px-6 py-3 flex items-center gap-2 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-700 transition-all"
           >
             <FaWhatsapp size={24} /> انضم الآن 💬
-          </a>
+          </Link>
         </div>
       </div>
-
-      <div className="mt-8 p-6 bg-white shadow-lg rounded-xl border border-gray-200">
+      <div
+        className="relative mt-8 p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
+    hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 
+    before:bg-gradient-to-br before:from-blue-500 before:to-blue-700 before:rounded-2xl before:opacity-20"
+      >
         <h2 className="text-2xl font-bold text-gray-900">
-          📌 كيف يمكنك دعم المشروع؟
+          📌 تابع صفحتنا على فيسبوك
         </h2>
         <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          ❤ بدعوة صالحة .
+          تابع آخر التحديثات والأخبار عبر صفحتنا الرسمية على فيسبوك.
         </p>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          ❤ بنشر الفكرة – شارك هذا مع أصدقائك وعائلتك.
-        </p>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          ❤ بالعمل التطوعي – عندنا عجز في العدد،
-          <Link className="underline" href={"https://wa.me/+201003816322"}>
-            اضغظ هنا للتواصل معنا
+        <div className="mt-4 flex justify-center gap-4">
+          <Link
+            href="https://www.facebook.com/YourPageLink"
+            target="_blank"
+            className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all"
+          >
+            <FaFacebook size={24} /> تابع الآن 👍
           </Link>
-          .
+        </div>
+      </div>
+      <div
+        className="relative mt-8 p-8 bg-white bg-opacity-90 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
+    hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 
+    before:bg-gradient-to-br before:from-pink-100 before:to-red-200 before:rounded-2xl before:opacity-30"
+      >
+        <h2 className="text-3xl font-extrabold text-gray-900 flex items-center justify-center gap-2">
+          📌 كيف يمكنك دعم المشروع؟
+        </h2>
+
+        <p className="mt-4 text-lg text-gray-700 leading-relaxed text-center">
+          ❤️ بنشر الفكرة مع أصدقائك وعائلتك، فالكلمة الطيبة تُحدث فرقًا.
+        </p>
+
+        <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">
+          {/* زر الدعم المالي */}
+          <a
+            href="https://mafazaa.com/support_us"
+            target="_blank"
+            className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md 
+        hover:bg-blue-700 transition-all"
+          >
+            💰 دعم مالي
+          </a>
+
+          {/* زر العمل التطوعي */}
+          <a
+            href="https://mafazaa.com/join"
+            target="_blank"
+            className="px-6 py-3 flex items-center gap-2 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md 
+        hover:bg-green-700 transition-all"
+          >
+            🤝 الانضمام للعمل التطوعي
+          </a>
+        </div>
+
+        <p className="mt-6 text-lg text-gray-700 leading-relaxed text-center">
+          🙌 بدعوة صالحة - لعلها تكون سببًا في نجاحنا جميعًا.
         </p>
       </div>
 

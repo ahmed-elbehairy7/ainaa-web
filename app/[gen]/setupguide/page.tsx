@@ -5,7 +5,6 @@ import { gensParams } from "../genData";
 import { genName } from "@/app/appTypes";
 import setupGuideData, { genSetupGuideData } from "./setupGuideData";
 import LearnProtection from "@/app/components/LearnProtection";
-import Header from "@/app/components/Header";
 
 function Page({ params }: { params: { gen: genName } }) {
   const genGuide: genSetupGuideData = setupGuideData[params.gen];
