@@ -17,7 +17,7 @@ function Table({
   categories,
 }: TableDataTypes) {
   return (
-    <div className="max-w-screen-xl w-full mx-auto px-4 md:px-8">
+    <div className="max-w-screen-xl w-full mx-auto ">
       {/* Table layout for larger screens */}
       <div className="hidden md:block mt-8 overflow-hidden border rounded-lg shadow-sm">
         <table className="min-w-full text-sm text-center border-collapse">

@@ -8,7 +8,7 @@ const SetupValuesPage = () => {
   const setupLevels = setupValuesData.gen1;
 
   return (
-    <div className=" my-12 flex flex-col items-center px-4">
+    <div className=" mb-10 flex flex-col items-center px-4">
       <h1 className="text-center text-4xl font-bold mb-8 text-gray-800">
         تفاصيل مستويات الحماية 🔒
       </h1>
@@ -17,7 +17,7 @@ const SetupValuesPage = () => {
         الجيل الأول
       </h2>
 
-      <div className="flex flex-col gap-6 w-full max-w-5xl">
+      <div className="flex flex-col gap-0 w-full max-w-5xl">
         {Object.entries(setupLevels).map(([key, values], index) => (
           <Table
             key={index}
