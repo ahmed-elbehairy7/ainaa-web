@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { FaFacebook } from "react-icons/fa6";
+import { FiFacebook } from "react-icons/fi"; // ✅ استيراد الأيقونات
 
 export default function Home() {
   return (
-    <article className="px-4 flex flex-col items-center justify-center text-center">
+    <article className="max-w-5xl mx-auto px-4 flex flex-col items-center justify-center text-center">
       {/* قسم العنوان والوصف */}
       <section id="about" className="mx-auto max-w-screen-md">
         <h1 className="inline-block px-6 py-2 text-xl font-semibold tracking-wide text-white uppercase rounded-full bg-gradient-to-r from-teal-500 to-teal-700 shadow-teal-300 shadow-md">
@@ -49,7 +51,10 @@ export default function Home() {
       </section>
 
       {/* زر البدء */}
-      <section id="start" className="pt-6 block max-w-screen-lg">
+      <section
+        id="start"
+        className="w-full max-w-3xl mx-auto pt-6 flex justify-center"
+      >
         <Link
           href="/gen1/setupguide"
           className="px-8 py-4 bg-teal-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300 block active:scale-90 active:shadow-2xl"
@@ -75,11 +80,13 @@ export default function Home() {
               التبرع المالي 💰
             </h3>
             <p className="text-gray-700 mt-2 leading-relaxed">
-              يمكنك المساهمة ماديًا لدعم المشروع عبر:
+              يمكنك المساهمة ماديًا لدعم المشروع عن طريق كارت الفيزا او فودافون
+              كاش عبر:
             </p>
             <ul className="mt-2 text-sm sm:text-base text-teal-700">
-              <li>📌 فودافون كاش: 01003816322</li>
-              <li>📌 إنستاباي: ahmed-elbehairy@instapay</li>
+              <li>
+                <Link href="mafazaa.com/support_us">📌الرابط هنا ➡️</Link>
+              </li>
             </ul>
           </div>
 
@@ -106,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔹 قسم الجروب والقناة*/}
+      {/* 🔹 قسم الصفحة والقناة*/}
       <section id="community" className="pb-12 max-w-screen-md mx-auto">
         <h2 className="text-3xl font-bold text-gray-900">انضم لمجتمعنا 💬</h2>
         <p className="mt-4 text-lg text-gray-700 leading-relaxed">
@@ -121,11 +128,11 @@ export default function Home() {
             انضم الآن للقناة 📢
           </Link>
           <Link
-            href="https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO"
+            href="https://www.facebook.com/mafazaa.org"
             target="_blank"
-            className="mt-6 inline-block px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
+            className="flex gap-2 mt-6 items-center justify-between px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
           >
-            انضم الآن للجروب 📢
+            تابعنا على فيسبوك <FaFacebook size={24} />
           </Link>
         </div>
       </section>

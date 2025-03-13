@@ -9,23 +9,22 @@ export const supportUsStep: Step[] = [
     type: "link",
     data: {
       href: "https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO",
-      text: "انضم إلى جروب الواتساب لمتابعة الجديد 💬",
+      text: " انضم إلى جروب الواتساب لمتابعة الجديد ➡️",
     },
-  },
-  {
-    type: "text",
-    data: "💳 الدعم عبر فودافون كاش: يمكنك التبرع عبر تحويل الأموال إلى الرقم التالي: 01003816322 📞",
   },
 
   {
-    type: "text",
-    data: "🏦 الدعم عبر إنستاباي: يمكنك التبرع مباشرة عبر تطبيق InstaPay عبر الرابط التالي: ahmed-elbehairy@instapay",
+    type: "link",
+    data: {
+      href: "mafazaa.com/support_us",
+      text: "🏦 يمكنك التبرع مباشرة  عبر هذا الرابط ➡️",
+    },
   },
   {
     type: "link",
     data: {
       href: "https://www.mafazaa.com/join",
-      text: "🚀 انضم إلى فريق التطوع",
+      text: "🚀 انضم إلى فريق التطوع️ ➡️",
     },
   },
   {
@@ -59,34 +58,13 @@ export const checkActivationStep: Step[] = [
 export const customerSupportStep: Step[] = [
   {
     type: "text",
-    data: "إذا واجهت أي مشكلة أو كنت بحاجة إلى دعم، لا تتردد في التواصل معنا عبر واتساب:",
+    data: "إذا واجهت أي مشكلة أو كنت بحاجة إلى دعم، لا تتردد في التواصل معنا",
   },
   {
     type: "link",
     data: {
-      href: "https://wa.me/+201005286073",
-      text: "📩 تواصل عبر واتساب - 01005286073",
-    },
-  },
-  {
-    type: "link",
-    data: {
-      href: "https://wa.me/+201203250103",
-      text: "📩 تواصل عبر واتساب - 01203250103",
-    },
-  },
-  // {
-  // 	type: "link",
-  // 	data: {
-  // 		href: "https://wa.me/+201003816322",
-  // 		text: "📩 تواصل عبر واتساب - 01003816322",
-  // 	},
-  // },
-  {
-    type: "link",
-    data: {
-      href: "https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO",
-      text: "تواصل معنا على جروب الواتساب 💬",
+      href: "https://www.facebook.com/messages/t/419901901197382",
+      text: "📩 تواصل عبر ماسنجر",
     },
   },
   {
