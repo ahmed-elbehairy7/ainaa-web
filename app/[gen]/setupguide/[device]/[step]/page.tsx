@@ -12,15 +12,7 @@ const StepPage = ({
   params: { step: stepName; gen: genName; device: deviceName };
 }) => {
   const devSteps = (stepData.gen1 as any)?.[params.device];
-  const arabicNumbers = [
-    "الأولى",
-    "الثانية",
-    "الثالثة",
-    "الرابعة",
-    "الخامسة",
-    "السادسة",
-    "السابعة",
-  ];
+
   if (!devSteps) {
     return (
       <p className="text-red-500 text-center font-bold text-lg">
@@ -29,9 +21,10 @@ const StepPage = ({
     );
   }
 
-  const substeps: Step[] = devSteps[params.step] || [];
   const totalSteps = Object.keys(devSteps).length;
   const currentStep = Number(params.step.replace("step", ""));
+  const isLastStep = currentStep === totalSteps;
+  const substeps: Step[] = devSteps[params.step] || [];
 
   return (
     <div
@@ -39,15 +32,12 @@ const StepPage = ({
       dir="rtl"
     >
       <DeviceCard device={params.device} gen={params.gen} />
+
       <h2 className="text-3xl md:text-4xl font-extrabold text-teal-700 bg-teal-100 px-6 py-3 rounded-lg shadow-md">
-        {currentStep === totalSteps
-          ? "طرق دعمنا"
-          : `الخطوة ${
-              arabicNumbers[currentStep - 1]
-            } (${currentStep.toLocaleString("ar-EG")})`}
+        {isLastStep ? "طرق دعمنا" : `الخطوة ${currentStep}`}
       </h2>
 
-      <ol className="space-y-4 ">
+      <ol className="w-full max-w-5xl space-y-4">
         {substeps?.map((step, index) => (
           <li key={index}>
             {step.type === "text" ? (
@@ -69,15 +59,17 @@ const StepPage = ({
             ) : (
               <Image
                 alt="screenshot"
-                src={require(`@/public/setupguide/${params.gen}/${params.device}/${params.step}_${step.data}.png`)}
-                className="rounded-lg shadow-lg border border-gray-200"
+                src={`/setupguide/${params.gen}/${params.device}/${params.step}_${step.data}.png`}
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg border border-gray-200 mx-auto bg-cover w-full"
               />
             )}
           </li>
         ))}
       </ol>
 
-      <div className="flex justify-between  w-full md:w-3/4 gap-6">
+      <div className="flex justify-between w-full max-w-5xl gap-6">
         {currentStep > 1 ? (
           <Link
             href={`/${params.gen}/setupguide/${params.device}/step${
@@ -90,7 +82,7 @@ const StepPage = ({
         ) : (
           <div className="flex-1" />
         )}
-        {currentStep < totalSteps ? (
+        {!isLastStep ? (
           <Link
             href={`/${params.gen}/setupguide/${params.device}/step${
               currentStep + 1
@@ -110,11 +102,19 @@ const StepPage = ({
 export default StepPage;
 
 export function generateStaticParams() {
-  return Object.keys(stepData.gen1).flatMap((device) =>
-    Object.keys(stepData.gen1[device as deviceName] || {}).map((step) => ({
+  return Object.keys(stepData.gen1).flatMap((device) => {
+    const steps = Object.keys(stepData.gen1[device as deviceName] || {});
+
+    if (steps.length < 15) {
+      for (let i = steps.length + 1; i <= 15; i++) {
+        steps.push(`step${i}`);
+      }
+    }
+
+    return steps.map((step) => ({
       gen: "gen1",
       device,
       step,
-    }))
-  );
+    }));
+  });
 }
