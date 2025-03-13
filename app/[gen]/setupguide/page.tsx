@@ -12,12 +12,12 @@ function Page({ params }: { params: { gen: genName } }) {
 
   return (
     <div
-      className="flex flex-col items-center my-10 mx-auto gap-10 px-4"
+      className="flex flex-col items-center mb-10 mx-auto gap-10 px-4"
       dir="rtl"
     >
       <CardGen {...genGuide.genProps} />
 
-      <h1 className="px-5 py-3 text-2xl font-semibold tracking-wide text-white bg-teal-500 rounded-lg shadow-md">
+      <h1 className="px-5 py-3 text-2xl font-semibold tracking-wide text-white bg-teal-500 rounded-lg shadow-md text-center">
         بأي جهاز ستبدأ إن شاء الله؟
       </h1>
 
@@ -26,7 +26,7 @@ function Page({ params }: { params: { gen: genName } }) {
         حماية 100%، ولكنها طبقات متعددة ترفع من مستوى الأمان.
       </p>
 
-      <div className="w-full max-w-5xl grid grid-cols-2 gap-6">
+      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6">
         {genGuide.devices.map((device, i) => (
           <DeviceCard {...device} key={i} />
         ))}
