@@ -5,18 +5,11 @@ export const supportUsStep: Step[] = [
     type: "text",
     data: "شارك الموقع ورابط الإعدادات مع أصدقائك وعائلتك،وعلى وسائل التواصل الاجتماعي حتى تصل الفائدة لأكبر عدد ممكن. 📢",
   },
-  {
-    type: "link",
-    data: {
-      href: "https://chat.whatsapp.com/GpVDyjVulTgArIyEhZ75HO",
-      text: " انضم إلى جروب الواتساب لمتابعة الجديد ➡️",
-    },
-  },
 
   {
     type: "link",
     data: {
-      href: "mafazaa.com/support_us",
+      href: "https://www.mafazaa.com/support_us",
       text: "🏦 يمكنك التبرع مباشرة  عبر هذا الرابط ➡️",
     },
   },
