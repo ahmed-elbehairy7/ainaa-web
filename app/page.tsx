@@ -85,7 +85,9 @@ export default function Home() {
             </p>
             <ul className="mt-2 text-sm sm:text-base text-teal-700">
               <li>
-                <Link href="mafazaa.com/support_us">📌الرابط هنا ➡️</Link>
+                <Link href="https://www.mafazaa.com/support_us">
+                  📌الرابط هنا ➡️
+                </Link>
               </li>
             </ul>
           </div>
@@ -121,7 +123,7 @@ export default function Home() {
         </p>
         <div className="flex gap-4 items-center justify-center">
           <Link
-            href="https://whatsapp.com/channel/0029VakgzRJ5kg7BkQFSJK36"
+            href="https://whatsapp.com/channel/0029Vb5NRuqLY6dCU3qeXO2i"
             target="_blank"
             className="mt-6 inline-block px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
           >
