@@ -84,7 +84,7 @@ export default function About() {
         </p>
         <div className="mt-4 flex justify-center gap-4">
           <Link
-            href="https://whatsapp.com/channel/0029VakgzRJ5kg7BkQFSJK36"
+            href="https://whatsapp.com/channel/0029Vb5NRuqLY6dCU3qeXO2i"
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-700 transition-all"
           >
@@ -105,7 +105,7 @@ export default function About() {
         </p>
         <div className="mt-4 flex justify-center gap-4">
           <Link
-            href="https://www.facebook.com/YourPageLink"
+            href="https://www.facebook.com/mafazaa.org"
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all"
           >
@@ -126,31 +126,29 @@ export default function About() {
           ❤️ بنشر الفكرة مع أصدقائك وعائلتك، فالكلمة الطيبة تُحدث فرقًا.
         </p>
 
+        <p className="mt-6 text-lg text-gray-700 leading-relaxed text-center">
+          🙌 بدعوة صالحة - لعلها تكون سببًا في نجاحنا جميعًا.
+        </p>
         <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">
-          {/* زر الدعم المالي */}
-          <a
+          <Link
             href="https://mafazaa.com/support_us"
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md 
         hover:bg-blue-700 transition-all"
           >
             💰 دعم مالي
-          </a>
+          </Link>
 
           {/* زر العمل التطوعي */}
-          <a
+          <Link
             href="https://mafazaa.com/join"
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md 
         hover:bg-green-700 transition-all"
           >
             🤝 الانضمام للعمل التطوعي
-          </a>
+          </Link>
         </div>
-
-        <p className="mt-6 text-lg text-gray-700 leading-relaxed text-center">
-          🙌 بدعوة صالحة - لعلها تكون سببًا في نجاحنا جميعًا.
-        </p>
       </div>
 
       <div className="mt-10">
