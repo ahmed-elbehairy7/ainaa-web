@@ -1,4 +1,6 @@
-export const googleForm = "https://forms.gle/hcT1bU8pFUUyQbFD6";
+export const formUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdLizpsP03ZJ1epl1DfW41XZsH_Ul83HU_ZWEidOla_En-s5A/formResponse";
+export const formEntryId = "1388739102";
 export const whatsappChannel =
   "https://whatsapp.com/channel/0029Vb5NRuqLY6dCU3qeXO2i";
 export const joinUs = "https://mafazaa.com/join";
