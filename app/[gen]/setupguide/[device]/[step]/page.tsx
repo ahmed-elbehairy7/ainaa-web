@@ -44,12 +44,24 @@ const StepPage = ({
               <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
                 <h3 className="font-semibold">
                   {index + 1}.{" "}
-                  {step.data.split("\n").map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
+                  {typeof step.data === "string" ? (
+                    step.data.split("\n").map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))
+                  ) : typeof step.data === "number" ? (
+                    step.data
+                  ) : (
+                    <Link
+                      href={step.data.href}
+                      target="_blank"
+                      className="underline text-teal-900 hover:text-teal-600"
+                    >
+                      {step.data.text}
+                    </Link>
+                  )}
                 </h3>
               </div>
             ) : step.type === "link" ? (
