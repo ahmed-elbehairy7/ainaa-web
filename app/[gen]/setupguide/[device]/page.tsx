@@ -21,7 +21,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
             {...dev.embeddedVideo}
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             id="player"
-            className="w-full  h-64 md:h-72 lg:h-96 rounded-lg shadow-lg"
+            className="w-full max-w-[400px] h-[500px] sm:h-[550px] md:h-[600px] aspect-[9/16] rounded-lg shadow-lg"
             allowFullScreen
           ></iframe>
 

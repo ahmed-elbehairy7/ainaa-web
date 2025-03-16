@@ -58,11 +58,11 @@ export default function Home() {
       {/* زر البدء */}
       <section
         id="start"
-        className="w-full max-w-3xl mx-auto pt-6 flex justify-center"
+        className="max-w-2xl w-full flex justify-center pt-6 "
       >
         <Link
           href="/gen1/setupguide"
-          className="px-8 py-4 bg-teal-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300 block active:scale-90 active:shadow-2xl"
+          className="w-full px-8 py-4 bg-teal-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300 block active:scale-90 active:shadow-2xl"
         >
           ابدأ الآن 🚀
         </Link>
