@@ -43,7 +43,13 @@ const StepPage = ({
             {step.type === "text" ? (
               <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
                 <h3 className="font-semibold">
-                  {index + 1}. {step.data as string}
+                  {index + 1}.{" "}
+                  {step.data.split("\n").map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
                 </h3>
               </div>
             ) : step.type === "link" ? (

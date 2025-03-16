@@ -1,4 +1,10 @@
 "use client";
+import {
+  facebookPage,
+  joinUs,
+  support_us,
+  whatsappChannel,
+} from "@/importantLinks";
 import Link from "next/link";
 import { FaFacebook, FaGlobe, FaWhatsapp } from "react-icons/fa";
 
@@ -60,13 +66,13 @@ export default function About() {
           يمكنك تفعيل الحماية من خلال اتباع الخطوات على موقع مافازا.
         </p>
         <div className="mt-4 flex justify-center gap-4">
-          <a
+          <Link
             href="https://ainaa.mafazaa.com/gen1/setupguide/"
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all"
           >
             <FaGlobe size={24} /> تفعيل الحماية 🔒
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -84,7 +90,7 @@ export default function About() {
         </p>
         <div className="mt-4 flex justify-center gap-4">
           <Link
-            href="https://whatsapp.com/channel/0029Vb5NRuqLY6dCU3qeXO2i"
+            href={whatsappChannel}
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-700 transition-all"
           >
@@ -105,7 +111,7 @@ export default function About() {
         </p>
         <div className="mt-4 flex justify-center gap-4">
           <Link
-            href="https://www.facebook.com/mafazaa.org"
+            href={facebookPage}
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all"
           >
@@ -131,7 +137,7 @@ export default function About() {
         </p>
         <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">
           <Link
-            href="https://mafazaa.com/support_us"
+            href={support_us}
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md 
         hover:bg-blue-700 transition-all"
@@ -141,7 +147,7 @@ export default function About() {
 
           {/* زر العمل التطوعي */}
           <Link
-            href="https://mafazaa.com/join"
+            href={joinUs}
             target="_blank"
             className="px-6 py-3 flex items-center gap-2 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md 
         hover:bg-green-700 transition-all"

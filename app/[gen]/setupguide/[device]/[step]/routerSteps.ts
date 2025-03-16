@@ -1,4 +1,10 @@
 import {
+  PrimaryHigh,
+  PrimaryLow,
+  SecondaryHigh,
+  SecondaryLow,
+} from "@/importantLinks";
+import {
   checkActivationStep,
   customerSupportStep,
   supportUsStep,
@@ -30,7 +36,7 @@ const routerSteps: { gen1: Steps } = {
       },
       {
         type: "text",
-        data: "غالبًا ما تكون القيم الافتراضية:\n - **اسم المستخدم:** admin \n - **كلمة المرور:** admin \n جربهما أولًا.",
+        data: "غالبًا ما تكون القيم الافتراضية:\n - (اسم المستخدم): admin \n - (كلمة المرور): admin \n جربهما أولًا.",
       },
       {
         type: "screenshot",
@@ -54,11 +60,11 @@ const routerSteps: { gen1: Steps } = {
     step4: [
       {
         type: "text",
-        data: "📌 ابحث يدويًا عن إعدادات الـ **Primary DNS** و **Secondary DNS** داخل صفحة الراوتر.",
+        data: "📌 ابحث يدويًا عن إعدادات الـ (Primary DNS) و (Secondary DNS) داخل صفحة الراوتر.",
       },
       {
         type: "text",
-        data: "🔍 ستجد هذه الإعدادات غالبًا داخل أحد الأقسام التالية:\n - **LAN Settings** (إعدادات الشبكة المحلية)\n - **WAN Settings** (إعدادات الإنترنت)\n - **Internet Settings** (إعدادات الاتصال بالإنترنت)\n - **DHCP Settings** (إعدادات توزيع العناوين)\n - **Network Settings** (إعدادات الشبكة)",
+        data: "🔍 ستجد هذه الإعدادات غالبًا داخل أحد الأقسام التالية:\n - (LAN Settings) (إعدادات الشبكة المحلية)\n - (WAN Settings) (إعدادات الإنترنت)\n - (Internet Settings) (إعدادات الاتصال بالإنترنت)\n - (DHCP Settings) (إعدادات توزيع العناوين)\n - (Network Settings) (إعدادات الشبكة)",
       },
       {
         type: "text",
@@ -68,20 +74,27 @@ const routerSteps: { gen1: Steps } = {
         type: "link",
         data: {
           href: "https://www.facebook.com/messages/t/419901901197382",
-          text: "📩 تواصل عبر ماسنجر",
+          text: "للتواصل عبر ماسنجر 📩",
         },
       },
       {
         type: "text",
-        data: "📌 **اختر مستوى الحماية المناسب لك:**",
+        data: "📌 (اختر مستوى الحماية المناسب لك):",
       },
       {
         type: "text",
-        data: "✅ **حماية منخفضة:**\n - **Primary DNS:** 157.241.6.180\n - **Secondary DNS:** 157.241.47.209",
+        data: `✅ (حماية منخفضة):\n - (Primary DNS): ${PrimaryLow}\n - (Secondary DNS): ${SecondaryLow}`,
       },
       {
         type: "text",
-        data: "✅ **حماية عالية:**\n - **Primary DNS:** 15.184.191.201\n - **Secondary DNS:** 15.184.243.155",
+        data: `✅ (حماية عالية):\n - (Primary DNS):  ${PrimaryHigh}\n - (Secondary DNS):  ${SecondaryHigh}`,
+      },
+      {
+        type: "link",
+        data: {
+          href: "/setupvalues",
+          text: "لمعرفة المزيد عن أنواع الحماية ➡️",
+        },
       },
     ],
 

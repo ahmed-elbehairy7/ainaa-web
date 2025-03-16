@@ -1,6 +1,11 @@
+import {
+  facebookPage,
+  joinUs,
+  support_us,
+  whatsappChannel,
+} from "@/importantLinks";
 import Link from "next/link";
 import { FaFacebook } from "react-icons/fa6";
-import { FiFacebook } from "react-icons/fi"; // ✅ استيراد الأيقونات
 
 export default function Home() {
   return (
@@ -85,9 +90,7 @@ export default function Home() {
             </p>
             <ul className="mt-2 text-sm sm:text-base text-teal-700">
               <li>
-                <Link href="https://www.mafazaa.com/support_us">
-                  📌الرابط هنا ➡️
-                </Link>
+                <Link href={support_us}>📌الرابط هنا ➡️</Link>
               </li>
             </ul>
           </div>
@@ -104,7 +107,7 @@ export default function Home() {
               المشروع.
             </p>
             <Link
-              href="https://www.mafazaa.com/join"
+              href={joinUs}
               target="_blank"
               className="mt-3 inline-block text-teal-900 underline hover:text-teal-600"
             >
@@ -122,14 +125,14 @@ export default function Home() {
         </p>
         <div className="flex gap-4 items-center justify-center">
           <Link
-            href="https://whatsapp.com/channel/0029Vb5NRuqLY6dCU3qeXO2i"
+            href={whatsappChannel}
             target="_blank"
             className="mt-6 inline-block px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
           >
             انضم الآن للقناة 📢
           </Link>
           <Link
-            href="https://www.facebook.com/mafazaa.org"
+            href={facebookPage}
             target="_blank"
             className="flex gap-2 mt-6 items-center justify-between px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
           >
