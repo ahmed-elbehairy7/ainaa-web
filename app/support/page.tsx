@@ -27,7 +27,6 @@ export default function SupportPage() {
               className="p-4 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
               hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100"
             >
-              {/* ✅ التحقق من نوع `data` قبل العرض */}
               {step.type === "text" && typeof step.data === "string" && (
                 <p className="text-base sm:text-lg text-gray-800">
                   {step.data}
