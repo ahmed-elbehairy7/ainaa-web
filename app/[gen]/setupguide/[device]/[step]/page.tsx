@@ -79,8 +79,8 @@ const StepPage = ({
                 alt="screenshot"
                 src={`/setupguide/${params.gen}/${params.device}/${params.step}_${step.data}.png`}
                 width={600}
-                height={400}
-                className="rounded-lg shadow-lg border border-gray-200 mx-auto bg-cover w-full"
+                height={150}
+                className="rounded-lg shadow-lg border border-gray-200 mx-auto bg-cover md:bg-contain "
               />
             )}
           </li>

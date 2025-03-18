@@ -23,7 +23,7 @@ function Header() {
         </h1>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex">
+        <nav className="hidden lg:flex">
           <ul className="flex gap-x-6">
             {navLinks.map(({ label, href }, index) => (
               <li key={index}>
@@ -48,7 +48,7 @@ function Header() {
 
         {/* Mobile Menu Button - React Icons */}
         <button
-          className="md:hidden p-0 text-white text-3xl z-50"
+          className="lg:hidden p-0 text-white text-3xl z-50"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
