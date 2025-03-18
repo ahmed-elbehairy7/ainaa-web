@@ -67,9 +67,9 @@ function Table({
 
       {/* Card layout for smaller screens */}
       <div className="md:hidden mt-12 space-y-4">
-        <div className="border rounded-lg p-4 shadow-sm bg-white">
+        <div className="border rounded-lg px-2 py-4 shadow-sm bg-white">
           <h2 className="font-semibold text-lg mb-2">{title}</h2>
-          <div className="text-gray-600 space-y-1">
+          <div className="text-gray-600 space-y-1  text-sm">
             <p>
               <strong className="text-gray-800">Domain:</strong> {domain}
             </p>
@@ -79,6 +79,9 @@ function Table({
             <p>
               <strong className="text-gray-800">Secondary DNS:</strong>{" "}
               {secondary}
+            </p>
+            <p>
+              <strong className="text-gray-800">DNS-over-HTTPS :</strong> {doh}
             </p>
           </div>
           <div className="flex flex-wrap gap-1 mt-2">
