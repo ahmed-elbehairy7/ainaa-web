@@ -24,7 +24,6 @@ const setupGuideData: { gen1: genSetupGuideData; gen2: genSetupGuideData } = {
       {
         device: "android",
         gen: "gen1",
-        soon: true,
       },
 
       {

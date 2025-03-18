@@ -120,7 +120,7 @@ const windowsSteps: { gen1: Steps } = {
         data: 1,
       },
     ],
-    step7: checkActivationStep,
+    step7: checkActivationStep.filter((e, i) => i != 0),
     step8: customerSupportStep,
     step9: supportUsStep,
   },
