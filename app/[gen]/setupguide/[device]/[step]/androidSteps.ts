@@ -1,3 +1,4 @@
+import { highDoh, lowDoh } from "@/importantLinks";
 import {
   checkActivationStep,
   customerSupportStep,
@@ -55,8 +56,8 @@ const androidSteps: { gen1: Steps } = {
       {
         type: "text",
         data: `أدخل عنوان DoH التالي:\n  
-        للحماية العالية: \n high-dns.mafazaa.com \n 
-        للحماية المنخفضة: \n low-dns.mafazaa.com`,
+        للحماية العالية: \n ${highDoh} \n 
+        للحماية المنخفضة: \n ${lowDoh}`,
       },
       {
         type: "screenshot",

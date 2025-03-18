@@ -1,3 +1,4 @@
+import { joinUs, messenger, support_us } from "@/importantLinks";
 import { Step } from "./stepData";
 
 export const supportUsStep: Step[] = [
@@ -9,14 +10,14 @@ export const supportUsStep: Step[] = [
   {
     type: "link",
     data: {
-      href: "https://www.mafazaa.com/support_us",
+      href: support_us,
       text: "🏦 يمكنك التبرع مباشرة  عبر هذا الرابط ➡️",
     },
   },
   {
     type: "link",
     data: {
-      href: "https://www.mafazaa.com/join",
+      href: joinUs,
       text: "🚀 انضم إلى فريق التطوع️ ➡️",
     },
   },
@@ -60,7 +61,7 @@ export const customerSupportStep: Step[] = [
   {
     type: "link",
     data: {
-      href: "https://www.facebook.com/messages/t/419901901197382",
+      href: messenger,
       text: "📩 تواصل عبر ماسنجر",
     },
   },

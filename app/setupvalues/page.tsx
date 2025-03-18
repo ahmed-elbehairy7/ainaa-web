@@ -25,6 +25,7 @@ const SetupValuesPage = () => {
             domain={`${values.subdomain}.mafazaa.com`}
             primary={values.primary}
             secondary={values.secondary}
+            doh={values.doh}
             categories={values.categories}
           />
         ))}

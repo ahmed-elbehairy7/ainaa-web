@@ -1,4 +1,5 @@
 import {
+  messenger,
   PrimaryHigh,
   PrimaryLow,
   SecondaryHigh,
@@ -73,7 +74,7 @@ const routerSteps: { gen1: Steps } = {
       {
         type: "link",
         data: {
-          href: "https://www.facebook.com/messages/t/419901901197382",
+          href: messenger,
           text: "للتواصل عبر ماسنجر 📩",
         },
       },
