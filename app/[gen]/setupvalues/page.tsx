@@ -6,8 +6,6 @@ import setupValuesData, {
 } from "@/app/setupvalues/setupValuesData";
 import Table from "@/app/components/Table";
 
-// TODO: implement an appropriate design
-
 const SetupValuesPage = ({ params }: { params: { gen: genName } }) => {
   const setupValues = setupValuesData[params.gen];
   const gen = genData[params.gen];
@@ -23,8 +21,9 @@ const SetupValuesPage = ({ params }: { params: { gen: genName } }) => {
               key={index}
               title={values.ar.title}
               domain={values.subdomain + ".mafazaa.com"}
-              primary={"2"}
-              secondary={"4"}
+              primary={values.primary}
+              secondary={values.secondary}
+              doh={values.doh}
               categories={values.categories}
             />
           );

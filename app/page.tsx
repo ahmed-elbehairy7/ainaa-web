@@ -6,11 +6,11 @@ import {
 } from "@/importantLinks";
 import Link from "next/link";
 import { FaFacebook } from "react-icons/fa6";
+import InfoCard from "./components/InfoCard";
 
 export default function Home() {
   return (
     <article className="max-w-5xl mx-auto px-4 flex flex-col items-center justify-center text-center">
-      {/* قسم العنوان والوصف */}
       <section id="about" className="mx-auto max-w-screen-md">
         <h1 className="inline-block px-6 py-2 text-xl font-semibold tracking-wide text-white uppercase rounded-full bg-gradient-to-r from-teal-500 to-teal-700 shadow-teal-300 shadow-md">
           عَيْنًا سَلْسَبِيلًا
@@ -23,39 +23,23 @@ export default function Home() {
           الإنترنت. اكتشف كيف يمكنك تأمين جميع أجهزتك بسهولة.
         </p>
       </section>
-
-      {/* قسم الميزات */}
       <section id="features" className="pt-6 max-w-screen-md mx-auto">
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 text-center md:text-right">
-          {/* ميزة 1 */}
-          <div
-            className="relative p-4 md:p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-teal-400 before:to-green-300 before:rounded-2xl before:opacity-20 "
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center justify-center md:justify-start gap-2">
-              حماية شاملة <span>✅</span>
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              يحميك من المواقع الإباحية والمحتوى الضار.
-            </p>
-          </div>
-
-          {/* ميزة 2 */}
-          <div
-            className="relative p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-sky-400 before:to-blue-400 before:rounded-2xl before:opacity-20"
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center justify-center md:justify-start gap-2">
-              سهولة الإعداد <span>⚡</span>
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              بخطوات بسيطة يمكنك تأمين جميع أجهزتك.
-            </p>
-          </div>
+          <InfoCard
+            title="حماية شاملة ✅"
+            description="بخطوات بسيطة يمكنك تأمين جميع أجهزتك."
+            fromColor="from-sky-400"
+            toColor="to-purple-300"
+          />
+          <InfoCard
+            title=" سهولة الإعداد ⚡"
+            description="يحميك من المواقع الإباحية والمحتوى الضار."
+            fromColor="from-sky-400"
+            toColor="to-orange-300"
+          />
         </div>
       </section>
 
-      {/* زر البدء */}
       <section
         id="start"
         className="max-w-2xl w-full flex justify-center pt-6 "
@@ -68,7 +52,6 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* 🔹 قسم الدعم */}
       <section id="support" className="pt-12 pb-6 max-w-screen-md mx-auto">
         <h2 className="text-3xl font-bold text-gray-900">طرق دعم المشروع 💡</h2>
         <p className="mt-4 text-lg text-gray-700 leading-relaxed">
@@ -76,48 +59,26 @@ export default function Home() {
         </p>
 
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 mt-6">
-          {/* دعم مالي */}
-          <div
-            className="relative p-4 md:p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-yellow-400 before:to-orange-300 before:rounded-2xl before:opacity-20"
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-              التبرع المالي 💰
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              يمكنك المساهمة ماديًا لدعم المشروع عن طريق كارت الفيزا او فودافون
-              كاش عبر:
-            </p>
-            <ul className="mt-2 text-sm sm:text-base text-teal-700">
-              <li>
-                <Link href={support_us}>📌الرابط هنا ➡️</Link>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            className="relative p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-purple-400 before:to-pink-300 before:rounded-2xl before:opacity-20"
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-              التطوع 🤝
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              لديك مهارات في البرمجة أو التسويق؟ انضم إلينا وساعدنا في تحسين
-              المشروع.
-            </p>
-            <Link
-              href={joinUs}
-              target="_blank"
-              className="mt-3 inline-block text-teal-900 underline hover:text-teal-600"
-            >
-              🚀 انضم لفريق التطوع
-            </Link>
-          </div>
+          <InfoCard
+            title="التبرع المالي 💰"
+            description=" يمكنك المساهمة ماديًا لدعم المشروع عن طريق كارت الفيزا او فودافون
+              كاش عبر:"
+            link={support_us}
+            linkText="📌الرابط هنا ➡️"
+            fromColor="from-yellow-400"
+            toColor="to-orange-300"
+          />
+          <InfoCard
+            title="التطوع 🤝"
+            description="لديك مهارات في البرمجة أو التسويق؟ انضم إلينا وساعدنا في تحسين المشروع."
+            link={joinUs}
+            linkText="🚀 انضم لفريق التطوع"
+            fromColor="from-purple-400"
+            toColor="to-pink-300"
+          />
         </div>
       </section>
 
-      {/* 🔹 قسم الصفحة والقناة*/}
       <section id="community" className="pb-12 max-w-screen-md mx-auto">
         <h2 className="text-3xl font-bold text-gray-900">انضم لمجتمعنا 💬</h2>
         <p className="mt-4 text-lg text-gray-700 leading-relaxed">

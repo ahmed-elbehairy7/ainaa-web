@@ -5,7 +5,6 @@ import {
   supportUsStep,
 } from "./commonSteps";
 import { Steps } from "./stepData";
-console.log(checkActivationStep.filter((e, i) => i == 0));
 
 const androidSteps: { gen1: Steps } = {
   gen1: {
