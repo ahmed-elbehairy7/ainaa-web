@@ -24,8 +24,11 @@ const setupGuideData: { gen1: genSetupGuideData; gen2: genSetupGuideData } = {
       {
         device: "android",
         gen: "gen1",
+        embeddedVideo: {
+          src: "https://player.vimeo.com/video/1066824872?h=367a3d05ce&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+          title: "شرح تفعيل حجب المواقع الإباحية من جهاز الهاتف | android",
+        },
       },
-
       {
         device: "linux",
         gen: "gen1",
