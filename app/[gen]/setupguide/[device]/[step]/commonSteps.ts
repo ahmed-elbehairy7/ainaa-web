@@ -56,6 +56,10 @@ export const checkActivationStep: Step[] = [
 export const customerSupportStep: Step[] = [
   {
     type: "text",
+data : "إذا كنت مبتلى و تريد تفعيلها بشكل لا تستطيع الخروج منه، لا تتردد في التواصل معنا"
+  },
+  {
+    type: "text",
     data: "إذا واجهت أي مشكلة أو كنت بحاجة إلى دعم، لا تتردد في التواصل معنا",
   },
   {
