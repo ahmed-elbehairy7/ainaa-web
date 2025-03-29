@@ -6,6 +6,17 @@ export const supportUsStep: Step[] = [
     type: "text",
     data: "شارك الموقع ورابط الإعدادات مع أصدقائك وعائلتك،وعلى وسائل التواصل الاجتماعي حتى تصل الفائدة لأكبر عدد ممكن. 📢",
   },
+{
+ data: "ولا تنسى الاشتراك في قناة الواتساب ليصلك كل جديد",
+type: "text"
+},
+{
+ type: "link",
+ data: {
+href: "https://whatsapp.com/channel/0029Vb5NRuqLY6dCU3qeXO2i",
+text: "اضغط هنا للدخول إلى قناة الواتساب"
+}
+},
 
   {
     type: "link",
