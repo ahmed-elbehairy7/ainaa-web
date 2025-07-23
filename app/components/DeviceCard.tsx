@@ -3,18 +3,27 @@ import Link from "next/link";
 import React from "react";
 import { deviceParams } from "../[gen]/setupguide/[device]/deviceData";
 
-// Define a single color theme for all devices
-const unifiedColor = "from-gray-200 to-blue-300 shadow-blue-400";
+// Define a single color theme for all devices - changed to red
+const unifiedColor = "from-red-500 to-red-600 shadow-red-400";
 
 function DeviceCard({ device, gen, soon }: deviceParams) {
+  // Device descriptions in Arabic
+  const deviceDescriptions: {[key: string]: string} = {
+    windows: "تطبيق يحمي الكمبيوتر",
+    router: "يحمي كل الأجهزة المتصلة به",
+    android: "تطبيق يحمي مشكلة الهاتف",
+    ios: "تطبيق يحمي الآيفون",
+    linux: "تطبيق يحمي اللينكس"
+  };
+
   return (
     <Link
       href={soon ? `/commingSoon` : `/${gen}/setupguide/${device}`}
-      className={`relative group p-6 lg:px-10 duration-300 transform border border-gray-300 text-gray-900 shadow-lg rounded-2xl flex flex-col gap-5 justify-center items-center transition-all
+      className={`relative group p-6 lg:px-10 duration-300 transform border border-gray-300 text-gray-900 shadow-lg rounded-[30px] w-[289px] h-[289px] flex flex-col gap-5 justify-center items-center transition-all
         ${
           soon
             ? "hidden"
-            : `bg-gradient-to-br ${unifiedColor} hover:shadow-2xl hover:-translate-y-2 active:scale-95`
+            : `[background:linear-gradient(227.53deg,#E0462D_1.9%,#A73826_96.57%)] hover:shadow-2xl hover:-translate-y-2 active:scale-95`
         }
       `}
     >
@@ -38,9 +47,16 @@ function DeviceCard({ device, gen, soon }: deviceParams) {
         </div>
 
         {/* Device Name */}
-        <h3 className="text-lg font-bold capitalize text-gray-50 transition-all duration-300 group-hover:text-white">
-          {device}
+        <h3 className="text-lg font-bold capitalize text-white transition-all duration-300 group-hover:text-white">
+          {device === "windows" ? "ويندوز" : 
+           device === "router" ? "راوتر" : 
+           device === "android" ? "أندرويد" : device}
         </h3>
+        
+        {/* Device Description */}
+        <p className="text-sm text-white text-center">
+          {deviceDescriptions[device] || ""}
+        </p>
       </div>
 
       {/* "Coming Soon" Badge with Soft Pulse Effect */}
