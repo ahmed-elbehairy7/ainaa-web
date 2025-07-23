@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next"; // ✅ استيراد Viewport
-import { Tajawal } from "next/font/google";
+import { Almarai } from 'next/font/google';
 import "./globals.css";
 import Header from "./components/Header";
 import Warnning from "./components/Warnning";
 
-const tajawal = Tajawal({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700"],
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ['300',"400", "700"],
+  display: "swap",
+  adjustFontFallback: true,
+  preload: true
 });
 
 export const metadata: Metadata = {
@@ -139,7 +142,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={tajawal.className}>
+    <html lang="ar" dir="rtl" className={almarai.className}>
       <body>
         <Header />
         {/* <Warnning /> */}

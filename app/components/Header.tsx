@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import MainLogo from './../../public/logo.svg'
 import { FiMenu, FiX } from "react-icons/fi"; // ✅ استيراد الأيقونات
+import Image from "next/image";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,10 +18,12 @@ function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-l from-teal-500 to-teal-700 shadow-lg shadow-teal-300/30 py-4 px-4 z-50 backdrop-blur-md transition-all">
-      <div className="container mx-auto flex items-center justify-between max-w-5xl">
+    <header className="fixed top-0 left-0 w-full h-[80px] bg-white shadow-lg shadow-black/30 px-4 z-50 backdrop-blur-md transition-all">
+      <div className="container mx-auto flex items-center justify-between max-w-5xl h-full">
         <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-wide">
-          <Link href="/">عَيْنًا سَلْسَبِيلًا</Link>
+          <Link href="/">
+            <Image src={MainLogo} alt="logo" />
+          </Link>
         </h1>
 
         {/* Desktop Navigation */}
@@ -34,10 +38,10 @@ function Header() {
                       : "_self"
                   }
                   href={href}
-                  className="relative text-white text-lg font-semibold transition-all duration-300 
-                    before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-green-300 before:to-teal-500 
+                  className="relative text-black text-lg font-semibold transition-all duration-300 
+                    before:absolute before:bottom-[-8px] before:left-0 before:w-0 before:h-0.5 before:bg-[#da442c]
                     before:transition-all before:duration-300 hover:before:w-full 
-                    hover:text-gray-100 hover:drop-shadow-lg active:scale-95"
+                    hover:text-[#da442c] hover:drop-shadow-lg active:scale-95"
                 >
                   {label}
                 </Link>
@@ -67,10 +71,15 @@ function Header() {
             <li key={index}>
               <Link
                 href={href}
-                className="relative text-white text-lg font-semibold transition-all duration-300 
-                before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-green-300 before:to-teal-500 
+                target={
+                  href === "https://mafazaa.com/support_us"
+                    ? "_blank"
+                    : "_self"
+                }
+                className="relative text-black text-lg font-semibold transition-all duration-300 
+                before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#da442c]
                 before:transition-all before:duration-300 hover:before:w-full 
-                hover:text-gray-100 hover:drop-shadow-lg active:scale-95"
+                hover:text-[#da442c] hover:drop-shadow-lg active:scale-95"
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
