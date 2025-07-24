@@ -16,9 +16,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    #f9fafb,
-    #e3fdfd
-  ); /* Light Teal Gradient */
+  background:  linear-gradient(to bottom, #ffffff, #ede2e0); /* Light Teal Gradient */
 }
+
+
