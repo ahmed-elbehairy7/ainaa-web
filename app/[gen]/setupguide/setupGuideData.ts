@@ -6,6 +6,11 @@ const setupGuideData: { gen1: genSetupGuideData; gen2: genSetupGuideData } = {
     genProps: genData.gen1,
     devices: [
       {
+        device: "android",
+        gen: "gen1",
+
+      },
+      {
         device: "router",
         gen: "gen1",
         embeddedVideo: {
@@ -20,11 +25,6 @@ const setupGuideData: { gen1: genSetupGuideData; gen2: genSetupGuideData } = {
           src: "https://player.vimeo.com/video/1003172023?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
           title: "شرح تفعيل حجب المواقع الإباحية من جهاز الويندز | windows",
         },
-      },
-      {
-        device: "android",
-        gen: "gen1",
-        soon: true,
       },
 
       {
