@@ -5,59 +5,129 @@ import { genName } from "@/app/appTypes";
 import { deviceName, genParam, gensParams } from "../../genData";
 import LearnProtection from "@/app/components/LearnProtection";
 import Link from "next/link";
+import Image from "next/image";
 import { googleForm } from "@/importantLinks";
+
+const deviceMessages: Record<string, string> = {
+  android: "تحميل برنامج الاندرويد",
+  windows: "تحميل برنامج الويندوز",
+};
+
 
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
   const dev = (deviceData[params.gen] as deviceParams[]).find(
     (value) => value.device === params.device
   ) as deviceParams;
+  console.log(dev);
 
-  return (
-    <div className="flex flex-col items-center gap-10 mb-10 px-4">
-      <DeviceCard {...params} />
-      {dev.embeddedVideo !== undefined && (
-        <div className="flex flex-col items-center gap-4">
-          <iframe
-            {...dev.embeddedVideo}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            id="player"
-            className="w-full max-w-[400px] h-[500px] sm:h-[550px] md:h-[600px] aspect-[9/16] rounded-lg shadow-lg"
-            allowFullScreen
-          ></iframe>
-
-          <div className="text-center max-w-2xl p-6 rounded-lg shadow-md bg-gradient-to-r from-blue-500 to-indigo-500">
-            <h2 className="text-xl font-semibold text-white">
-              📝 سجل بياناتك للاستفادة الكاملة من الخدمة!
-            </h2>
-            <p className="text-white mt-2">
-              حتى نتمكن من تحسين الخدمة والتواصل معك عند الحاجة، يمكنك تسجيل
-              بياناتك الآن بسهولة. 🚀
-            </p>
-          </div>
-
+  return(
+    <div className="flex flex-col items-center mt-8">
+      <div className="flex flex-col text-center">
+        <h1 className="font-bold text-4xl tracking-widest">
+          {deviceMessages[dev.device] ?? "تفعيل الحماية"}
+        </h1>
+        <h2 className="text-xl break-normal max-w-2xl tracking-widest mt-2 text-gray-700 ">
+        نوصي بتفعيل الحماية علي جميع الأجهزة وعدم الاكتفاء بجهاز واحد، فلا توجد حماية 100%، ولكنها طبقات متعددة ترفع من مستوي الأمان  
+        </h2>
+      </div>
+    <div className="flex flex-row-reverse  justify-between items-center gap-10">
+      <div className="text-right max-w-xl">
+        <h1 className="text-3xl font-normal text-gray-700 mb-6 leading-relaxed tracking-widest ">
+        حماية نفسك و أطفالك و أحبابك <br />
+        على بعد خطوات!
+        </h1>
+        <ul className="text-gray-600 text-lg mb-6 space-y-2 pr-2">
+          <li>• ميزة رقم واحد عن التطبيق</li>
+          <li>• ميزة رقم اثنان عن التطبيق</li>
+          <li>• ميزة رقم ثلاثة عن التطبيق</li>
+        </ul>
+        <div className='flex'>
           <Link
-            href={googleForm}
-            target="_blank"
-            className="flex items-center justify-center px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg shadow-md transition-all duration-300 transform hover:from-blue-600 hover:to-indigo-600 hover:-translate-y-1 hover:shadow-lg active:scale-95"
+            href='/support'
+            className='text-white py-4 px-14 rounded-xl transition-all duration bg-gradient-to-l
+            from-[#E0462D] to-[#A73826]
+            hover:from-[#E0462D] hover:to-[#000]
+            '
           >
-            📝 تسجيل بياناتك الآن
+            حمل التطبيق
           </Link>
         </div>
-      )}
-
-      <Link
-        href={`/${params.gen}/setupguide/${params.device}/step1`}
-        className="w-full max-w-2xl flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-green-500 to-teal-500 rounded-lg shadow-md transition-all duration-300 transform hover:from-green-600 hover:to-teal-600 hover:-translate-y-1 hover:shadow-lg active:scale-95"
-      >
-        إبدأ في الخطوات 🚀
-      </Link>
-
-      <LearnProtection />
+      </div>
+      <div>
+      <div className='relative w-[340px] h-[340px] flex justify-center items-center transition-all duration-300 group-hover:scale-105'>
+           <Image
+            src={require(`@/public/devices/orange-${dev.device}.svg`)}
+            alt={dev.device}
+            className='object-contain drop-shadow-md transition-all duration-300 ml-24'
+            width={1000}
+            height={1000}
+          />
+        </div>
+      </div>
     </div>
-  );
+    <div className='flex justify-end'>
+          <Link
+            href='/support'
+            className='text-white py-4 px-8 rounded-xl transition-colors'
+            style={{
+              background: 'linear-gradient(180deg, #E0462D 0%, #A73826 100%)',
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
+            }}
+          >
+            خدمة العملاء
+          </Link>
+        </div>
+    </div>
+  )
+
+  // return (
+  //   <div className="flex flex-col items-center gap-10 mb-10 px-4">
+  //     <h1></h1>
+  //     <DeviceCard {...params} />            {/* The Device Card */}
+  //     {dev.embeddedVideo !== undefined && (
+  //       <div className="flex flex-col items-center gap-4">
+  //         <iframe
+  //           {...dev.embeddedVideo}
+  //           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+  //           id="player"
+  //           className="w-full max-w-[400px] h-[500px] sm:h-[550px] md:h-[600px] aspect-[9/16] rounded-lg shadow-lg"
+  //           allowFullScreen
+  //         ></iframe>
+
+  //         <div className="text-center max-w-2xl p-6 rounded-lg shadow-md bg-gradient-to-r from-blue-500 to-indigo-500">
+  //           <h2 className="text-xl font-semibold text-white">
+  //             📝 سجل بياناتك للاستفادة الكاملة من الخدمة!
+  //           </h2>
+  //           <p className="text-white mt-2">
+  //             حتى نتمكن من تحسين الخدمة والتواصل معك عند الحاجة، يمكنك تسجيل
+  //             بياناتك الآن بسهولة. 🚀
+  //           </p>
+  //         </div>
+
+  //         <Link
+  //           href={googleForm}
+  //           target="_blank"
+  //           className="flex items-center justify-center px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg shadow-md transition-all duration-300 transform hover:from-blue-600 hover:to-indigo-600 hover:-translate-y-1 hover:shadow-lg active:scale-95"
+  //         >
+  //           📝 تسجيل بياناتك الآن
+  //         </Link>
+  //       </div>
+  //     )}
+
+  //     <Link
+  //       href={`/${params.gen}/setupguide/${params.device}/step1`}
+  //       className="w-full max-w-2xl flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-green-500 to-teal-500 rounded-lg shadow-md transition-all duration-300 transform hover:from-green-600 hover:to-teal-600 hover:-translate-y-1 hover:shadow-lg active:scale-95"
+  //     >
+  //       إبدأ في الخطوات 🚀
+  //     </Link>
+
+  //     <LearnProtection />
+  //   </div>
+  // );
 }
 
 export default Page;
+
 
 export async function generateStaticParams() {
   return gensParams.flatMap((gen: genParam) =>
