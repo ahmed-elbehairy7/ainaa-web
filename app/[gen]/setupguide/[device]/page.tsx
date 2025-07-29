@@ -43,7 +43,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
             </ul>
             <div className='flex'>
               <Link
-                href='/gen1/setupguide/android'
+                href={`/gen1/setupguide/${dev.device}`}
                 className='text-white py-4 px-14 rounded-xl transition-all duration bg-gradient-to-l
                 from-[#E0462D] to-[#A73826]
                 hover:from-[#E0462D] hover:to-[#000]
