@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React, { useState } from "react";
@@ -135,6 +136,12 @@ const SetupValuesPage = () => {
       </div>
     </>
   );
+=======
+import SetupValuesComponent from "./SetupValuesComponent";
+
+const SetupValuesPage = () => {
+  return <SetupValuesComponent />;
+>>>>>>> 7c55bc536d1e97c62308b36b45bd0784ae2d42ab
 };
 
 export default SetupValuesPage;
