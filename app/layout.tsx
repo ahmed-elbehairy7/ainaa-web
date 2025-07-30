@@ -1,15 +1,16 @@
 import type { Metadata, Viewport } from "next"; // ✅ استيراد Viewport
-import { Almarai } from 'next/font/google';
+import { Almarai } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Warnning from "./components/Warnning";
+import Header from "./_components/Header";
+import Warnning from "./_components/Warnning";
+import Modal from "./_components/Modal";
 
 const almarai = Almarai({
   subsets: ["arabic"],
-  weight: ['300',"400", "700"],
+  weight: ["300", "400", "700"],
   display: "swap",
   adjustFontFallback: true,
-  preload: true
+  preload: true,
 });
 
 export const metadata: Metadata = {

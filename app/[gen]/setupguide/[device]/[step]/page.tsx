@@ -4,7 +4,7 @@ import stepData, { Step, stepName } from "./stepData";
 import { deviceName } from "@/app/[gen]/genData";
 import Image from "next/image";
 import Link from "next/link";
-import DeviceCard from "@/app/components/DeviceCard";
+import DeviceCard from "@/app/_components/DeviceCard";
 
 const StepPage = ({
   params,

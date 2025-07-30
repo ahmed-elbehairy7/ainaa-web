@@ -4,7 +4,7 @@ import { genData, gensParams } from "@/app/[gen]/genData";
 import setupValuesData, {
   levelSetupValues,
 } from "@/app/setupvalues/setupValuesData";
-import Table from "@/app/components/Table";
+import Table from "@/app/_components/Table";
 
 // TODO: implement an appropriate design
 

@@ -1,9 +1,9 @@
 import React from "react";
-import DeviceCard from "@/app/components/DeviceCard";
+import DeviceCard from "@/app/_components/DeviceCard";
 import deviceData, { deviceParams } from "./deviceData";
 import { genName } from "@/app/appTypes";
 import { deviceName, genParam, gensParams } from "../../genData";
-import LearnProtection from "@/app/components/LearnProtection";
+import LearnProtection from "@/app/_components/LearnProtection";
 import Link from "next/link";
 import { googleForm } from "@/importantLinks";
 
