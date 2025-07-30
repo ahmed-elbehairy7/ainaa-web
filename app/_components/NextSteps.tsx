@@ -1,14 +1,16 @@
-"use client";
-import { useState } from "react";
 import Modal from "../_components/Modal";
 import Link from "next/link";
 
-export default function NextStepsPage() {
-  const [isOpen, setIsOpen] = useState(true);
+type NextStepsProps = {
+  isOpen: boolean;
+  close: boolean;
+  onClose: () => void;
+};
 
+export default function NextSteps({ isOpen, close, onClose }: NextStepsProps) {
   return (
     <article className="px-4 flex flex-col items-center justify-center text-center">
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <Modal isOpen={isOpen} close={close} onClose={onClose}>
         <div className="flex flex-col items-center justify-center gap-8">
           <div>
             <h2 className="text-2xl font-semibold">
@@ -38,7 +40,7 @@ export default function NextStepsPage() {
 
           <div className="flex justify-around w-full items-center gap-4 ">
             <Link
-              href="/support"
+              href="/gen1/setupguide"
               className="w-40 p-4 rounded-md text-white bg-red-700 "
             >
               فعلها على جهاز آخر{" "}
