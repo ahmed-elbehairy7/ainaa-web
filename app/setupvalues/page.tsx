@@ -82,11 +82,9 @@ const SetupValuesPage = () => {
               {level.type === 'high' && (
                 <Link
                   href='/support'
-                  className='absolute bottom-[150px] left-0 z-10 transform -translate-x-1/2 text-white py-4 px-8 transition-colors'
+                  className='absolute bottom-[150px] left-0 z-10 transform bg-red-red2-gradient -translate-x-1/2 text-white py-4 px-8 transition-colors'
                   style={{
                     borderRadius: '20px',
-                    background:
-                      'var(--Red-Grad, linear-gradient(180deg, var(--colors-Red, #E0462D) 0%, var(--colors-Red-2, #A73826) 100%))',
                     boxShadow: '0 5px 4px 0 rgba(0, 0, 0, 0.25)',
                   }}
                 >

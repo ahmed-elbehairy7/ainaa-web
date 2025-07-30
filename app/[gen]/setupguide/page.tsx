@@ -52,14 +52,12 @@ function Page({ params }: { params: { gen: genName } }) {
           </div>
         </div>
 
-
         <div className='flex justify-end'>
           <Link
             href='/support'
-            className='text-white py-4 px-8 transition-colors'
+            className='text-white py-4 px-8 transition-colors bg-red-red2-gradient'
             style={{
               borderRadius: '20px',
-              background: 'linear-gradient(180deg, Red2 0%,  Red 100%)',
               boxShadow: '0 5px 4px 0 rgba(0, 0, 0, 0.25)',
             }}
           >

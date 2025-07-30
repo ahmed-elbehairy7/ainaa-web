@@ -22,6 +22,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "red-red2-gradient": "linear-gradient(180deg, #E0462D 0%, #A73826 100%)",
       },
       gradientColorStops: {
         "dark-gradient": {
