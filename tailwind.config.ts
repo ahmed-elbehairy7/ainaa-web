@@ -8,14 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        Red: "#E0462D",
-        Red2: "#A73826",
-        dark: "#1C1C1C",
-        Text: "#353535",
-        grey: "#7B7B7B",
-        "light-cyan": "#EBF7F6",
-        light: "#FFFFFF",
+      colors: {
+        Red: "#E0462D",  // Use as: text-Red, bg-Red, border-Red, etc.
+        Red2: "#A73826", // Use as: text-Red2, bg-Red2, border-Red2, etc.
+        dark: "#1C1C1C", // Use as: text-dark, bg-dark, border-dark, etc.
+        Text: "#353535", // Use as: text-Text, bg-Text, border-Text, etc.
+        grey: "#7B7B7B", // Use as: text-grey, bg-grey, border-grey, etc.
+        "light-cyan": "#EBF7F6", // Use as: text-light-cyan, bg-light-cyan, etc.
+        light: "#FFFFFF", // Use as: text-light, bg-light, border-light, etc.
       },
 
       backgroundImage: {
