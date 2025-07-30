@@ -30,7 +30,7 @@ function Page({ params }: { params: { gen: genName } }) {
         </p>
       </div>
 
-      <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-6'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center'>
         {genGuide.devices
           .filter(
             (device) =>
