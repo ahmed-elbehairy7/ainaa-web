@@ -1,14 +1,17 @@
+
 import { genName } from "@/app/appTypes";
-import React from "react";
 import { genData, gensParams } from "@/app/[gen]/genData";
 import setupValuesData, {
   levelSetupValues,
 } from "@/app/setupvalues/setupValuesData";
-import Table from "@/app/components/Table";
+import Table from "@/app/_components/Table";
+import Explanation from "./../../_components/Explanation";
 
 // TODO: implement an appropriate design
 
 const SetupValuesPage = ({ params }: { params: { gen: genName } }) => {
+  
+
   const setupValues = setupValuesData[params.gen];
   const gen = genData[params.gen];
   return (
@@ -30,6 +33,8 @@ const SetupValuesPage = ({ params }: { params: { gen: genName } }) => {
           );
         })}
       </div>
+
+    
     </div>
   );
 };

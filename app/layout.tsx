@@ -1,15 +1,14 @@
 import type { Metadata, Viewport } from "next"; // ✅ استيراد Viewport
-import { Almarai } from 'next/font/google';
+import { Almarai } from "next/font/google";
+import Header from "./_components/Header";
 import "./globals.css";
-import Header from "./components/Header";
-import Warnning from "./components/Warnning";
 
 const almarai = Almarai({
   subsets: ["arabic"],
-  weight: ['300',"400", "700"],
+  weight: ["300", "400", "700"],
   display: "swap",
   adjustFontFallback: true,
-  preload: true
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -136,6 +135,8 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+import Footer from "./_components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -147,6 +148,7 @@ export default function RootLayout({
         <Header />
         {/* <Warnning /> */}
         <main className="pt-24">{children}</main>
+        <Footer />
       </body>
     </html>
   );

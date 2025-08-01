@@ -1,5 +1,5 @@
 import React from "react";
-import CommingSoon from "../components/CommingSoon";
+import CommingSoon from "../_components/CommingSoon";
 
 function page() {
   return <CommingSoon />;
