@@ -73,7 +73,7 @@ export default function Home() {
           href: "/gen1/setupguide",
         }}
       />
-      <div className="bg-white   py-24">
+      <div className="bg-white py-24">
         <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
           <h2 className="text-text font-bold text-H4 max-w-xl text-center">
             ساهم في تطوير مستقبل أكثر أمانا للإنترنت
@@ -93,7 +93,7 @@ export default function Home() {
             </Link>
             <Link
               href={"/"}
-              className={cn("btn-outline", "!text-text !border-black ")}
+              className={cn("btn-outline", " !text-black !border-black ")}
             >
               كارت
             </Link>
