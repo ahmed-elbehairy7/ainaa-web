@@ -27,15 +27,15 @@ const SetupValuesPage = () => {
   // const redColor = "#e0472c";
 
   const renderDNSInfo = (level) => (
-    <div className="mt-4 text-right">
-      {["primary DNS", "secondary DNS", "Dns-Over-Https"].map(
+    <div className='mt-4 text-right'>
+      {['primary DNS', 'secondary DNS', 'Dns-Over-Https'].map(
         (label, index) => (
           <React.Fragment key={index}>
-            <p className="text-red-500 font-semibold text-[18px]">{label}</p>
-            <p className="mb-2 text-[18px] font-[600]">
-              {label === "Dns-Over-Https"
+            <p className='text-Red font-semibold text-[18px]'>{label}</p>
+            <p className='mb-2 text-[18px] font-[600]'>
+              {label === 'Dns-Over-Https'
                 ? `${setupLevels[level].subdomain}.mafazaa.com`
-                : setupLevels[level][label.split(" ")[0].toLowerCase()]}
+                : setupLevels[level][label.split(' ')[0].toLowerCase()]}
             </p>
           </React.Fragment>
         )
@@ -66,7 +66,7 @@ const SetupValuesPage = () => {
               <div className="p-4 text-right">
                 <h2
                   className="text-3xl font-bold mb-4 text-red-600 "
-                  // style={{ color: redColor }}
+                // style={{ color: redColor }}
                 >
                   {level.title}
                 </h2>
