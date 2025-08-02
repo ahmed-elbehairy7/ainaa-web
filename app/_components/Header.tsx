@@ -20,13 +20,12 @@ function Header() {
       clickHandler: () => setIsOpenExplanation(true),
     },
     { label: "مستويات الحماية", href: "/setupvalues/" },
-    { label: "عن المشروع", href: "/about" },
     {
       label: "التبرع لنا",
       href: "https://mafazaa.com/support_us",
       clickHandler: () => setIsSupportOpen(true),
     },
-    { label: "الدعم الفني", href: "/support" },
+    { label: "خدمة العملاء", href: "/support" },
   ];
 
   return (
@@ -81,9 +80,8 @@ function Header() {
 
         {/* Mobile Navigation */}
         <nav
-          className={`absolute top-full left-0 w-full bg-teal-700 shadow-md transition-transform transform ${
-            menuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
-          } origin-top`}
+          className={`absolute top-full left-0 w-full bg-teal-700 shadow-md transition-transform transform ${menuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+            } origin-top`}
         >
           <ul className="flex flex-col gap-y-3 text-center py-4">
             {navLinks.map(({ label, href }, index) => (

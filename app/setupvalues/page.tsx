@@ -26,6 +26,7 @@ import Explanation from "./../_components/Explanation";
 //   const setupLevels = setupValuesData.gen1;
 //   // const redColor = "#e0472c";
 
+<<<<<<< HEAD
 //   const renderDNSInfo = (level) => (
 //     <div className="mt-4 text-right">
 //       {["primary DNS", "secondary DNS", "Dns-Over-Https"].map(
@@ -42,6 +43,24 @@ import Explanation from "./../_components/Explanation";
 //       )}
 //     </div>
 //   );
+=======
+  const renderDNSInfo = (level) => (
+    <div className='mt-4 text-right'>
+      {['primary DNS', 'secondary DNS', 'Dns-Over-Https'].map(
+        (label, index) => (
+          <React.Fragment key={index}>
+            <p className='text-Red font-semibold text-[18px]'>{label}</p>
+            <p className='mb-2 text-[18px] font-[600]'>
+              {label === 'Dns-Over-Https'
+                ? `${setupLevels[level].subdomain}.mafazaa.com`
+                : setupLevels[level][label.split(' ')[0].toLowerCase()]}
+            </p>
+          </React.Fragment>
+        )
+      )}
+    </div>
+  );
+>>>>>>> 372179234c9ac837950b52b260f3bc3a1cb72b07
 
 //   return (
 //     <>
@@ -56,6 +75,7 @@ import Explanation from "./../_components/Explanation";
 //           <p className="text-xl text-gray-700">تفصيل مستويات الحماية المتاحة</p>
 //         </div>
 
+<<<<<<< HEAD
 //         {/* Protection Levels Cards */}
 //         <div className="flex flex-col items-center  md:flex-row md:items-start justify-center gap-[90px] w-full max-w-5xl ">
 //           {PROTECTION_LEVEL.map((level) => (
@@ -73,6 +93,25 @@ import Explanation from "./../_components/Explanation";
 //                 <p className="text-right text-gray-700 mb-12 text-[20px] leading-[30px]">
 //                   {level.description}
 //                 </p>
+=======
+        {/* Protection Levels Cards */}
+        <div className="flex flex-col items-center  md:flex-row md:items-start justify-center gap-[90px] w-full max-w-5xl ">
+          {PROTECTION_LEVEL.map((level) => (
+            <div
+              key={level.type}
+              className="min-h-[750px] border-[4px] border-[#353535] rounded-3xl overflow-hidden bg-white shadow-md px-[30px] py-[40px] w-[380px]"
+            >
+              <div className="p-4 text-right">
+                <h2
+                  className="text-3xl font-bold mb-4 text-red-600 "
+                // style={{ color: redColor }}
+                >
+                  {level.title}
+                </h2>
+                <p className="text-right text-gray-700 mb-12 text-[20px] leading-[30px]">
+                  {level.description}
+                </p>
+>>>>>>> 372179234c9ac837950b52b260f3bc3a1cb72b07
 
 //                 {/* Categories */}
 //                 <div className="flex flex-wrap justify-start gap-[25px] mb-12">
@@ -130,6 +169,7 @@ import Explanation from "./../_components/Explanation";
 //         ))}
 //       </div>
 
+<<<<<<< HEAD
 //       {/* Modal for Explanation */}
 //       <div className="  top-0 left-0 z-50 flex items-center justify-center bg-black/50">
 //         <Explanation isOpen={isOpen} onClose={() => setIsOpen(false)} />
@@ -142,4 +182,13 @@ const SetupValuesPage = () => {
   return <SetupValuesComponent />;
 };
 
+=======
+      {/* Modal for Explanation */}
+      <div className="  top-0 left-0 z-50 flex items-center justify-center bg-black/50">
+        <Explanation isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      </div>
+    </>
+  );
+}
+>>>>>>> 372179234c9ac837950b52b260f3bc3a1cb72b07
 export default SetupValuesPage;

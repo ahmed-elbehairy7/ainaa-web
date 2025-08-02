@@ -135,6 +135,8 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+import Footer from "./_components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -145,7 +147,8 @@ export default function RootLayout({
       <body>
         <Header />
         {/* <Warnning /> */}
-        <main className="pt-20">{children}</main>
+        <main className="pt-24">{children}</main>
+        <Footer />
       </body>
     </html>
   );

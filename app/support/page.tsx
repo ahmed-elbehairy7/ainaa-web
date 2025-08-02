@@ -1,7 +1,13 @@
+"use client"
 import Link from "next/link";
 import { customerSupportStep } from "../[gen]/setupguide/[device]/[step]/commonSteps";
+import { useEffect } from "react";
+import { redirect } from "next/navigation";
 
 export default function SupportPage() {
+  useEffect(() => {
+    redirect('https://www.facebook.com/messages/t/419901901197382')
+  }, [])
   return (
     <article className="px-4 flex flex-col items-center justify-center text-center">
       {/* 🔹 عنوان الصفحة */}
