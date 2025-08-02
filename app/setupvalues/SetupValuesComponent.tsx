@@ -55,7 +55,7 @@ const SetupValuesComponent = () => {
         {protectionLevels.map((level) => (
           <div
             key={level.type}
-            className="border-[4px] border-[#353535] rounded-3xl overflow-hidden bg-white shadow-md px-[30px] py-[40px] md:w-[380px]"
+            className="min-h-[750px] border-[4px] border-[#353535] rounded-3xl overflow-hidden bg-white shadow-md px-[30px] py-[40px] md:w-[380px]"
           >
             <div className="p-4 text-right">
               <h2

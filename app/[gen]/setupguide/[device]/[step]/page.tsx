@@ -28,12 +28,12 @@ const StepPage = ({
 
   return (
     <div
-      className="flex flex-col items-center justify-center mb-10 mx-auto gap-8 px-4"
+      className="flex flex-col items-center justify-center mb-10 mx-auto my-10 gap-8 px-4"
       dir="rtl"
     >
       <DeviceCard device={params.device} gen={params.gen} />
 
-      <h2 className="text-3xl md:text-4xl font-extrabold text-teal-700 bg-teal-100 px-6 py-3 rounded-lg shadow-md">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-red-700 bg-red-100 px-6 py-3 rounded-lg shadow-md">
         {isLastStep ? "طرق دعمنا" : `الخطوة ${currentStep}`}
       </h2>
 
@@ -41,23 +41,26 @@ const StepPage = ({
         {substeps?.map((step, index) => (
           <li key={index}>
             {step.type === "text" ? (
-              <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
+              <div className="w-full p-4 text-red-700 border border-red-300 rounded-lg bg-red-50 shadow-md">
                 <h3 className="font-semibold">
                   {index + 1}.{" "}
-                  {step.data?.toString().split("\n").map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
+                  {step.data
+                    ?.toString()
+                    .split("\n")
+                    .map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
                 </h3>
               </div>
             ) : step.type === "link" ? (
-              <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
+              <div className="w-full p-4 text-red-700 border border-red-300 rounded-lg bg-red-50 shadow-md">
                 <Link
                   href={(step.data as any).href}
                   target="_blank"
-                  className="underline text-teal-900 hover:text-teal-600"
+                  className="underline text-red-900 hover:text-red-600"
                 >
                   {index + 1}. {(step.data as any).text}
                 </Link>
@@ -81,7 +84,7 @@ const StepPage = ({
             href={`/${params.gen}/setupguide/${params.device}/step${
               currentStep - 1
             }`}
-            className="flex-1 flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-teal-600 to-teal-800 hover:from-teal-700 hover:to-teal-900 rounded-lg shadow-md transition-all duration-300"
+            className="flex-1 flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-red-600 to-red-800 hover:from-red-600 hover:to-red-700 rounded-lg shadow-md transition-all duration-300"
           >
             ➡️ السابق
           </Link>
@@ -93,12 +96,19 @@ const StepPage = ({
             href={`/${params.gen}/setupguide/${params.device}/step${
               currentStep + 1
             }`}
-            className="flex-1 flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 rounded-lg shadow-md transition-all duration-300"
+            className="flex-1 flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-red-800 to-red-600 hover:from-red-700 hover:to-red-600 rounded-lg shadow-md transition-all duration-300"
           >
             التالي ⬅️
           </Link>
         ) : (
-          <div className="flex-1" />
+          <div className="flex-1">
+            <Link
+              href="/congratulations"
+              className="flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-red-800 to-red-600 hover:from-red-700 hover:to-red-600 rounded-lg shadow-md transition-all duration-300"
+            >
+              التالي ⬅️
+            </Link>
+          </div>
         )}
       </div>
     </div>

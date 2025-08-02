@@ -71,7 +71,7 @@ function Header() {
 
           {/* Mobile Menu Button - React Icons */}
           <button
-            className="md:hidden p-0 text-white text-3xl z-50"
+            className="md:hidden p-0  text-3xl z-50"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
           >

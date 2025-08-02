@@ -1,14 +1,10 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import NextSteps from "../_components/NextSteps";
+import AfterBtn from "./_components/AfterBtn";
 
 export default function CongratulationsPage() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <main className="max-w-screen-lg mx-auto flex flex-col items-center  gap-8 px-4">
+    <main className="max-w-screen-lg mx-auto my-10 flex flex-col items-center  gap-8 px-4">
       <div className="flex flex-col items-center gap-4 mt-4">
         <p className="text-3xl font-bold">مبارك تفعيل الحماية!!</p>
         <p>
@@ -42,26 +38,15 @@ export default function CongratulationsPage() {
       </div>
 
       <div className="w-full flex justify-between items-center gap-4 ">
-        <button
-          className="w-64 p-4 text-center rounded-md text-white bg-red-700 "
-          onClick={() => setIsOpen(true)}
-        >
-          ماذا بعد تفعيل الحماية؟
-        </button>
+        <AfterBtn />
 
         <Link
-          href="/setupvalues"
+          href="/gen1/setupguide/router/step7"
           className="w-40 p-4 rounded-lg  border-4 border-black text-center "
         >
           السابق{" "}
         </Link>
       </div>
-
-      <NextSteps
-        isOpen={isOpen}
-        close={true}
-        onClose={() => setIsOpen(false)}
-      />
     </main>
   );
 }
