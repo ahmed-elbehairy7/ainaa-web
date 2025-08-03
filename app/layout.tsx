@@ -147,7 +147,7 @@ export default function RootLayout({
       <body>
         <Header />
         {/* <Warnning /> */}
-        <main className="pt-24">{children}</main>
+        <main className="pt-24 min-h-[550px]">{children}</main>
         <Footer />
       </body>
     </html>
