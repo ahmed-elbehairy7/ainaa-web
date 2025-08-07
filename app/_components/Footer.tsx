@@ -1,6 +1,5 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const FOOTER_CONTENT = {
   logo: {
@@ -20,7 +19,7 @@ const FOOTER_CONTENT = {
       { href: '/setupvalues', text: 'مستويات الحماية' },
       { href: '/support', text: 'خدمة العملاء' },
       { href: '/donate', text: 'ادعمنا' },
-      { href: '/blog', text: 'المدونة' },
+      { href: '/blogs', text: 'المدونة' },
     ],
   },
   aboutMafazaa: {
@@ -29,7 +28,7 @@ const FOOTER_CONTENT = {
       { href: '/about', text: 'مفازا' },
       { href: '/join', text: 'انضم إلينا' },
       { href: '/contribute', text: 'مشاريعنا' },
-      { href: '/blog', text: 'مدونة مفازا' },
+      { href: '/blogs', text: 'مدونة مفازا' },
     ],
   },
 };

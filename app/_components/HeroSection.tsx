@@ -11,11 +11,11 @@ const HeroSection = ({
   className: string;
   title: string;
   description: string;
-  button1: {
+  button1?: {
     text: string;
     href: string;
   };
-  button2: {
+  button2?: {
     text: string;
     href: string;
   };
@@ -32,14 +32,20 @@ const HeroSection = ({
       <div className="max-w-5xl mx-auto px-4 flex flex-col items-center justify-center text-center text-white relative z-10 h-full w-full">
         <h1 className="text-H1 font-bold text-white">{title}</h1>
         <p className="text-paragraph mt-4">{description}</p>
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 mt-24">
-          <Link href={button1.href} className="btn-primary">
-            {button1.text}
-          </Link>
-          <Link href={button2.href} className="btn-outline">
-            {button2.text}
-          </Link>
-        </div>
+        {button1 || button2 ? (
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 mt-24">
+            {button1 && (
+              <Link href={button1.href} className="btn-primary">
+                {button1.text}
+              </Link>
+            )}
+            {button2 && (
+              <Link href={button2.href} className="btn-outline">
+                {button2.text}
+              </Link>
+            )}
+          </div>
+        ) : null}
       </div>
     </div>
   );

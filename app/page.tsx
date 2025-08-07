@@ -14,7 +14,7 @@ export default function Home() {
         description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
         button1={{
           text: "اقرأ المزيد...",
-          href: "/blog",
+          href: "/blogs",
         }}
         button2={{
           text: "فعل الحماية",
@@ -33,18 +33,24 @@ export default function Home() {
       </div>
       <div className="  grid lg:grid-cols-2 ">
         <BlogCard
+          isMain
+          blogId="1"
           className="bg-blog-image2 max-lg:bg-right"
           title="أطفالكم في خطر عظيم!"
           description="نداء استغاثة من شاب عن واقع الأجيال الحالية"
         />
         <BlogCard
+          isMain
+          blogId="2"
           className="bg-blog-image1"
           title="أطفئ حريق الإباحية"
           description="دليل الشباب المبتلى عن كيفية الإقلاع عن الإباحية بإذن الله"
         />
       </div>
       <div className="flex items-center justify-center py-24">
-        <button className="btn-primary">المزيد من مدونتنا</button>
+        <Link href={"/blogs"} className="btn-primary">
+          المزيد من مدونتنا
+        </Link>
       </div>
       <HeroSection
         className="bg-home-hero2"
@@ -52,7 +58,7 @@ export default function Home() {
         description="« كُلُّكْمْ رَاعٍ، وَكُلُّكُمْ مَسْئوُلٌ عَنْ رَعِيتّهِِ... والرَّجُلُ راعٍ في أهْلِهِ وهو مَسْئُولٌ عن رَعِيَّتِهِ »"
         button1={{
           text: "اقرأ المزيد...",
-          href: "/blog",
+          href: "/blogs",
         }}
         button2={{
           text: "فعل الحماية",
@@ -66,7 +72,7 @@ export default function Home() {
         description="كلما تعرض الشخص للإباحية في صغره، كان خروجه منها أصعب و أشد!"
         button1={{
           text: "اقرأ المزيد...",
-          href: "/blog",
+          href: "/blogs",
         }}
         button2={{
           text: "فعل الحماية",
