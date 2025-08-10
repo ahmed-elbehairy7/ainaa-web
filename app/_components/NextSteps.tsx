@@ -24,13 +24,17 @@ export default function NextSteps({ isOpen, close, onClose }: NextStepsProps) {
 						للكبارو عن الخروج من مستنقع الإباحية للشباب المبتلى.
 						<br />
 						يمكنك أيضا{" "}
-						<Link href="/support" className="text-red-700">
+						<Link
+							href="https://mafazaa.com/support_us"
+							target="_blank"
+							className="text-red-700"
+						>
 							دعمنا
 						</Link>{" "}
 						أو{" "}
 						<a
 							rel="noopener noreferrer"
-							href="https://www.mafazaa.com/details?type=skilled"
+							href="https://www.mafazaa.com/join"
 							target="_blank"
 							className="text-red-700"
 						>
