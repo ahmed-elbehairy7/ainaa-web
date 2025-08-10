@@ -18,16 +18,19 @@ const FOOTER_CONTENT = {
 			{ href: "/", text: "الصفحة الرئيسية" },
 			{ href: "/setupvalues", text: "مستويات الحماية" },
 			{ href: "/support", text: "خدمة العملاء" },
-			{ href: "/donate", text: "ادعمنا" },
+			{ href: "https://mafazaa.com/support_us", text: "ادعمنا" },
 			// { href: '/blogs', text: 'المدونة' },
 		],
 	},
 	aboutMafazaa: {
 		title: "عن مفازا",
 		links: [
-			{ href: "/about", text: "مفازا" },
-			{ href: "/join", text: "انضم إلينا" },
-			{ href: "/contribute", text: "مشاريعنا" },
+			{ href: "https://mafazaa.com", text: "مفازا" },
+			{ href: "https://mafazaa.com/join", text: "انضم إلينا" },
+			{
+				href: "https://mafazaa.com/#projects",
+				text: "مشاريعنا",
+			},
 			// { href: '/blogs', text: 'مدونة مفازا' },
 		],
 	},

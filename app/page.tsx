@@ -56,6 +56,9 @@ export default function Home() {
 				// 			</Link>
 				// 		</div>
 			}
+
+			<SetupValuesComponent />
+
 			<HeroSection
 				className="bg-home-hero2"
 				title="ولدك ليس استثناء، حماية منزلك لم يعد أمرا اختياريا بعد الآن"
@@ -69,7 +72,6 @@ export default function Home() {
 					href: "/gen1/setupguide",
 				}}
 			/>
-			<SetupValuesComponent />
 			<HeroSection
 				className="bg-home-hero3"
 				title="اليوم مقطعٌ واحد، و غدا مدمنٌ في سن العشرين"
