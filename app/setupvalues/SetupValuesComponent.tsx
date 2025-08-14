@@ -4,7 +4,6 @@ import setupValuesData from './setupValuesData';
 
 const SetupValuesComponent = () => {
   const setupLevels = setupValuesData.gen1;
-  const redColor = '#e0472c';
 
   const protectionLevels = [
     {
@@ -59,8 +58,7 @@ const SetupValuesComponent = () => {
           >
             <div className='p-4 text-right'>
               <h2
-                className='text-3xl font-bold mb-4'
-                style={{ color: redColor }}
+                className='text-Red text-3xl font-bold mb-4'
               >
                 {level.title}
               </h2>
@@ -111,7 +109,6 @@ const SetupValuesComponent = () => {
           <Link
             href={button.href}
             className={`${button.className} md:py-8 md:px-20`}
-            style={{ backgroundColor: redColor }}
           >
             {button.text}
           </Link>
