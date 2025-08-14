@@ -17,7 +17,8 @@ const HeroSection = ({
   };
   button2?: {
     text: string;
-    href: string;
+    href?: string;
+    handleClick?: () => void;
   };
 }) => {
   return (
@@ -39,10 +40,15 @@ const HeroSection = ({
                 {button1.text}
               </Link>
             )}
-            {button2 && (
+            {button2?.href && (
               <Link href={button2.href} className="btn-outline">
                 {button2.text}
               </Link>
+            )}
+            {button2?.handleClick && (
+              <button onClick={button2.handleClick} className="btn-outline">
+                {button2.text}
+              </button>
             )}
           </div>
         ) : null}

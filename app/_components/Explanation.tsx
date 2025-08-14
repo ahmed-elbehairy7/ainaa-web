@@ -1,7 +1,6 @@
 "use client";
-import { useState } from "react";
-import Modal from "../_components/Modal";
 import Link from "next/link";
+import Modal from "../_components/Modal";
 
 type ExplanationProps = {
 	isOpen: boolean;
@@ -10,7 +9,7 @@ type ExplanationProps = {
 export default function Explanation({ isOpen, onClose }: ExplanationProps) {
 	return (
 		// <article className="px-4 flex flex-col items-center justify-center text-center">
-		<Modal isOpen={isOpen}>
+		<Modal isOpen={isOpen} onClose={onClose}>
 			<div className="flex flex-col items-center justify-center gap-8">
 				<h2 className="text-3xl font-semibold">تنبيهات!!</h2>
 
@@ -29,7 +28,7 @@ export default function Explanation({ isOpen, onClose }: ExplanationProps) {
 				<div className="flex justify-around w-full items-center gap-4 ">
 					<Link
 						href="/gen1/setupguide"
-						className="w-40 p-4 rounded-md text-white bg-red-700"
+						className="w-40 p-4 rounded-md text-white bg-red-700 text-center"
 						onClick={onClose}
 					>
 						أكمل
