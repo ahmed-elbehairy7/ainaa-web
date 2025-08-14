@@ -61,7 +61,6 @@ const Footer = () => {
 		<footer className="bg-gradient-to-br from-Text via-dark to-dark text-[#DADADA] py-10">
 			<div className="container mx-auto px-4">
 				<div className="flex flex-col justify-center items-center gap-12 md:flex-row md:gap-16 lg:gap-24 xl:gap-32 2xl:gap-40">
-					{/* Logo and Activation Button */}
 					<div className="w-fit flex flex-col justify-center items-center gap-10">
 						<Image
 							src={FOOTER_CONTENT.logo.src}
@@ -82,15 +81,11 @@ const Footer = () => {
 							{FOOTER_CONTENT.activationButton.text}
 						</Link>
 					</div>
-
-					{/* Important Links */}
 					<div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24">
 						<FooterLinkList
 							title={FOOTER_CONTENT.importantLinks.title}
 							links={FOOTER_CONTENT.importantLinks.links}
 						/>
-
-						{/* About Mafazaa */}
 						<FooterLinkList
 							title={FOOTER_CONTENT.aboutMafazaa.title}
 							links={FOOTER_CONTENT.aboutMafazaa.links}
