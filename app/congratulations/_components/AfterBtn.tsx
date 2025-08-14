@@ -8,7 +8,7 @@ export default function AfterBtn() {
   return (
     <>
       <button
-        className="w-64 p-4 text-center rounded-md text-white bg-red-700 "
+        className='w-full sm:w-64 p-4 text-center rounded-xl bg-gradient-to-r from-Red to-Red2 text-white text-sm md:text-base'
         onClick={() => setIsOpen(true)}
       >
         ماذا بعد تفعيل الحماية؟
