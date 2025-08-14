@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import MainLogo from "./../../public/logo.svg";
-import { FiMenu, FiX } from "react-icons/fi"; // ✅ استيراد الأيقونات
+import { FiMenu, FiX } from "react-icons/fi"; 
 import Image from "next/image";
 import Explanation from "./Explanation";
 import SupportUs from "./SupportUs";
@@ -12,7 +12,6 @@ function Header() {
 	const [isOpenExplanation, setIsOpenExplanation] = useState(false);
 	const [isSupportOpen, setIsSupportOpen] = useState(false);
 
-	// قائمة الروابط
 	const navLinks = [
 		{
 			label: "ابدأ الآن",
@@ -39,7 +38,6 @@ function Header() {
 						</Link>
 					</h1>
 
-					{/* Desktop Navigation */}
 					<nav className="hidden md:flex">
 						<ul className="flex gap-x-6">
 							{navLinks.map(
@@ -72,7 +70,6 @@ function Header() {
 						</ul>
 					</nav>
 
-					{/* Mobile Menu Button - React Icons */}
 					<button
 						className="md:hidden p-0  text-3xl z-50"
 						onClick={() => setMenuOpen(!menuOpen)}
@@ -82,7 +79,6 @@ function Header() {
 					</button>
 				</div>
 
-				{/* Mobile Navigation */}
 				<nav
 					className={`absolute top-full left-0 w-full bg-white shadow-md transition-transform transform ${
 						menuOpen
@@ -115,14 +111,12 @@ function Header() {
 				</nav>
 			</header>
 
-			{/* Modal for Explanation */}
 			<div className="  top-0 left-0 z-50 flex items-center justify-center bg-black/50">
 				<Explanation
 					isOpen={isOpenExplanation}
 					onClose={() => setIsOpenExplanation(false)}
 				/>
 			</div>
-			{/* Modal for Support Us */}
 			<div className="  top-0 left-0 z-50 flex items-center justify-center bg-black/50">
 				<SupportUs
 					close={true}
