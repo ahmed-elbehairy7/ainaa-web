@@ -84,7 +84,7 @@ function Header() {
 
 				{/* Mobile Navigation */}
 				<nav
-					className={`absolute top-full left-0 w-full bg-teal-700 shadow-md transition-transform transform ${
+					className={`absolute top-full left-0 w-full bg-white shadow-md transition-transform transform ${
 						menuOpen
 							? "scale-y-100 opacity-100"
 							: "scale-y-0 opacity-0"
