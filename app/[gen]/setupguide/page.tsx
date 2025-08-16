@@ -38,7 +38,6 @@ function Page({ params }: { params: { gen: genName } }) {
               ['windows', 'router', 'android'].includes(device.device)
           )
           .map((device, i) => {
-            console.log(device);
             return <DeviceCard {...device} key={i} />;
           })}
       </div>
