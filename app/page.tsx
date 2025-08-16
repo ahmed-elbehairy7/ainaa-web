@@ -1,120 +1,137 @@
-import { cn } from "@/utils";
-import Link from "next/link";
-import BlogCard from "./_components/BlogCard";
+"use client";
+
+import { useState } from "react";
+import Explanation from "./_components/Explanation";
 import HeroSection from "./_components/HeroSection";
 import SetupValuesComponent from "./setupvalues/SetupValuesComponent";
 
 export default function Home() {
-	return (
-		<div>
-			{/* Hero Section */}
-			<HeroSection
-				className="bg-home-hero"
-				title="اعطاء ابنك هاتفا، ضمان لتعرضه لموادٍ إباحية!"
-				description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
-				// button1={{
-				// 	text: "اقرأ المزيد...",
-				// 	href: "/blogs",
-				// }}
-				button2={{
-					text: "فعل الحماية",
-					href: "/gen1/setupguide",
-				}}
-			/>
+  const [isOpenExplanation, setIsOpenExplanation] = useState(false);
+  return (
+    <div>
+      {/* Hero Section */}
+      <HeroSection
+        className="bg-home-hero"
+        title="اعطاء ابنك هاتفا، ضمان لتعرضه لموادٍ إباحية!"
+        description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
+        // button1={{
+        // 	text: "اقرأ المزيد...",
+        // 	href: "/blogs",
+        // }}
+        button2={{
+          text: "فعل الحماية",
+          handleClick: () => {
+            setIsOpenExplanation(true);
+          },
+        }}
+      />
 
-			{
-				// <div className="bg-white   py-24">
-				// 			<div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
-				// 				<h2 className="text-text font-bold text-5xl">
-				// 					أهم مقالاتنا
-				// 				</h2>
-				// 				<p className="text-text text-2xl font-bold text-center">
-				// 					مقال توعوي للأباء و الأمهات عن ما وصلت إليه الإباحية في
-				// 					هذا الزمن، و آخر يساعد الشباب على التعافي بإذن الله
-				// 				</p>
-				// 			</div>
-				// 		</div>
-				// 		<div className="  grid lg:grid-cols-2 ">
-				// 			<BlogCard
-				// 				isMain
-				// 				blogId="1"
-				// 				className="bg-blog-image2 max-lg:bg-right"
-				// 				title="أطفالكم في خطر عظيم!"
-				// 				description="نداء استغاثة من شاب عن واقع الأجيال الحالية"
-				// 			/>
-				// 			<BlogCard
-				// 				isMain
-				// 				blogId="2"
-				// 				className="bg-blog-image1"
-				// 				title="أطفئ حريق الإباحية"
-				// 				description="دليل الشباب المبتلى عن كيفية الإقلاع عن الإباحية بإذن الله"
-				// 			/>
-				// 		</div>
-				// 		<div className="flex items-center justify-center py-24">
-				// 			<Link href={"/blogs"} className="btn-primary">
-				// 				المزيد من مدونتنا
-				// 			</Link>
-				// 		</div>
-			}
+      {
+        // <div className="bg-white   py-24">
+        // 			<div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
+        // 				<h2 className="text-text font-bold text-5xl">
+        // 					أهم مقالاتنا
+        // 				</h2>
+        // 				<p className="text-text text-2xl font-bold text-center">
+        // 					مقال توعوي للأباء و الأمهات عن ما وصلت إليه الإباحية في
+        // 					هذا الزمن، و آخر يساعد الشباب على التعافي بإذن الله
+        // 				</p>
+        // 			</div>
+        // 		</div>
+        // 		<div className="  grid lg:grid-cols-2 ">
+        // 			<BlogCard
+        // 				isMain
+        // 				blogId="1"
+        // 				className="bg-blog-image2 max-lg:bg-right"
+        // 				title="أطفالكم في خطر عظيم!"
+        // 				description="نداء استغاثة من شاب عن واقع الأجيال الحالية"
+        // 			/>
+        // 			<BlogCard
+        // 				isMain
+        // 				blogId="2"
+        // 				className="bg-blog-image1"
+        // 				title="أطفئ حريق الإباحية"
+        // 				description="دليل الشباب المبتلى عن كيفية الإقلاع عن الإباحية بإذن الله"
+        // 			/>
+        // 		</div>
+        // 		<div className="flex items-center justify-center py-24">
+        // 			<Link href={"/blogs"} className="btn-primary">
+        // 				المزيد من مدونتنا
+        // 			</Link>
+        // 		</div>
+      }
 
-			<SetupValuesComponent />
+      <SetupValuesComponent />
 
-			<HeroSection
-				className="bg-home-hero2"
-				title="ولدك ليس استثناء، حماية منزلك لم يعد أمرا اختياريا بعد الآن"
-				description="« كُلُّكْمْ رَاعٍ، وَكُلُّكُمْ مَسْئوُلٌ عَنْ رَعِيتّهِِ... والرَّجُلُ راعٍ في أهْلِهِ وهو مَسْئُولٌ عن رَعِيَّتِهِ »"
-				// button1={{
-				// 	text: "اقرأ المزيد...",
-				// 	href: "/blogs",
-				// }}
-				button2={{
-					text: "فعل الحماية",
-					href: "/gen1/setupguide",
-				}}
-			/>
-			<HeroSection
-				className="bg-home-hero3"
-				title="اليوم مقطعٌ واحد، و غدا مدمنٌ في سن العشرين"
-				description="كلما تعرض الشخص للإباحية في صغره، كان خروجه منها أصعب و أشد!"
-				// button1={{
-				// 	text: "اقرأ المزيد...",
-				// 	href: "/blogs",
-				// }}
-				button2={{
-					text: "فعل الحماية",
-					href: "/gen1/setupguide",
-				}}
-			/>
-			{
-				//TODO: uncomment
-				// <div className="bg-white py-24">
-				//   <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
-				//     <h2 className="text-text font-bold text-H4 max-w-xl text-center">
-				//       ساهم في تطوير مستقبل أكثر أمانا للإنترنت
-				//     </h2>
-				//     <div>
-				//       <h5 className="text-text  text-H5">المبلغ (جنيه مصري)</h5>
-				//       <input
-				//         name="amount"
-				//         type="number"
-				//         placeholder="أدخل المبلغ هنا"
-				//         className="border p-4 no-arrows rounded-md mt-5 text-paragraph w-full placeholder:text-paragraph placeholder:text-grey "
-				//       />
-				//     </div>
-				//     <div className="flex flex-col lg:flex-row gap-10 mt-24">
-				//       <Link href={"/"} className="btn-primary">
-				//         محفظة
-				//       </Link>
-				//       <Link
-				//         href={"/"}
-				//         className={cn("btn-outline", " !text-black !border-black ")}
-				//       >
-				//         كارت
-				//       </Link>
-				//     </div>
-				//   </div>
-				// </div>
-			}
-		</div>
-	);
+      <HeroSection
+        className="bg-home-hero2"
+        title="ولدك ليس استثناء، حماية منزلك لم يعد أمرا اختياريا بعد الآن"
+        description="« كُلُّكْمْ رَاعٍ، وَكُلُّكُمْ مَسْئوُلٌ عَنْ رَعِيتّهِِ... والرَّجُلُ راعٍ في أهْلِهِ وهو مَسْئُولٌ عن رَعِيَّتِهِ »"
+        // button1={{
+        // 	text: "اقرأ المزيد...",
+        // 	href: "/blogs",
+        // }}
+        button2={{
+          text: "فعل الحماية",
+          handleClick: () => {
+            setIsOpenExplanation(true);
+          },
+        }}
+      />
+      <HeroSection
+        className="bg-home-hero3"
+        title="اليوم مقطعٌ واحد، و غدا مدمنٌ في سن العشرين"
+        description="كلما تعرض الشخص للإباحية في صغره، كان خروجه منها أصعب و أشد!"
+        // button1={{
+        // 	text: "اقرأ المزيد...",
+        // 	href: "/blogs",
+        // }}
+        button2={{
+          text: "فعل الحماية",
+          href: "/gen1/setupguide",
+          handleClick: () => {
+            setIsOpenExplanation(true);
+          },
+        }}
+      />
+      {
+        //TODO: uncomment
+        // <div className="bg-white py-24">
+        //   <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
+        //     <h2 className="text-text font-bold text-H4 max-w-xl text-center">
+        //       ساهم في تطوير مستقبل أكثر أمانا للإنترنت
+        //     </h2>
+        //     <div>
+        //       <h5 className="text-text  text-H5">المبلغ (جنيه مصري)</h5>
+        //       <input
+        //         name="amount"
+        //         type="number"
+        //         placeholder="أدخل المبلغ هنا"
+        //         className="border p-4 no-arrows rounded-md mt-5 text-paragraph w-full placeholder:text-paragraph placeholder:text-grey "
+        //       />
+        //     </div>
+        //     <div className="flex flex-col lg:flex-row gap-10 mt-24">
+        //       <Link href={"/"} className="btn-primary">
+        //         محفظة
+        //       </Link>
+        //       <Link
+        //         href={"/"}
+        //         className={cn("btn-outline", " !text-black !border-black ")}
+        //       >
+        //         كارت
+        //       </Link>
+        //     </div>
+        //   </div>
+        // </div>
+      }
+
+      {/* Modal for Explanation */}
+      <div className="  top-0 left-0 z-50 flex items-center justify-center bg-black/50">
+        <Explanation
+          isOpen={isOpenExplanation}
+          onClose={() => setIsOpenExplanation(false)}
+        />
+      </div>
+    </div>
+  );
 }
