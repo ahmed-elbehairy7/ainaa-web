@@ -1,36 +1,35 @@
-import Link from "next/link";
-import React from "react";
-import setupValuesData from "./setupValuesData";
+import Link from 'next/link';
+import React from 'react';
+import setupValuesData from './setupValuesData';
 
 const SetupValuesComponent = () => {
   const setupLevels = setupValuesData.gen1;
-  const redColor = "#e0472c";
 
   const protectionLevels = [
     {
-      type: "low",
-      title: "الحماية المنخفضة",
+      type: 'low',
+      title: 'الحماية المنخفضة',
       description:
-        "تحجب لك فقط الأساسيات التي قد تزعجك أو تعد غير مناسبة، مع إبقاء معظم المحتوى متاحًا لتصفح أكثر حرية مثل:",
+        'تحجب لك فقط الأساسيات التي قد تزعجك أو تعد غير مناسبة، مع إبقاء معظم المحتوى متاحًا لتصفح أكثر حرية مثل:',
     },
     {
-      type: "high",
-      title: "الحماية العالية",
+      type: 'high',
+      title: 'الحماية العالية',
       description:
-        "توفر لك حماية شاملة من معظم أنواع المحتوى غير المرغوب فيه، مما يضمن تجربة تصفح أكثر أمانًا وراحة مثل:",
+        'توفر لك حماية شاملة من معظم أنواع المحتوى غير المرغوب فيه، مما يضمن تجربة تصفح أكثر أمانًا وراحة مثل:',
     },
   ];
 
   const renderDNSInfo = (level) => (
-    <div className="mt-4 text-right">
-      {["primary DNS", "secondary DNS", "Dns-Over-Https"].map(
+    <div className='mt-4 text-right'>
+      {['primary DNS', 'secondary DNS', 'Dns-Over-Https'].map(
         (label, index) => (
           <React.Fragment key={index}>
             <p className="text-red-500 font-semibold text-sm sm:text-base md:text-[18px]">{label}</p>
             <p className="mb-2 text-sm sm:text-base md:text-[18px] font-[600] break-words">
               {label === "Dns-Over-Https"
                 ? `${setupLevels[level].subdomain}.mafazaa.com`
-                : setupLevels[level][label.split(" ")[0].toLowerCase()]}
+                : setupLevels[level][label.split(' ')[0].toLowerCase()]}
             </p>
           </React.Fragment>
         )
@@ -40,9 +39,9 @@ const SetupValuesComponent = () => {
 
   return (
     <div
-      className="my-[70px] flex flex-col gap-10
-       items-center px-4 bg-bg-cover bg-center bg-no-repeat"
-      dir="rtl"
+      className='my-[70px] flex flex-col gap-10
+       items-center px-4 bg-bg-cover bg-center bg-no-repeat'
+      dir='rtl'
     >
       {/* Header */}
       <div className="text-center mb-6 sm:mb-8">
@@ -90,8 +89,8 @@ const SetupValuesComponent = () => {
       {/* Buttons */}
       {[
         {
-          href: "/gen1/setupguide",
-          text: "فعل الحماية الآن",
+          href: '/gen1/setupguide',
+          text: 'فعل الحماية الآن',
           className:
             "mt-8 sm:mt-10 md:mt-12 mb-4 sm:mb-6 text-white py-4 sm:py-6 md:py-8 px-6 sm:px-10 md:px-20 rounded-[16px] text-lg sm:text-xl md:text-2xl font-medium transition-colors bg-gradient-to-r from-[#E0462D] to-[#A73826] w-full sm:w-auto text-center",
         },
@@ -104,12 +103,12 @@ const SetupValuesComponent = () => {
       ].map((button, index) => (
         <div
           key={index}
-          className={index === 0 ? "mt-12 mb-6" : "absolute left-0 top-0"}
+          className={`${index === 0 ? 'mt-6 mb-3' : 'absolute left-0 top-0'
+            } md:mt-12 md:mb-6`}
         >
           <Link
             href={button.href}
-            className={button.className}
-            style={{ backgroundColor: redColor }}
+            className={`${button.className} md:py-8 md:px-20`}
           >
             {button.text}
           </Link>

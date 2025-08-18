@@ -17,7 +17,8 @@ const HeroSection = ({
   };
   button2?: {
     text: string;
-    href: string;
+    href?: string;
+    handleClick?: () => void;
   };
 }) => {
   return (
@@ -35,20 +36,25 @@ const HeroSection = ({
         {button1 || button2 ? (
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 lg:gap-20 mt-12 md:mt-16 lg:mt-24 w-full justify-center">
             {button1 && (
-              <Link 
-                href={button1.href} 
+              <Link
+                href={button1.href}
                 className="w-full sm:w-auto text-center text-white px-6 sm:px-10 md:px-16 lg:px-20 py-4 sm:py-6 lg:py-8 rounded-[16px] font-medium text-lg sm:text-xl lg:text-2xl transition-colors bg-gradient-to-r from-Red to-Red2"
               >
                 {button1.text}
               </Link>
             )}
-            {button2 && (
-              <Link 
-                href={button2.href} 
+            {button2?.href && (
+              <Link
+                href={button2.href}
                 className="w-full sm:w-auto text-center text-white px-6 sm:px-10 md:px-16 lg:px-20 py-4 sm:py-6 lg:py-8 rounded-[16px] font-medium text-base sm:text-xl lg:text-paragraph border-2 sm:border-[3px] md:border-4 lg:border-[5px] border-white flex items-center justify-center"
               >
                 {button2.text}
               </Link>
+            )}
+            {button2?.handleClick && (
+              <button onClick={button2.handleClick} className="btn-outline">
+                {button2.text}
+              </button>
             )}
           </div>
         ) : null}
