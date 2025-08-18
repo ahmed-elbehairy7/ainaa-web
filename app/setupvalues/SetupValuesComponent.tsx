@@ -59,7 +59,7 @@ const SetupValuesComponent = () => {
             <div className="p-2 sm:p-3 md:p-4 text-right">
               <h2
                 className="text-2xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 md:mb-4"
-                style={{ color: redColor }}
+                style={{ color: '#E0462D' }}
               >
                 {level.title}
               </h2>
