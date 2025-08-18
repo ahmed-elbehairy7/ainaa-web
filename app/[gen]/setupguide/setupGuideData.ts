@@ -8,7 +8,10 @@ const setupGuideData: { gen1: genSetupGuideData; gen2: genSetupGuideData } = {
       {
         device: "android",
         gen: "gen1",
-
+        embeddedVideo: {
+          src: "https://player.vimeo.com/video/1003172023?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+          title: "شرح تفعيل حجب المواقع الإباحية على الأندرويد | Android Settings",
+        },
       },
       {
         device: "router",

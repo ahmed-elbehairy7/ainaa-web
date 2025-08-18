@@ -42,13 +42,13 @@ body {
   }
 
   .btn {
-    @apply text-white  px-20 rounded-[16px] font-medium  text-paragraph;
+    @apply text-white px-6 sm:px-10 md:px-16 lg:px-20 rounded-[16px] font-medium text-base sm:text-xl lg:text-paragraph;
   }
   .btn-primary {
-    @apply btn  py-8  text-2xl  transition-colors bg-gradient-to-r from-[#E0462D] to-[#A73826];
+    @apply btn py-4 sm:py-6 lg:py-8 text-lg sm:text-xl lg:text-2xl transition-colors bg-gradient-to-r from-[#E0462D] to-[#A73826];
   }
   .btn-outline {
-    @apply btn box-border border-[5px] h-[97px]  border-white flex items-center justify-center;
+    @apply btn box-border border-2 sm:border-[3px] md:border-4 lg:border-[5px] py-4 sm:py-6 lg:py-8 border-white flex items-center justify-center;
   }
   .container {
     @apply max-w-5xl mx-auto px-4;

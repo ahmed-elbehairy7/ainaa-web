@@ -13,12 +13,12 @@ export default function NextSteps({ isOpen, close, onClose }: NextStepsProps) {
 			<Modal isOpen={isOpen} close={close} onClose={onClose}>
 				<div className="flex flex-col items-center justify-center gap-8">
 					<div>
-						<h2 className="text-2xl font-semibold">
-							لا يزال لدينا مفاجئات أخرى..!{" "}
+						<h2 className="text-xl sm:text-xl md:text-2xl font-semibold">
+							لا يزال لدينا مفاجئات أخرى..!
 						</h2>
-						<p className="mt-2">ما هي خطوتك القادمة؟</p>
+						<p className="mt-2 text-sm sm:text-base">ما هي خطوتك القادمة؟</p>
 					</div>
-					<p>
+					<p className="text-xs sm:text-sm md:text-base text-center px-2 sm:px-4">
 						يمكنك تفعيل الحماية على جهاز آخر! و لا تنسى قراءة
 						مقالاتنا عن ما وصلت إليه الأجيال الحالية مع الإباحية
 						للكبارو عن الخروج من مستنقع الإباحية للشباب المبتلى.
@@ -42,12 +42,12 @@ export default function NextSteps({ isOpen, close, onClose }: NextStepsProps) {
 						</a>
 					</p>
 
-					<div className="flex justify-around w-full items-center gap-4 ">
+					<div className="flex flex-col sm:flex-row justify-around w-full items-center gap-4 sm:gap-6 md:gap-8">
 						<Link
 							href="/gen1/setupguide"
-							className="w-40 p-4 rounded-md text-white bg-red-700 "
+							className="w-full sm:w-auto px-4 py-3 sm:py-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
 						>
-							فعلها على جهاز آخر{" "}
+							فعلها على جهاز آخر
 						</Link>
 
 						{/* // Todo: Need to add a link for "مقالات تهمك" */}

@@ -19,7 +19,7 @@ function DeviceCard({ device, gen, soon }: deviceParams) {
   return (
     <Link
       href={soon ? `/commingSoon` : `/${gen}/setupguide/${device}`}
-      className={`relative group p-6 lg:px-10 duration-300 transform border border-gray-300 text-gray-900 shadow-lg rounded-[30px] w-[289px] h-[289px] flex flex-col gap-5 justify-center items-center transition-all
+      className={`relative group p-4 sm:p-5 md:p-6 lg:px-10 duration-300 transform border border-gray-300 text-gray-900 shadow-lg rounded-[20px] sm:rounded-[25px] md:rounded-[30px] w-[220px] sm:w-[250px] md:w-[289px] h-[220px] sm:h-[250px] md:h-[289px] flex flex-col gap-3 sm:gap-4 md:gap-5 justify-center items-center transition-all
         ${
           soon
             ? 'hidden'
@@ -31,14 +31,14 @@ function DeviceCard({ device, gen, soon }: deviceParams) {
         {/* Floating Soft Glow Effect */}
         <div className='absolute inset-0 flex items-center justify-center'>
           <div
-            className={`w-[140px] h-[140px] rounded-full bg-opacity-30 opacity-0 group-hover:opacity-50 transition-all duration-500 blur-2xl ${unifiedColor}`}
+            className={`w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] rounded-full bg-opacity-30 opacity-0 group-hover:opacity-50 transition-all duration-500 blur-2xl ${unifiedColor}`}
           />
         </div>
 
         {/* Device Image */}
-        <div className='relative w-[120px] h-[120px] flex justify-center items-center transition-all duration-300 group-hover:scale-105'>
+        <div className='relative w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] flex justify-center items-center transition-all duration-300 group-hover:scale-105'>
           <Image
-            src={require(`@/public/devices/${device}.svg`)}
+            src={`/devices/${device}.svg`}
             alt={device}
             className='object-contain drop-shadow-md transition-all duration-300'
             width={120}
@@ -47,7 +47,7 @@ function DeviceCard({ device, gen, soon }: deviceParams) {
         </div>
 
         {/* Device Name */}
-        <h3 className='text-lg font-bold capitalize text-white transition-all duration-300 group-hover:text-white'>
+        <h3 className='text-base sm:text-lg md:text-xl font-bold capitalize text-white transition-all duration-300 group-hover:text-white'>
           {device === 'windows'
             ? 'ويندوز'
             : device === 'router'
@@ -58,14 +58,14 @@ function DeviceCard({ device, gen, soon }: deviceParams) {
         </h3>
 
         {/* Device Description */}
-        <p className='text-sm text-white text-center'>
+        <p className='text-xs sm:text-sm md:text-base text-white text-center'>
           {deviceDescriptions[device] || ''}
         </p>
       </div>
 
       {/* "Coming Soon" Badge with Soft Pulse Effect */}
       {soon && (
-        <p className='absolute bottom-4 left-1/2 transform -translate-x-1/2 px-3 py-1 text-xs md:text-sm text-white font-medium tracking-wide shadow-md bg-gray-800 rounded-full animate-pulse'>
+        <p className='absolute bottom-2 sm:bottom-3 md:bottom-4 left-1/2 transform -translate-x-1/2 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs md:text-sm text-white font-medium tracking-wide shadow-md bg-gray-800 rounded-full animate-pulse'>
           Coming Soon 🚀
         </p>
       )}

@@ -25,13 +25,13 @@ type activeGenTypes = {
 };
 function Steps({ activeGen }: { activeGen: activeGenTypes }) {
   return (
-    <section className="max-w-5xl mx-auto py-10" dir="ltr">
+    <section className="max-w-5xl mx-auto py-6 sm:py-8 md:py-10 px-3 sm:px-4 md:px-6" dir="ltr">
       <div>
         <div className="flex flex-row">
           <div className="hidden md:flex flex-col items-center">
-            <div className="w-32 py-5 border border-gray-300 rounded mr-4 uppercase flex flex-col items-center justify-center">
-              <div className="text-3xl font-black text-gray-500">Step 1</div>
-              <div className="text-gray-500 text-sm">Idea</div>
+            <div className="w-24 sm:w-28 md:w-32 py-3 sm:py-4 md:py-5 border border-gray-300 rounded mr-4 uppercase flex flex-col items-center justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-black text-gray-500">Step 1</div>
+              <div className="text-gray-500 text-xs sm:text-sm">Idea</div>
             </div>
             <div className="h-full border-l-4 border-transparent">
               <div className="border-l-4 mr-4 h-full border-gray-300 border-dashed"></div>
@@ -40,24 +40,24 @@ function Steps({ activeGen }: { activeGen: activeGenTypes }) {
           <div className="flex-auto border rounded  border-gray-300">
             <div className="flex md:flex-row flex-col items-center">
               <div className="flex-auto">
-                <div className="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-gray-500">
+                <div className="md:hidden text-xs sm:text-sm font-normal uppercase pt-2 sm:pt-3 pl-2 sm:pl-3 text-gray-500">
                   <span className="font-black">Step 1</span> - Idea
                 </div>
-                <div className="p-3 text-3xl text-gray-800 font">
+                <div className="p-3 text-xl sm:text-2xl md:text-3xl text-gray-800 font">
                   Find your best idea
                 </div>
-                <div className="px-3 pb-6">
+                <div className="px-3 pb-4 sm:pb-5 md:pb-6 text-sm sm:text-base md:text-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Aperiam facilis, voluptates error alias dolorem praesentium
                   sit soluta iure incidunt labore explicabo eaque, quia
                   architecto veritatis dolores, enim consequatur nihil ipsum.
                 </div>
               </div>
-              <div className="md:w-96 w-full p-5">
+              <div className="md:w-72 lg:w-96 w-full p-3 sm:p-4 md:p-5">
                 <Image
                   src="https://image.flaticon.com/icons/svg/1330/1330216.svg"
                   alt="step 1"
-                  className="object-scale-down"
+                  className="object-scale-down w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto"
                   width={100}
                   height={100}
                 />
@@ -76,9 +76,9 @@ function Steps({ activeGen }: { activeGen: activeGenTypes }) {
         </div>
         <div className="flex flex-row-reverse">
           <div className="hidden md:flex flex-col items-center">
-            <div className="w-32 py-5 border border-gray-300 rounded ml-4 uppercase flex flex-col items-center justify-center">
-              <div className="text-3xl font-black text-gray-500">Step 2</div>
-              <div className="text-gray-500 text-sm">Collaboration</div>
+            <div className="w-24 sm:w-28 md:w-32 py-3 sm:py-4 md:py-5 border border-gray-300 rounded ml-4 uppercase flex flex-col items-center justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-black text-gray-500">Step 2</div>
+              <div className="text-gray-500 text-xs sm:text-sm">Collaboration</div>
             </div>
             <div className="h-full border-r-4 border-transparent">
               <div className="border-l-4 ml-4 h-full border-gray-300 border-dashed"></div>
@@ -87,24 +87,24 @@ function Steps({ activeGen }: { activeGen: activeGenTypes }) {
           <div className="flex-auto border rounded  border-gray-300">
             <div className="flex md:flex-row flex-col items-center">
               <div className="flex-auto">
-                <div className="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-gray-500">
+                <div className="md:hidden text-xs sm:text-sm font-normal uppercase pt-2 sm:pt-3 pl-2 sm:pl-3 text-gray-500">
                   <span className="font-black">Step 2</span> - Collaboration
                 </div>
-                <div className="p-3 text-3xl text-gray-800 font">
+                <div className="p-3 text-xl sm:text-2xl md:text-3xl text-gray-800 font">
                   Find your team and collaborate
                 </div>
-                <div className="px-3 pb-6">
+                <div className="px-3 pb-4 sm:pb-5 md:pb-6 text-sm sm:text-base md:text-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Aperiam facilis, voluptates error alias dolorem praesentium
                   sit soluta iure incidunt labore explicabo eaque, quia
                   architecto veritatis dolores, enim consequatur nihil ipsum.
                 </div>
               </div>
-              <div className="md:w-96 w-full p-5">
+              <div className="md:w-72 lg:w-96 w-full p-3 sm:p-4 md:p-5">
                 <Image
                   src="https://image.flaticon.com/icons/svg/1330/1330216.svg"
                   alt="step 2"
-                  className="object-scale-down"
+                  className="object-scale-down w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto"
                   width={100}
                   height={100}
                 />
@@ -123,9 +123,9 @@ function Steps({ activeGen }: { activeGen: activeGenTypes }) {
         </div>
         <div className="flex flex-row">
           <div className="hidden md:flex flex-col items-center">
-            <div className="w-32 py-5 border border-gray-300 rounded mr-4 uppercase flex flex-col items-center justify-center">
-              <div className="text-3xl font-black text-gray-500">Step 3</div>
-              <div className="text-gray-500 text-sm">Planification</div>
+            <div className="w-24 sm:w-28 md:w-32 py-3 sm:py-4 md:py-5 border border-gray-300 rounded mr-4 uppercase flex flex-col items-center justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-black text-gray-500">Step 3</div>
+              <div className="text-gray-500 text-xs sm:text-sm">Planification</div>
             </div>
             <div className="h-full border-l-4 border-transparent">
               <div className="border-l-4 mr-4 h-full border-gray-300 border-dashed"></div>
@@ -134,24 +134,24 @@ function Steps({ activeGen }: { activeGen: activeGenTypes }) {
           <div className="flex-auto border rounded  border-gray-300">
             <div className="flex md:flex-row flex-col items-center">
               <div className="flex-auto">
-                <div className="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-gray-500">
+                <div className="md:hidden text-xs sm:text-sm font-normal uppercase pt-2 sm:pt-3 pl-2 sm:pl-3 text-gray-500">
                   <span className="font-black">Step 3</span> - Planification
                 </div>
-                <div className="p-3 text-3xl text-gray-800 font">
+                <div className="p-3 text-xl sm:text-2xl md:text-3xl text-gray-800 font">
                   Make a good plan and prepare tasks
                 </div>
-                <div className="px-3 pb-6">
+                <div className="px-3 pb-4 sm:pb-5 md:pb-6 text-sm sm:text-base md:text-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Aperiam facilis, voluptates error alias dolorem praesentium
                   sit soluta iure incidunt labore explicabo eaque, quia
                   architecto veritatis dolores, enim consequatur nihil ipsum.
                 </div>
               </div>
-              <div className="md:w-96 w-full p-5">
+              <div className="md:w-72 lg:w-96 w-full p-3 sm:p-4 md:p-5">
                 <Image
                   src="https://image.flaticon.com/icons/svg/1330/1330216.svg"
                   alt="step 3"
-                  className="object-scale-down"
+                  className="object-scale-down w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto"
                   width={100}
                   height={100}
                 />
@@ -170,32 +170,32 @@ function Steps({ activeGen }: { activeGen: activeGenTypes }) {
         </div>
         <div className="flex flex-row-reverse">
           <div className="hidden md:flex flex-col items-center">
-            <div className="w-32 py-5 border border-gray-300 rounded ml-4 uppercase flex flex-col items-center justify-center">
-              <div className="text-3xl font-black text-gray-500">Step 4</div>
-              <div className="text-gray-500 text-sm">Implementation</div>
+            <div className="w-24 sm:w-28 md:w-32 py-3 sm:py-4 md:py-5 border border-gray-300 rounded ml-4 uppercase flex flex-col items-center justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-black text-gray-500">Step 4</div>
+              <div className="text-gray-500 text-xs sm:text-sm">Implementation</div>
             </div>
           </div>
           <div className="flex-auto border rounded  border-gray-300">
             <div className="flex md:flex-row flex-col items-center">
               <div className="flex-auto">
-                <div className="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-gray-500">
+                <div className="md:hidden text-xs sm:text-sm font-normal uppercase pt-2 sm:pt-3 pl-2 sm:pl-3 text-gray-500">
                   <span className="font-black">Step 4</span> - Implementation
                 </div>
-                <div className="p-3 text-3xl text-gray-800 font">
+                <div className="p-3 text-xl sm:text-2xl md:text-3xl text-gray-800 font">
                   Execute, impletement your solution
                 </div>
-                <div className="px-3 pb-6">
+                <div className="px-3 pb-4 sm:pb-5 md:pb-6 text-sm sm:text-base md:text-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Aperiam facilis, voluptates error alias dolorem praesentium
                   sit soluta iure incidunt labore explicabo eaque, quia
                   architecto veritatis dolores, enim consequatur nihil ipsum.
                 </div>
               </div>
-              <div className="md:w-96 w-full p-5">
+              <div className="md:w-72 lg:w-96 w-full p-3 sm:p-4 md:p-5">
                 <Image
                   src="https://image.flaticon.com/icons/svg/1330/1330216.svg"
                   alt="step 4"
-                  className="object-scale-down"
+                  className="object-scale-down w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto"
                   width={100}
                   height={100}
                 />

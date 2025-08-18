@@ -33,7 +33,7 @@ const StepPage = ({
 		>
 			<DeviceCard device={params.device} gen={params.gen} />
 
-			<h2 className="text-3xl md:text-4xl font-extrabold text-red-700 bg-red-100 px-6 py-3 rounded-lg shadow-md">
+			<h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-red-700 bg-red-100 px-4 sm:px-5 md:px-6 py-2 sm:py-3 rounded-lg shadow-md">
 				{`الخطوة ${currentStep}`}
 			</h2>
 
@@ -41,8 +41,8 @@ const StepPage = ({
 				{substeps?.map((step, index) => (
 					<li key={index}>
 						{step.type === "text" ? (
-							<div className="w-full p-4 text-red-700 border border-red-300 rounded-lg bg-red-50 shadow-md">
-								<h3 className="font-semibold">
+							<div className="w-full p-3 sm:p-4 text-red-700 border border-red-300 rounded-lg bg-red-50 shadow-md">
+								<h3 className="font-semibold text-sm sm:text-base md:text-lg">
 									{index + 1}.{" "}
 									{step.data
 										?.toString()
@@ -56,11 +56,11 @@ const StepPage = ({
 								</h3>
 							</div>
 						) : step.type === "link" ? (
-							<div className="w-full p-4 text-red-700 border border-red-300 rounded-lg bg-red-50 shadow-md">
+							<div className="w-full p-3 sm:p-4 text-red-700 border border-red-300 rounded-lg bg-red-50 shadow-md">
 								<Link
 									href={(step.data as any).href}
 									target="_blank"
-									className="underline text-red-900 hover:text-red-600"
+									className="underline text-red-900 hover:text-red-600 text-sm sm:text-base md:text-lg block w-full"
 								>
 									{index + 1}. {(step.data as any).text}
 								</Link>
@@ -78,13 +78,13 @@ const StepPage = ({
 				))}
 			</ol>
 
-			<div className="flex justify-between w-full max-w-5xl gap-6">
+			<div className="flex justify-between w-full max-w-5xl gap-3 sm:gap-4 md:gap-6">
 				{currentStep > 1 ? (
 					<Link
 						href={`/${params.gen}/setupguide/${params.device}/step${
 							currentStep - 1
 						}`}
-						className="flex-1 flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-red-600 to-red-800 hover:from-red-600 hover:to-red-700 rounded-lg shadow-md transition-all duration-300"
+						className="flex-1 flex items-center justify-center px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-white text-xs sm:text-sm md:text-xl font-medium bg-gradient-to-r from-red-600 to-red-800 hover:from-red-600 hover:to-red-700 rounded-lg shadow-md transition-all duration-300"
 					>
 						➡️ السابق
 					</Link>
@@ -96,7 +96,7 @@ const StepPage = ({
 						href={`/${params.gen}/setupguide/${params.device}/step${
 							currentStep + 1
 						}`}
-						className="flex-1 flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-red-800 to-red-600 hover:from-red-700 hover:to-red-600 rounded-lg shadow-md transition-all duration-300"
+						className="flex-1 flex items-center justify-center px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-white text-xs sm:text-sm md:text-xl font-medium bg-gradient-to-r from-red-800 to-red-600 hover:from-red-700 hover:to-red-600 rounded-lg shadow-md transition-all duration-300"
 					>
 						التالي ⬅️
 					</Link>
@@ -104,7 +104,7 @@ const StepPage = ({
 					<div className="flex-1">
 						<Link
 							href="/congratulations"
-							className="flex items-center justify-center px-4 py-3 text-white text-sm md:text-xl font-medium bg-gradient-to-r from-red-800 to-red-600 hover:from-red-700 hover:to-red-600 rounded-lg shadow-md transition-all duration-300"
+							className="flex items-center justify-center px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-white text-xs sm:text-sm md:text-xl font-medium bg-gradient-to-r from-red-800 to-red-600 hover:from-red-700 hover:to-red-600 rounded-lg shadow-md transition-all duration-300"
 						>
 							التالي ⬅️
 						</Link>

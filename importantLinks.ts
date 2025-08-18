@@ -8,3 +8,5 @@ export const PrimaryLow = "16.24.111.209";
 export const SecondaryLow = "16.24.202.94";
 export const PrimaryHigh = "15.184.147.40";
 export const SecondaryHigh = "15.184.182.221";
+export const downloadWindows =
+  "https://github.com/mafazaa-org/Ainaa-windows/releases/latest/download/default.exe";
