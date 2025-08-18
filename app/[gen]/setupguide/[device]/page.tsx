@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import OtherDeviceButton from "@/app/_components/otherDeviceButton";
 import setupGuideData, { genSetupGuideData } from "../setupGuideData";
-import { downloadWindows, googleForm } from "@/importantLinks";
+import { downloadAndroid, downloadWindows, googleForm } from "@/importantLinks";
 import OpenEnterYourNumberBtn from "./_components/OpenEnterYourNumberBtn";
 
 const deviceMessages: Record<string, string> = {
@@ -50,7 +50,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
               </ul>
               <div className='flex'>
                 <Link
-                  href={dev.device === 'windows' ? downloadWindows : dev.device === 'android' ? '' : ''}
+                  href={dev.device === 'windows' ? downloadWindows : dev.device === 'android' ? downloadAndroid : ''}
                   className='text-white py-4 px-14 rounded-xl transition-all duration bg-gradient-to-l
                 from-[#E0462D] to-[#A73826]
                 hover:from-[#E0462D] hover:to-[#000]
