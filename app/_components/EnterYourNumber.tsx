@@ -1,7 +1,7 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Modal from "../_components/Modal";
-import { useRouter } from "next/navigation";
 
 type EnterYourNumberProps = {
   isOpen: boolean;
@@ -58,7 +58,7 @@ export default function EnterYourNumber({
 
       // Optional: Redirect after successful submission
       setTimeout(() => {
-        router.push("/gen1/setupguide/router/step1");
+        router.push("/gen1/setupguide/router");
       }, 1500);
     } catch (error) {
       console.error("Error submitting phone number:", error);
