@@ -11,4 +11,4 @@ export const SecondaryHigh = "15.184.182.221";
 export const downloadWindows =
   "https://github.com/mafazaa-org/Ainaa-windows/releases/latest/download/default.exe";
 export const downloadAndroid =
-  "https://github.com/mafazaa-org/Ainaa-android/releases/latest/download/app-release.apk";
+  "https://github.com/mafazaa-org/Ainaa-android/releases/download/v2/app-release.apk";
