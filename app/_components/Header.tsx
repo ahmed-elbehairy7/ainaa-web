@@ -74,19 +74,24 @@ function Header() {
         </div>
 
         <nav
-          className={`absolute top-full left-0 w-full bg-white shadow-md transition-transform transform ${
-            menuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
-          } origin-top`}
+          className={`absolute top-full left-0 w-full bg-white shadow-md transition-transform transform ${menuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+            } origin-top`}
         >
           <ul className="flex flex-col gap-y-3 text-center py-4">
-            {navLinks.map(({ label, href }, index) => (
+            {navLinks.map(({ label, href, clickHandler }, index) => (
               <li
                 key={index}
                 className="relative cursor-pointer text-black text-lg font-semibold transition-all duration-300 
                 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#da442c]
                 before:transition-all before:duration-300 hover:before:w-full 
                 hover:text-[#da442c] hover:drop-shadow-lg active:scale-95"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  if (clickHandler) {
+                    e.preventDefault();
+                    setMenuOpen(false);
+                    clickHandler();
+                  }
+                }}
               >
                 {label}
               </li>

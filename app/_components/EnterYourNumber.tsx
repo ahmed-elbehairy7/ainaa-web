@@ -69,19 +69,19 @@ export default function EnterYourNumber({
   };
 
   return (
-    <article className="px-4 flex flex-col items-center justify-center text-center">
+    <article className="px-4 flex flex-col items-center justify-center text-center sm:px-6 md:px-8">
       <Modal isOpen={isOpen} onClose={onClose}>
         <form
           onSubmit={submitPhoneToGoogleForm}
-          className="flex flex-col items-center justify-center gap-8"
+          className="flex flex-col items-center justify-center gap-8 w-full max-w-md"
         >
-          <h2 className="text-2xl font-semibold">
-            نحتاج منك رقم الهاتف حتى تبدأ في الخطوات{" "}
+          <h2 className="text-2xl font-semibold sm:text-3xl">
+            نحتاج منك رقم الهاتف حتى تبدأ في الخطوات
           </h2>
 
-          <div className="flex flex-col justify-center gap-2 translate-x-[50px] sm:translate-x-[100px]">
+          <div className="flex flex-col justify-center gap-2 w-full">
             <label
-              className="text-xl font-semibold translate-x-16 flex-1"
+              className="text-xl font-semibold flex-1"
               htmlFor="phone"
             >
               رقم الهاتف
@@ -94,7 +94,7 @@ export default function EnterYourNumber({
               value={phoneNumber}
               onChange={handlePhoneChange}
               placeholder="برجاء إدخال رقم الهاتف"
-              className="border p-4 no-arrows rounded-md"
+              className="border p-4 no-arrows rounded-md w-full"
               required
               disabled={isSubmitting}
             />
@@ -114,11 +114,11 @@ export default function EnterYourNumber({
           )}
 
           {/* Buttons */}
-          <div className="flex justify-around w-full items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-around w-full items-center gap-4">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-40 p-4 rounded-md text-white bg-red-700 disabled:bg-red-400 transition-colors"
+              className="w-full sm:w-40 p-4 rounded-md text-white bg-red-700 disabled:bg-red-400 transition-colors"
             >
               {isSubmitting ? "جاري الإرسال..." : "أكمل"}
             </button>
@@ -126,7 +126,7 @@ export default function EnterYourNumber({
             <button
               type="button"
               onClick={onClose}
-              className="w-40 p-4 rounded-lg border-4 border-black"
+              className="w-full sm:w-40 p-4 rounded-lg border-4 border-black"
               disabled={isSubmitting}
             >
               لاحقا
