@@ -97,7 +97,7 @@ export default function Home() {
           },
         }}
       />
-      {<div>
+      {
         <form action="/support_us/pay"
           method="post" className="bg-white py-24">
           <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
@@ -112,8 +112,8 @@ export default function Home() {
                 id="amount"
                 min="10"
                 required
-                autoFocus
-                step="any"
+                
+           
                 placeholder="أدخل المبلغ هنا"
                 className="border border-gray-300 p-2 sm:p-3 md:p-4 rounded-md w-full"
               />
@@ -149,7 +149,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </form></div>
+        </form>
       }
 
       {/* Modal for Explanation */}
