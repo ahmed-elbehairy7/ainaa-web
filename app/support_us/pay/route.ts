@@ -9,7 +9,6 @@ export async function POST(req: NextRequest) {
 	const formData = await req.formData();
 	const amount = formData.get("amount");
 	const defaultMethod = formData.get("defaultMethod");
-	console.log(defaultMethod);
 	const hash = createHmac("sha256", process.env.KASHEIR_API_KEY as string)
 		.update(`/?payment=${MID}.${orderId}.${amount}.EGP`)
 		.digest("hex");
@@ -24,12 +23,12 @@ export async function POST(req: NextRequest) {
 		`merchantRedirect=${encodeURI(
 			process.env.NEXT_PUBLIC_HOST + "/support_us/"
 		)}&` +
-		`allowedMethods=card,wallet&` +
+		`allowedMethods=card,wallet,fawry&` +
 		`defaultMethod=${defaultMethod}&` +
 		`failureRedirect=true&` +
 		`redirectMethod=get&` +
-		`brandColor=%23ffe600&` +
+		`brandColor=%23A73826&` +
 		`display=ar`;
-	console.log(url);
+
 	redirect(url, RedirectType.replace);
 }
