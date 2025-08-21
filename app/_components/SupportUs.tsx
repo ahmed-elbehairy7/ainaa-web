@@ -37,7 +37,7 @@ export default function SupportUs({ isOpen, onClose, close }: SupportUsProps) {
             required
             autoFocus
             step="any"
-            placeholder="100 جنية"
+            placeholder="أدخل المبلغ هنا"
             className="border border-gray-300 p-2 sm:p-3 md:p-4 rounded-md w-full"
           />
         </div>
