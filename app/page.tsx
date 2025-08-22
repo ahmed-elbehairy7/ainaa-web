@@ -8,10 +8,6 @@ import instapay from '@/public/support_us/instapay.png'
 import visa from '@/public/support_us/visa.png'
 import vodafoneCash from '@/public/support_us/vodafoneCash.png'
 import Image from "next/image";
-import instapay from '@/public/support_us/instapay.png'
-import visa from '@/public/support_us/visa.png'
-import vodafoneCash from '@/public/support_us/vodafoneCash.png'
-import Image from "next/image";
 export default function Home() {
   const [isOpenExplanation, setIsOpenExplanation] = useState(false);
   return (
