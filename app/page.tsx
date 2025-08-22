@@ -4,7 +4,10 @@ import { useState } from "react";
 import Explanation from "./_components/Explanation";
 import HeroSection from "./_components/HeroSection";
 import SetupValuesComponent from "./setupvalues/SetupValuesComponent";
-
+import instapay from '@/public/support_us/instapay.png'
+import visa from '@/public/support_us/visa.png'
+import vodafoneCash from '@/public/support_us/vodafoneCash.png'
+import Image from "next/image";
 export default function Home() {
   const [isOpenExplanation, setIsOpenExplanation] = useState(false);
   return (
@@ -95,34 +98,58 @@ export default function Home() {
         }}
       />
       {
-        //TODO: uncomment
-        // <div className="bg-white py-24">
-        //   <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
-        //     <h2 className="text-text font-bold text-H4 max-w-xl text-center">
-        //       ساهم في تطوير مستقبل أكثر أمانا للإنترنت
-        //     </h2>
-        //     <div>
-        //       <h5 className="text-text  text-H5">المبلغ (جنيه مصري)</h5>
-        //       <input
-        //         name="amount"
-        //         type="number"
-        //         placeholder="أدخل المبلغ هنا"
-        //         className="border p-4 no-arrows rounded-md mt-5 text-paragraph w-full placeholder:text-paragraph placeholder:text-grey "
-        //       />
-        //     </div>
-        //     <div className="flex flex-col lg:flex-row gap-10 mt-24">
-        //       <Link href={"/"} className="btn-primary">
-        //         محفظة
-        //       </Link>
-        //       <Link
-        //         href={"/"}
-        //         className={cn("btn-outline", " !text-black !border-black ")}
-        //       >
-        //         كارت
-        //       </Link>
-        //     </div>
-        //   </div>
-        // </div>
+        <form action="/support_us/pay"
+          method="post" className="bg-white py-24">
+          <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
+            <h2 className="text-text font-bold text-H4 max-w-xl text-center">
+              ساهم في تطوير مستقبل أكثر أمانا للإنترنت
+            </h2>
+            <div className="w-full flex flex-col gap-4">
+              <h5 className="text-text  text-H5">المبلغ (جنيه مصري)</h5>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                min="10"
+                required
+                
+           
+                placeholder="أدخل المبلغ هنا"
+                className="border border-gray-300 p-2 sm:p-3 md:p-4 rounded-md w-full"
+              />
+            </div>
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 place-content-center justify-center gap-4 sm:gap-6 md:gap-8">
+              <div className="flex flex-col items-center justify-center gap-4">
+                <div className="flex items-center justify-center gap-4">
+                  <Image src={visa.src} alt="visa" width={80} height={80} />
+             
+               </div>
+
+                <button
+                  type="submit"
+                  name="defaultMethod"
+                  value={"card"}
+                  className="w-full p-3 sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
+                >
+
+             كارت فيزا 
+                </button>
+              </div>
+              <div className="flex flex-col items-center justify-center gap-4">
+                <Image src={vodafoneCash.src} alt="vodafoneCash" width={100} height={100} />
+                <button
+                  type="submit"
+                  name="defaultMethod"
+                  value={"wallet"}
+                  className="w-full  p-3  sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
+                >
+                  فودافون كاش
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </form>
       }
 
       {/* Modal for Explanation */}
