@@ -47,7 +47,7 @@ export default function SupportUs({ isOpen, onClose, close }: SupportUsProps) {
           <div className="flex flex-col items-center justify-center gap-4">
             <div className="flex items-center justify-center gap-4">
               <Image src={visa.src} alt="visa" width={80} height={80} />
-              <Image src={instapay.src} alt="instapay" width={80} height={80} />
+            
             </div>
 
             <button
@@ -57,7 +57,7 @@ export default function SupportUs({ isOpen, onClose, close }: SupportUsProps) {
               className="w-full p-3 sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
             >
 
-              كارت فيزا / انستا باي
+              كارت فيزا
             </button>
           </div>
           <div className="flex flex-col items-center justify-center gap-4">
@@ -68,7 +68,7 @@ export default function SupportUs({ isOpen, onClose, close }: SupportUsProps) {
               value={"wallet"}
               className="w-full  p-3  sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
             >
-              فودافون كاش
+              المحافظ الإلكترونية (فودافون كاش)
             </button>
 
           </div>

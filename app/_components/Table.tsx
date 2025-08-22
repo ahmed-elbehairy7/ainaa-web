@@ -6,6 +6,7 @@ type TableDataTypes = {
   title: string;
   primary: string;
   secondary: string;
+  doh: string;
   categories: string[];
 };
 
@@ -14,6 +15,7 @@ function Table({
   domain,
   primary,
   secondary,
+  doh,
   categories,
 }: TableDataTypes) {
   return (
@@ -28,12 +30,13 @@ function Table({
                 "Domain",
                 "Primary DNS",
                 "Secondary DNS",
+                "DNS-over-HTTPS",
                 "Categories",
               ].map((header, i) => (
                 <th
                   key={i}
                   scope="col"
-                  className="py-3 px-6 border-l last:border-none"
+                  className="py-3 px-2 border-l last:border-none"
                 >
                   {header}
                 </th>
@@ -42,11 +45,12 @@ function Table({
           </thead>
           <tbody className="text-gray-700 bg-white">
             <tr className="hover:bg-gray-50 transition">
-              <td className="px-6 py-4 font-bold border-l">{title}</td>
-              <td className="px-6 py-4 border-l">{domain}</td>
-              <td className="px-6 py-4 border-l">{primary}</td>
-              <td className="px-6 py-4 border-l">{secondary}</td>
-              <td className="px-6 py-4 flex flex-wrap justify-right gap-1">
+              <td className="px-2 py-4 font-bold border-l">{title}</td>
+              <td className="px-2 py-4 border-l">{domain}</td>
+              <td className="px-2 py-4 border-l">{primary}</td>
+              <td className="px-2 py-4 border-l">{secondary}</td>
+              <td className="px-2 py-4 border-l">{doh}</td>
+              <td className="px-2 py-4 flex flex-wrap justify-right gap-1">
                 {categories.map((category, i) => (
                   <span
                     key={i}
@@ -63,9 +67,9 @@ function Table({
 
       {/* Card layout for smaller screens */}
       <div className="md:hidden mt-12 space-y-4">
-        <div className="border rounded-lg p-4 shadow-sm bg-white">
+        <div className="border rounded-lg px-2 py-4 shadow-sm bg-white">
           <h2 className="font-semibold text-lg mb-2">{title}</h2>
-          <div className="text-gray-600 space-y-1">
+          <div className="text-gray-600 space-y-1  text-sm">
             <p>
               <strong className="text-gray-800">Domain:</strong> {domain}
             </p>
@@ -75,6 +79,9 @@ function Table({
             <p>
               <strong className="text-gray-800">Secondary DNS:</strong>{" "}
               {secondary}
+            </p>
+            <p>
+              <strong className="text-gray-800">DNS-over-HTTPS :</strong> {doh}
             </p>
           </div>
           <div className="flex flex-wrap gap-1 mt-2">

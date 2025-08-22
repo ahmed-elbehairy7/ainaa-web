@@ -14,7 +14,7 @@ const almarai = Almarai({
 export const metadata: Metadata = {
   title: "عَيْنًا سَلْسَبِيلًا - حماية إسلامية متكاملة",
   icons: {
-    icon:'/logo-small.svg'
+    icon: '/logo-small.svg'
   },
   description:
     "استخدم حماية عَيْنًا سَلْسَبِيلًا لحجب المواقع الإباحية والتيك توك والأغاني والأفلام، وتأمين الإنترنت للأطفال والعائلة بفعالية وخصوصية عالية.",

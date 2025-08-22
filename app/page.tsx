@@ -153,7 +153,7 @@ export default function Home() {
 									value={"wallet"}
 									className="w-full  p-3  sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
 								>
-									فودافون كاش
+									المحافظ الإلكترونية (فودافون كاش)
 								</button>
 							</div>
 						</div>
