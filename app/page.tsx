@@ -1,106 +1,164 @@
-import {
-  facebookPage,
-  joinUs,
-  support_us,
-  whatsappChannel,
-} from "@/importantLinks";
-import Link from "next/link";
-import { FaFacebook } from "react-icons/fa6";
-import InfoCard from "./components/InfoCard";
+"use client";
 
+import { useState } from "react";
+import Explanation from "./_components/Explanation";
+import HeroSection from "./_components/HeroSection";
+import SetupValuesComponent from "./setupvalues/SetupValuesComponent";
+import instapay from '@/public/support_us/instapay.png'
+import visa from '@/public/support_us/visa.png'
+import vodafoneCash from '@/public/support_us/vodafoneCash.png'
+import Image from "next/image";
 export default function Home() {
+  const [isOpenExplanation, setIsOpenExplanation] = useState(false);
   return (
-    <article className="max-w-5xl mx-auto px-4 flex flex-col items-center justify-center text-center">
-      <section id="about" className="mx-auto max-w-screen-md">
-        <h1 className="inline-block px-6 py-2 text-xl font-semibold tracking-wide text-white uppercase rounded-full bg-gradient-to-r from-teal-500 to-teal-700 shadow-teal-300 shadow-md">
-          عَيْنًا سَلْسَبِيلًا
-        </h1>
-        <h2 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
-          احمي طفلك من الإباحية 🛡️
-        </h2>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          نؤمن بأن الحماية من المحتوى الإباحي تبدأ بتوفير بيئة آمنة على
-          الإنترنت. اكتشف كيف يمكنك تأمين جميع أجهزتك بسهولة.
-        </p>
-      </section>
-      <section id="features" className="pt-6 max-w-screen-md mx-auto">
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 text-center md:text-right">
-          <InfoCard
-            title="حماية شاملة ✅"
-            description="بخطوات بسيطة يمكنك تأمين جميع أجهزتك."
-            fromColor="from-sky-400"
-            toColor="to-purple-300"
-          />
-          <InfoCard
-            title=" سهولة الإعداد ⚡"
-            description="يحميك من المواقع الإباحية والمحتوى الضار."
-            fromColor="from-sky-400"
-            toColor="to-orange-300"
-          />
-        </div>
-      </section>
+    <div>
+      {/* Hero Section */}
+      <HeroSection
+        className="bg-home-hero"
+        title="اعطاء ابنك هاتفا، ضمان لتعرضه لموادٍ إباحية!"
+        description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
+        // button1={{
+        // 	text: "اقرأ المزيد...",
+        // 	href: "/blogs",
+        // }}
+        button2={{
+          text: "فعل الحماية",
+          handleClick: () => {
+            setIsOpenExplanation(true);
+          },
+        }}
+      />
 
-      <section
-        id="start"
-        className="max-w-2xl w-full flex justify-center pt-6 "
-      >
-        <Link
-          href="/gen1/setupguide"
-          className="w-full px-8 py-4 bg-teal-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300 block active:scale-90 active:shadow-2xl"
-        >
-          ابدأ الآن 🚀
-        </Link>
-      </section>
+      {
+        // <div className="bg-white   py-24">
+        // 			<div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
+        // 				<h2 className="text-text font-bold text-5xl">
+        // 					أهم مقالاتنا
+        // 				</h2>
+        // 				<p className="text-text text-2xl font-bold text-center">
+        // 					مقال توعوي للأباء و الأمهات عن ما وصلت إليه الإباحية في
+        // 					هذا الزمن، و آخر يساعد الشباب على التعافي بإذن الله
+        // 				</p>
+        // 			</div>
+        // 		</div>
+        // 		<div className="  grid lg:grid-cols-2 ">
+        // 			<BlogCard
+        // 				isMain
+        // 				blogId="1"
+        // 				className="bg-blog-image2 max-lg:bg-right"
+        // 				title="أطفالكم في خطر عظيم!"
+        // 				description="نداء استغاثة من شاب عن واقع الأجيال الحالية"
+        // 			/>
+        // 			<BlogCard
+        // 				isMain
+        // 				blogId="2"
+        // 				className="bg-blog-image1"
+        // 				title="أطفئ حريق الإباحية"
+        // 				description="دليل الشباب المبتلى عن كيفية الإقلاع عن الإباحية بإذن الله"
+        // 			/>
+        // 		</div>
+        // 		<div className="flex items-center justify-center py-24">
+        // 			<Link href={"/blogs"} className="btn-primary">
+        // 				المزيد من مدونتنا
+        // 			</Link>
+        // 		</div>
+      }
 
-      <section id="support" className="pt-12 pb-6 max-w-screen-md mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">طرق دعم المشروع 💡</h2>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          يمكنك دعمنا من خلال المشاركة، التبرع أو التطوع معنا. 💖
-        </p>
+      <SetupValuesComponent />
 
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 mt-6">
-          <InfoCard
-            title="التبرع المالي 💰"
-            description=" يمكنك المساهمة ماديًا لدعم المشروع عن طريق كارت الفيزا او فودافون
-              كاش عبر:"
-            link={support_us}
-            linkText="📌الرابط هنا ➡️"
-            fromColor="from-yellow-400"
-            toColor="to-orange-300"
-          />
-          <InfoCard
-            title="التطوع 🤝"
-            description="لديك مهارات في البرمجة أو التسويق؟ انضم إلينا وساعدنا في تحسين المشروع."
-            link={joinUs}
-            linkText="🚀 انضم لفريق التطوع"
-            fromColor="from-purple-400"
-            toColor="to-pink-300"
-          />
-        </div>
-      </section>
+      <HeroSection
+        className="bg-home-hero2"
+        title="ولدك ليس استثناء، حماية منزلك لم يعد أمرا اختياريا بعد الآن"
+        description="« كُلُّكْمْ رَاعٍ، وَكُلُّكُمْ مَسْئوُلٌ عَنْ رَعِيتّهِِ... والرَّجُلُ راعٍ في أهْلِهِ وهو مَسْئُولٌ عن رَعِيَّتِهِ »"
+        // button1={{
+        // 	text: "اقرأ المزيد...",
+        // 	href: "/blogs",
+        // }}
+        button2={{
+          text: "فعل الحماية",
+          handleClick: () => {
+            setIsOpenExplanation(true);
+          },
+        }}
+      />
+      <HeroSection
+        className="bg-home-hero3"
+        title="اليوم مقطعٌ واحد، و غدا مدمنٌ في سن العشرين"
+        description="كلما تعرض الشخص للإباحية في صغره، كان خروجه منها أصعب و أشد!"
+        // button1={{
+        // 	text: "اقرأ المزيد...",
+        // 	href: "/blogs",
+        // }}
+        button2={{
+          text: "فعل الحماية",
+          href: "/gen1/setupguide",
+          handleClick: () => {
+            setIsOpenExplanation(true);
+          },
+        }}
+      />
+      {
+        <form action="/support_us/pay"
+          method="post" className="bg-white py-24">
+          <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
+            <h2 className="text-text font-bold text-H4 max-w-xl text-center">
+              ساهم في تطوير مستقبل أكثر أمانا للإنترنت
+            </h2>
+            <div className="w-full flex flex-col gap-4">
+              <h5 className="text-text  text-H5">المبلغ (جنيه مصري)</h5>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                min="10"
+                required
 
-      <section id="community" className="pb-12 max-w-screen-md mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">انضم لمجتمعنا 💬</h2>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          احصل على آخر التحديثات وكن جزءًا من مجتمع الحماية عبر الجروب والقناة
-        </p>
-        <div className="flex gap-4 items-center justify-center">
-          <Link
-            href={whatsappChannel}
-            target="_blank"
-            className="mt-6 inline-block px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
-          >
-            انضم الآن للقناة 📢
-          </Link>
-          <Link
-            href={facebookPage}
-            target="_blank"
-            className="flex gap-2 mt-6 items-center justify-between px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
-          >
-            تابعنا على فيسبوك <FaFacebook size={24} />
-          </Link>
-        </div>
-      </section>
-    </article>
+
+                placeholder="أدخل المبلغ هنا"
+                className="border border-gray-300 p-2 sm:p-3 md:p-4 rounded-md w-full"
+              />
+            </div>
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 place-content-center justify-center gap-4 sm:gap-6 md:gap-8">
+              <div className="flex flex-col items-center justify-center gap-4">
+                <div className="flex items-center justify-center gap-4">
+                  <Image src={visa.src} alt="visa" width={80} height={80} />
+
+                </div>
+
+                <button
+                  type="submit"
+                  name="defaultMethod"
+                  value={"card"}
+                  className="w-full p-3 sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
+                >
+
+                  كارت فيزا
+                </button>
+              </div>
+              <div className="flex flex-col items-center justify-center gap-4">
+                <Image src={vodafoneCash.src} alt="vodafoneCash" width={100} height={100} />
+                <button
+                  type="submit"
+                  name="defaultMethod"
+                  value={"wallet"}
+                  className="w-full  p-3  sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
+                >
+                  المحافظ الإلكترونية (فودافون كاش)
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </form>
+      }
+
+      {/* Modal for Explanation */}
+      <div className="  top-0 left-0 z-50 flex items-center justify-center bg-black/50">
+        <Explanation
+          isOpen={isOpenExplanation}
+          onClose={() => setIsOpenExplanation(false)}
+        />
+      </div>
+    </div>
   );
 }

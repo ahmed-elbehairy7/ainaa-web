@@ -1,14 +1,8 @@
-import {
-  checkActivationStep,
-  customerSupportStep,
-  supportUsStep,
-} from "./commonSteps";
 import { Steps } from "./stepData";
 
 const windowsSteps: { gen1: Steps } = {
   gen1: {
-    step1: customerSupportStep,
-    step2: [
+    step1: [
       {
         type: "text",
         data: "أولاً، اضغط على زر الويندوز من لوحة المفاتيح لفتح قائمة Start.",
@@ -26,13 +20,13 @@ const windowsSteps: { gen1: Steps } = {
         data: 0,
       },
     ],
-    step3: [
+    step2: [
       {
         type: "text",
         data: "من هذه النقطة، ستصبح الخطوات أكثر تحدياً، لذا انتبه جيداً وركز في التفاصيل الدقيقة لأن أي خطأ قد يؤدي إلى توقف الإنترنت على اللابتوب.",
       },
     ],
-    step4: [
+    step3: [
       {
         type: "text",
         data: "أولاً، اكتب الأمر التالي بعد فتح النافذة:",
@@ -63,7 +57,7 @@ const windowsSteps: { gen1: Steps } = {
         data: "يُرجى تطبيق الخطوات التالية على كل واجهة تستخدمها، وفي الغالب ستجد أنها تظهر كـ 'Connected' إذا كنت متصلاً بها.",
       },
     ],
-    step5: [
+    step4: [
       {
         type: "text",
         data: "عند رؤية الكلمة '{ interface }' بين قوسين في التعليمات التالية، استبدلها باسم الواجهة الخاصة بك واكتبها بين علامتي اقتباس، مثل: \"Wi-Fi\".",
@@ -94,7 +88,7 @@ const windowsSteps: { gen1: Steps } = {
         data: 1,
       },
     ],
-    step6: [
+    step5: [
       {
         type: "text",
         data: "الآن، اكتب الأمر التالي واضغط Enter:",
@@ -120,9 +114,6 @@ const windowsSteps: { gen1: Steps } = {
         data: 1,
       },
     ],
-    step7: checkActivationStep.filter((e, i) => i != 0),
-    step8: customerSupportStep,
-    step9: supportUsStep,
   },
 };
 

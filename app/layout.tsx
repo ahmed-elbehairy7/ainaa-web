@@ -1,16 +1,21 @@
 import type { Metadata, Viewport } from "next"; // ✅ استيراد Viewport
-import { Tajawal } from "next/font/google";
+import { Almarai } from "next/font/google";
+import Header from "./_components/Header";
 import "./globals.css";
-import Header from "./components/Header";
-import Warnning from "./components/Warnning";
 
-const tajawal = Tajawal({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700"],
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ["300", "400", "700"],
+  display: "swap",
+  adjustFontFallback: true,
+  preload: true,
 });
 
 export const metadata: Metadata = {
   title: "عَيْنًا سَلْسَبِيلًا - حماية إسلامية متكاملة",
+  icons: {
+    icon: '/logo-small.svg'
+  },
   description:
     "استخدم حماية عَيْنًا سَلْسَبِيلًا لحجب المواقع الإباحية والتيك توك والأغاني والأفلام، وتأمين الإنترنت للأطفال والعائلة بفعالية وخصوصية عالية.",
   keywords: [
@@ -133,17 +138,20 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+import Footer from "./_components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={tajawal.className}>
+    <html lang="ar" dir="rtl" className={almarai.className}>
       <body>
         <Header />
         {/* <Warnning /> */}
-        <main className="pt-24">{children}</main>
+        <main className="pt-24 min-h-[550px]">{children}</main>
+        <Footer />
       </body>
     </html>
   );

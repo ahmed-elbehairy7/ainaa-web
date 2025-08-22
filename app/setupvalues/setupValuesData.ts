@@ -1,6 +1,4 @@
 import {
-  highDoh,
-  lowDoh,
   PrimaryHigh,
   PrimaryLow,
   SecondaryHigh,
@@ -16,7 +14,6 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
       subdomain: "low-dns",
       primary: `${PrimaryLow}`,
       secondary: `${SecondaryLow}`,
-      doh: lowDoh,
       categories: [
         "الأباحية",
         "العري",
@@ -24,6 +21,9 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
         "المانجا",
         "القمار",
         "الاعلانات",
+        // "Web Spam",
+        // "Adult Themes",
+        // "Advertisements",
       ],
     },
     high: {
@@ -33,7 +33,6 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
       subdomain: "high-dns",
       primary: `${PrimaryHigh}`,
       secondary: `${SecondaryHigh}`,
-      doh: highDoh,
       categories: [
         "كل مافي الحماية المنخفضة",
         "الموسيقى",
@@ -50,7 +49,6 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
       subdomain: "low-proxy",
       primary: "{primary ip address}",
       secondary: "{secondary ip address}",
-      doh: highDoh,
       categories: [
         "Adware",
         "Dating",
@@ -75,7 +73,6 @@ const setupValuesData: { gen1: genSetupValues; gen2: genSetupValues } = {
       subdomain: "high-proxy",
       primary: "{primary ip address}",
       secondary: "{secondary ip address}",
-      doh: highDoh,
       categories: ["All Low Categories", "Music", "Movies"],
     },
   },
@@ -93,6 +90,5 @@ export type levelSetupValues = {
   subdomain: string;
   primary: string;
   secondary: string;
-  doh: string;
   categories: string[];
 };

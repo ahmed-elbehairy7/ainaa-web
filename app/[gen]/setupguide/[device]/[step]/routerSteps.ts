@@ -1,24 +1,15 @@
 import {
-  messenger,
   PrimaryHigh,
   PrimaryLow,
   SecondaryHigh,
   SecondaryLow,
 } from "@/importantLinks";
-import {
-  checkActivationStep,
-  customerSupportStep,
-  supportUsStep,
-} from "./commonSteps";
 import { Steps } from "./stepData";
 
 const routerSteps: { gen1: Steps } = {
   gen1: {
-    // الخطوة 1: دعم العملاء
-    step1: customerSupportStep,
-
-    // الخطوة 2: الدخول لصفحة الراوتر
-    step2: [
+    // الخطوة 1: الدخول لصفحة الراوتر
+    step1: [
       {
         type: "text",
         data: "ابدأ بالدخول إلى صفحة الراوتر في منزلك: افتح المتصفح واكتب في شريط العنوان 192.168.1.1.",
@@ -29,8 +20,8 @@ const routerSteps: { gen1: Steps } = {
       },
     ],
 
-    // الخطوة 3: تسجيل الدخول لصفحة الراوتر
-    step3: [
+    // الخطوة 2: تسجيل الدخول لصفحة الراوتر
+    step2: [
       {
         type: "text",
         data: "عند دخولك لصفحة الراوتر، سيُطلب منك إدخال اسم المستخدم وكلمة المرور.",
@@ -57,8 +48,8 @@ const routerSteps: { gen1: Steps } = {
       },
     ],
 
-    // الخطوة 4: إعدادات الراوتر وتفعيل الحماية (DNS)
-    step4: [
+    // الخطوة 3: إعدادات الراوتر وتفعيل الحماية (DNS)
+    step3: [
       {
         type: "text",
         data: "📌 ابحث يدويًا عن إعدادات الـ (Primary DNS) و (Secondary DNS) داخل صفحة الراوتر.",
@@ -74,7 +65,7 @@ const routerSteps: { gen1: Steps } = {
       {
         type: "link",
         data: {
-          href: messenger,
+          href: "https://www.facebook.com/messages/t/419901901197382",
           text: "للتواصل عبر ماسنجر 📩",
         },
       },
@@ -98,15 +89,6 @@ const routerSteps: { gen1: Steps } = {
         },
       },
     ],
-
-    // الخطوة 5: تفعيل الخدمة
-    step5: checkActivationStep,
-
-    // الخطوة 6: دعم العملاء (إذا كنت تحتاج للمساعدة)
-    step6: customerSupportStep,
-
-    // الخطوة 7: دعم المشروع
-    step7: supportUsStep,
   },
 };
 
