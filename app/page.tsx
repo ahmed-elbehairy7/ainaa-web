@@ -112,8 +112,8 @@ export default function Home() {
                 id="amount"
                 min="10"
                 required
-                
-           
+
+
                 placeholder="أدخل المبلغ هنا"
                 className="border border-gray-300 p-2 sm:p-3 md:p-4 rounded-md w-full"
               />
@@ -122,8 +122,8 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center gap-4">
                 <div className="flex items-center justify-center gap-4">
                   <Image src={visa.src} alt="visa" width={80} height={80} />
-             
-               </div>
+
+                </div>
 
                 <button
                   type="submit"
@@ -132,7 +132,7 @@ export default function Home() {
                   className="w-full p-3 sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
                 >
 
-             كارت فيزا 
+                  كارت فيزا
                 </button>
               </div>
               <div className="flex flex-col items-center justify-center gap-4">
@@ -143,7 +143,7 @@ export default function Home() {
                   value={"wallet"}
                   className="w-full  p-3  sm:p-4 text-center text-sm sm:text-base md:text-lg rounded-md text-white bg-red-700"
                 >
-                  فودافون كاش
+                  المحافظ الإلكترونية (فودافون كاش)
                 </button>
 
               </div>
