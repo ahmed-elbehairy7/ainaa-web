@@ -3,26 +3,26 @@ import React from "react";
 const PrivacyPolicyPage = () => {
 	return (
 		<>
-			<div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg my-8">
-				<h1 class="text-3xl font-bold text-gray-800 mb-4">
+			<div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg my-8">
+				<h1 className="text-3xl font-bold text-gray-800 mb-4">
 					سياسة الخصوصية
 				</h1>
-				<p class="text-lg text-gray-600 mb-6">
+				<p className="text-lg text-gray-600 mb-6">
 					آخر تحديث: 29 أغسطس 2025
 				</p>
 
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					تشرح سياسة الخصوصية هذه لشركة مفازا (التي تعمل باسم عَيْنًا
 					سَلْسَبِيلًا) ("نحن"، "لنا"، أو "خاصتنا") كيف ولماذا قد نصل،
 					نجمع، نخزن، نستخدم، و/أو نشارك ("نعالج") معلوماتك الشخصية
 					عند استخدامك لخدماتنا ("الخدمات")، بما في ذلك عندما:
 				</p>
-				<ul class="list-disc mr-6 mb-4 text-gray-700">
+				<ul className="list-disc mr-6 mb-4 text-gray-700">
 					<li>
 						تزور موقعنا الإلكتروني على{" "}
 						<a
 							href="https://ainaa.mafazaa.com"
-							class="text-blue-600 hover:underline"
+							className="text-blue-600 hover:underline"
 						>
 							https://ainaa.mafazaa.com
 						</a>{" "}
@@ -39,10 +39,10 @@ const PrivacyPolicyPage = () => {
 					</li>
 				</ul>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					أسئلة أو مخاوف؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					قراءة سياسة الخصوصية هذه ستساعدك على فهم حقوقك وخياراتك
 					المتعلقة بالخصوصية. نحن مسؤولون عن اتخاذ القرارات بشأن كيفية
 					معالجة معلوماتك الشخصية. إذا كنت لا توافق على سياساتنا
@@ -50,24 +50,24 @@ const PrivacyPolicyPage = () => {
 					أو مخاوف، يرجى التواصل معنا على{" "}
 					<a
 						href="mailto:contact@mafazaa.com"
-						class="text-blue-600 hover:underline"
+						className="text-blue-600 hover:underline"
 					>
 						contact@mafazaa.com
 					</a>
 					.
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					ملخص النقاط الرئيسية
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					يوفر هذا الملخص النقاط الرئيسية من سياسة الخصوصية الخاصة
 					بنا، ولكن يمكنك معرفة المزيد من التفاصيل حول أي من هذه
 					الموضوعات بالنقر على الرابط الذي يتبع كل نقطة رئيسية أو
 					باستخدام جدول المحتويات أدناه للعثور على القسم الذي تبحث
 					عنه.
 				</p>
-				<ul class="list-disc mr-6 mb-4 text-gray-700">
+				<ul className="list-disc mr-6 mb-4 text-gray-700">
 					<li>
 						<strong>ما هي المعلومات الشخصية التي نعالجها؟</strong>{" "}
 						عندما تزور، تستخدم، أو تتصفح خدماتنا، قد نعالج معلومات
@@ -108,7 +108,7 @@ const PrivacyPolicyPage = () => {
 						حقوقك هي زيارة{" "}
 						<a
 							href="https://m.me/mafazaa.org"
-							class="text-blue-600 hover:underline"
+							className="text-blue-600 hover:underline"
 						>
 							https://m.me/mafazaa.org
 						</a>
@@ -116,10 +116,10 @@ const PrivacyPolicyPage = () => {
 					</li>
 				</ul>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					جدول المحتويات
 				</h2>
-				<ol class="list-decimal mr-6 mb-4 text-gray-700">
+				<ol className="list-decimal mr-6 mb-4 text-gray-700">
 					<li>ما المعلومات التي نجمعها؟</li>
 					<li>كيف نعالج معلوماتك؟</li>
 					<li>متى ومع من نشارك معلوماتك الشخصية؟</li>
@@ -135,37 +135,37 @@ const PrivacyPolicyPage = () => {
 					</li>
 				</ol>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					1. ما المعلومات التي نجمعها؟
 				</h2>
-				<h3 class="text-xl font-medium text-gray-800 mb-2">
+				<h3 className="text-xl font-medium text-gray-800 mb-2">
 					المعلومات الشخصية التي تكشفها لنا
 				</h3>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>باختصار:</strong> نجمع المعلومات الشخصية التي تقدمها
 					لنا طوعًا.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					نجمع المعلومات الشخصية التي تقدمها لنا طوعًا عندما تعبر عن
 					اهتمامك بالحصول على معلومات عنا أو عن منتجاتنا وخدماتنا،
 					عندما تشارك في أنشطة على الخدمات، أو عندما تتواصل معنا
 					بطريقة أخرى.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>المعلومات الشخصية التي تقدمها.</strong> تعتمد
 					المعلومات الشخصية التي نجمعها على سياق تفاعلاتك معنا
 					والخدمات، والخيارات التي تتخذها، والمنتجات والميزات التي
 					تستخدمها. قد تشمل المعلومات الشخصية التي نجمعها ما يلي:
 				</p>
-				<ul class="list-disc mr-6 mb-4 text-gray-700">
+				<ul className="list-disc mr-6 mb-4 text-gray-700">
 					<li>أرقام الهواتف</li>
 					<li>عناوين البريد الإلكتروني</li>
 				</ul>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>المعلومات الحساسة.</strong> نحن لا نعالج معلومات
 					حساسة.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>بيانات الدفع.</strong> قد نجمع البيانات اللازمة
 					لمعالجة دفعاتك إذا اخترت إجراء عمليات شراء، مثل رقم أداة
 					الدفع الخاصة بك، والرمز الأمني المرتبط بأداة الدفع الخاصة
@@ -174,18 +174,18 @@ const PrivacyPolicyPage = () => {
 					بهم هنا:{" "}
 					<a
 						href="https://www.kashier.io/legal/privacy-policy"
-						class="text-blue-600 hover:underline"
+						className="text-blue-600 hover:underline"
 					>
 						https://www.kashier.io/legal/privacy-policy
 					</a>
 					.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>بيانات التطبيق.</strong> إذا كنت تستخدم تطبيقاتنا،
 					فقد نجمع أيضًا المعلومات التالية إذا اخترت منحنا الوصول أو
 					الإذن:
 				</p>
-				<ul class="list-disc mr-6 mb-4 text-gray-700">
+				<ul className="list-disc mr-6 mb-4 text-gray-700">
 					<li>
 						<strong>بيانات الجهاز المحمول.</strong> نجمع تلقائيًا
 						معلومات الجهاز (مثل معرف جهازك المحمول، الطراز، والشركة
@@ -206,25 +206,25 @@ const PrivacyPolicyPage = () => {
 						الاتصالات، يمكنك إيقاف تشغيلها في إعدادات جهازك.
 					</li>
 				</ul>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					تُستخدم هذه المعلومات بشكل أساسي للحفاظ على أمان وتشغيل
 					تطبيقاتنا، ولأغراض استكشاف الأخطاء وإصلاحها، ولأغراض
 					التحليلات والتقارير الداخلية الخاصة بنا.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					يجب أن تكون جميع المعلومات الشخصية التي تقدمها لنا صحيحة
 					وكاملة ودقيقة، ويجب عليك إخطارنا بأي تغييرات في هذه
 					المعلومات الشخصية.
 				</p>
-				<h3 class="text-xl font-medium text-gray-800 mb-2">
+				<h3 className="text-xl font-medium text-gray-800 mb-2">
 					المعلومات التي يتم جمعها تلقائيًا
 				</h3>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>باختصار:</strong> يتم جمع بعض المعلومات — مثل عنوان
 					بروتوكول الإنترنت (IP) الخاص بك و/أو خصائص المتصفح والجهاز —
 					تلقائيًا عند زيارتك لخدماتنا.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					نجمع تلقائيًا بعض المعلومات عند زيارتك، استخدامك، أو تصفحك
 					للخدمات. لا تكشف هذه المعلومات عن هويتك المحددة (مثل اسمك أو
 					معلومات الاتصال الخاصة بك) ولكنها قد تشمل معلومات الجهاز
@@ -235,8 +235,8 @@ const PrivacyPolicyPage = () => {
 					أساسي للحفاظ على أمان وتشغيل خدماتنا، ولأغراض التحليلات
 					والتقارير الداخلية الخاصة بنا.
 				</p>
-				<p class="text-gray-700 mb-4">تشمل المعلومات التي نجمعها:</p>
-				<ul class="list-disc mr-6 mb-4 text-gray-700">
+				<p className="text-gray-700 mb-4">تشمل المعلومات التي نجمعها:</p>
+				<ul className="list-disc mr-6 mb-4 text-gray-700">
 					<li>
 						<strong>بيانات السجل والاستخدام.</strong> بيانات السجل
 						والاستخدام هي معلومات متعلقة بالخدمة، تشخيصية، استخدام،
@@ -252,20 +252,20 @@ const PrivacyPolicyPage = () => {
 					</li>
 				</ul>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					2. كيف نعالج معلوماتك؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>باختصار:</strong> نعالج معلوماتك لتوفير خدماتنا،
 					تحسينها، وإدارتها، والتواصل معك، ولأغراض الأمن ومنع
 					الاحتيال، وللامتثال للقانون. قد نعالج معلوماتك أيضًا لأغراض
 					أخرى بموافقتك.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					نعالج معلوماتك الشخصية لأسباب متنوعة، بناءً على كيفية تفاعلك
 					مع خدماتنا، بما في ذلك:
 				</p>
-				<ul class="list-disc mr-6 mb-4 text-gray-700">
+				<ul className="list-disc mr-6 mb-4 text-gray-700">
 					<li>
 						<strong>لتقديم وتسهيل تقديم الخدمات للمستخدم.</strong>{" "}
 						قد نعالج معلوماتك لتوفير الخدمة المطلوبة.
@@ -279,28 +279,28 @@ const PrivacyPolicyPage = () => {
 					</li>
 				</ul>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					3. متى ومع من نشارك معلوماتك الشخصية؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					نحن لا نشارك معلوماتك مع أي جهة ثالثة.
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					4. كم من الوقت نحتفظ بمعلوماتك؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>باختصار:</strong> نحتفظ بمعلوماتك طالما كان ذلك
 					ضروريًا لتحقيق الأغراض الموضحة في سياسة الخصوصية هذه ما لم
 					يتطلب القانون خلاف ذلك.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					سنحتفظ بمعلوماتك الشخصية فقط طالما كان ذلك ضروريًا للأغراض
 					الموضحة في سياسة الخصوصية هذه، ما لم تكن هناك فترة احتفاظ
 					أطول مطلوبة أو مسموح بها بموجب القانون (مثل الضرائب،
 					المحاسبة، أو المتطلبات القانونية الأخرى).
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					عندما لا يكون لدينا حاجة تجارية مشروعة مستمرة لمعالجة
 					معلوماتك الشخصية، سنقوم إما بحذف أو إخفاء هوية هذه
 					المعلومات، أو، إذا لم يكن ذلك ممكنًا (على سبيل المثال، لأن
@@ -309,14 +309,14 @@ const PrivacyPolicyPage = () => {
 					إضافية حتى يصبح الحذف ممكنًا.
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					5. كيف نحافظ على أمان معلوماتك؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>باختصار:</strong> نهدف إلى حماية معلوماتك الشخصية من
 					خلال نظام من التدابير الأمنية التنظيمية والفنية.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					لقد نفذنا تدابير أمنية تنظيمية وفنية مناسبة ومعقولة مصممة
 					لحماية أمان أي معلومات شخصية نعالجها. ومع ذلك، على الرغم من
 					ضماناتنا وجهودنا لتأمين معلوماتك، لا يمكن ضمان أن تكون أي
@@ -330,15 +330,15 @@ const PrivacyPolicyPage = () => {
 					الخدمات فقط في بيئة آمنة.
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					6. ما هي حقوق الخصوصية الخاصة بك؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>باختصار:</strong> يمكنك مراجعة، تغيير، أو إنهاء
 					حسابك في أي وقت، بناءً على بلدك، محافظتك، أو ولايتك التي
 					تقيم فيها.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>سحب موافقتك:</strong> إذا كنا نعتمد على موافقتك
 					لمعالجة معلوماتك الشخصية، والتي قد تكون موافقة صريحة و/أو
 					ضمنية بناءً على القانون المعمول به، فلديك الحق في سحب
@@ -346,28 +346,28 @@ const PrivacyPolicyPage = () => {
 					التواصل معنا باستخدام تفاصيل الاتصال المقدمة في القسم "كيف
 					يمكنك التواصل معنا بشأن هذا الإشعار؟" أدناه.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					ومع ذلك، يرجى ملاحظة أن هذا لن يؤثر على قانونية المعالجة قبل
 					سحبها، ولا، عندما يسمح القانون المعمول به، سيؤثر على معالجة
 					معلوماتك الشخصية التي تتم بناءً على أسس معالجة قانونية غير
 					الموافقة.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					إذا كانت لديك أسئلة أو تعليقات حول حقوق الخصوصية الخاصة بك،
 					يمكنك مراسلتنا عبر البريد الإلكتروني على{" "}
 					<a
 						href="mailto:contact@mafazaa.com"
-						class="text-blue-600 hover:underline"
+						className="text-blue-600 hover:underline"
 					>
 						contact@mafazaa.com
 					</a>
 					.
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					7. التحكم في ميزات عدم التتبع
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					تتضمن معظم متصفحات الويب وبعض أنظمة التشغيل المحمولة
 					والتطبيقات المحمولة ميزة أو إعداد "عدم التتبع" (DNT) يمكنك
 					تفعيله للإشارة إلى تفضيلات الخصوصية الخاصة بك بعدم تتبع أو
@@ -379,14 +379,14 @@ const PrivacyPolicyPage = () => {
 					المستقبل، سنبلغك بذلك في نسخة منقحة من سياسة الخصوصية هذه.
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					8. هل نقوم بتحديث هذا الإشعار؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					<strong>باختصار:</strong> نعم، سنقوم بتحديث هذا الإشعار حسب
 					الضرورة للبقاء متوافقين مع القوانين ذات الصلة.
 				</p>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم الإشارة
 					إلى النسخة المحدثة بتاريخ "منقح" محدث في أعلى سياسة الخصوصية
 					هذه. إذا أجرينا تغييرات جوهرية على سياسة الخصوصية هذه، فقد
@@ -395,26 +395,26 @@ const PrivacyPolicyPage = () => {
 					متكرر لتكون على اطلاع بكيفية حماية معلوماتك.
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					9. كيف يمكنك التواصل معنا بشأن هذا الإشعار؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					إذا كانت لديك أسئلة أو تعليقات حول هذا الإشعار، يمكنك
 					مراسلتنا عبر البريد الإلكتروني على{" "}
 					<a
 						href="mailto:contact@mafazaa.com"
-						class="text-blue-600 hover:underline"
+						className="text-blue-600 hover:underline"
 					>
 						contact@mafazaa.com
 					</a>{" "}
 					أو التواصل معنا بالبريد على:
 				</p>
 
-				<h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+				<h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
 					10. كيف يمكنك مراجعة، تحديث، أو حذف البيانات التي نجمعها
 					منك؟
 				</h2>
-				<p class="text-gray-700 mb-4">
+				<p className="text-gray-700 mb-4">
 					لديك الحق في طلب الوصول إلى المعلومات الشخصية التي نجمعها
 					منك، والتفاصيل حول كيفية معالجتنا لها، تصحيح الأخطاء، أو حذف
 					معلوماتك الشخصية. قد يكون لديك أيضًا الحق في سحب موافقتك على
@@ -423,7 +423,7 @@ const PrivacyPolicyPage = () => {
 					أو حذف معلوماتك الشخصية، يرجى زيارة:{" "}
 					<a
 						href="https://m.me/mafazaa.org"
-						class="text-blue-600 hover:underline"
+						className="text-blue-600 hover:underline"
 					>
 						https://m.me/mafazaa.org
 					</a>
