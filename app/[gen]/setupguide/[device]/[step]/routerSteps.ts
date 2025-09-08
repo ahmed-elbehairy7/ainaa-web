@@ -65,7 +65,7 @@ const routerSteps: { gen1: Steps } = {
 			{
 				type: "link",
 				data: {
-					href: "https://m.me/mafazaa.cic",
+					href: "https://m.me/ainaa.mafazaa",
 					text: "للتواصل عبر ماسنجر 📩",
 				},
 			},
