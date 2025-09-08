@@ -1,8 +1,8 @@
 import {
-  PrimaryHigh,
-  PrimaryLow,
-  SecondaryHigh,
-  SecondaryLow,
+	PrimaryHigh,
+	PrimaryLow,
+	SecondaryHigh,
+	SecondaryLow,
 } from "@/importantLinks";
 import { Steps } from "./stepData";
 
@@ -65,7 +65,7 @@ const routerSteps: { gen1: Steps } = {
 			{
 				type: "link",
 				data: {
-					href: "https://m.me/mafazaa.org",
+					href: "https://m.me/mafazaa.cic",
 					text: "للتواصل عبر ماسنجر 📩",
 				},
 			},

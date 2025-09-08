@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 
 export default function SupportPage() {
 	useEffect(() => {
-		redirect("https://m.me/mafazaa.org");
+		redirect("https://m.me/mafazaa.cic");
 	}, []);
 	return (
 		<article className="px-4 flex flex-col items-center justify-center text-center">

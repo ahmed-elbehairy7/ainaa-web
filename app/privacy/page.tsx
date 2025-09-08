@@ -107,10 +107,10 @@ const PrivacyPolicyPage = () => {
 						<strong>كيف تمارس حقوقك؟</strong> أسهل طريقة لممارسة
 						حقوقك هي زيارة{" "}
 						<a
-							href="https://m.me/mafazaa.org"
+							href="https://m.me/mafazaa.cic"
 							className="text-blue-600 hover:underline"
 						>
-							https://m.me/mafazaa.org
+							https://m.me/mafazaa.cic
 						</a>
 						، و التواصل معنا.
 					</li>
@@ -235,7 +235,9 @@ const PrivacyPolicyPage = () => {
 					أساسي للحفاظ على أمان وتشغيل خدماتنا، ولأغراض التحليلات
 					والتقارير الداخلية الخاصة بنا.
 				</p>
-				<p className="text-gray-700 mb-4">تشمل المعلومات التي نجمعها:</p>
+				<p className="text-gray-700 mb-4">
+					تشمل المعلومات التي نجمعها:
+				</p>
 				<ul className="list-disc mr-6 mb-4 text-gray-700">
 					<li>
 						<strong>بيانات السجل والاستخدام.</strong> بيانات السجل
@@ -422,10 +424,10 @@ const PrivacyPolicyPage = () => {
 					الظروف بموجب القانون المعمول به. لتقديم طلب لمراجعة، تحديث،
 					أو حذف معلوماتك الشخصية، يرجى زيارة:{" "}
 					<a
-						href="https://m.me/mafazaa.org"
+						href="https://m.me/mafazaa.cic"
 						className="text-blue-600 hover:underline"
 					>
-						https://m.me/mafazaa.org
+						https://m.me/mafazaa.cic
 					</a>
 					.
 				</p>
