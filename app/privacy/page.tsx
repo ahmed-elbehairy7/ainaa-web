@@ -230,7 +230,8 @@ const PrivacyPolicyPage = () => {
           >
             contact@mafazaa.com
           </a>
-          أو على ماسنجر :<Link href={messenger}>{messenger}</Link>
+          أو على ماسنجر :<Link className="text-blue-600 hover:underline"
+            href={messenger}>{messenger}</Link>
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
@@ -240,7 +241,15 @@ const PrivacyPolicyPage = () => {
           بناءً على القوانين المعمول بها في بلدك، قد يكون لديك الحق في طلب
           الوصول إلى المعلومات الشخصية التي نجمعها منك، أو تغييرها، أو حذفها
           في ظروف معينة. لطلب مراجعة، أو تحديث، أو حذف معلوماتك الشخصية، يرجى
-          ملء وتقديم طلب وصول إلى البيانات.
+          إرسال بريد إلكتروني إلينا على
+          <a
+            href="mailto:contact@mafazaa.com"
+            className="text-blue-600 hover:underline"
+          >
+            contact@mafazaa.com
+          </a>
+          أو على ماسنجر :<Link className="text-blue-600 hover:underline"
+            href={messenger}>{messenger}</Link>
         </p>
       </div>
     </>
