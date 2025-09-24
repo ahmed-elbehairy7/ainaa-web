@@ -107,10 +107,10 @@ const PrivacyPolicyPage = () => {
 						<strong>كيف تمارس حقوقك؟</strong> أسهل طريقة لممارسة
 						حقوقك هي زيارة{" "}
 						<a
-							href="https://m.me/mafazaa.cic"
+							href="https://m.me/mafazaa.unite"
 							className="text-blue-600 hover:underline"
 						>
-							https://m.me/mafazaa.cic
+							https://m.me/mafazaa.unite
 						</a>
 						، و التواصل معنا.
 					</li>
@@ -424,10 +424,10 @@ const PrivacyPolicyPage = () => {
 					الظروف بموجب القانون المعمول به. لتقديم طلب لمراجعة، تحديث،
 					أو حذف معلوماتك الشخصية، يرجى زيارة:{" "}
 					<a
-						href="https://m.me/mafazaa.cic"
+						href="https://m.me/mafazaa.unite"
 						className="text-blue-600 hover:underline"
 					>
-						https://m.me/mafazaa.cic
+						https://m.me/mafazaa.unite
 					</a>
 					.
 				</p>
