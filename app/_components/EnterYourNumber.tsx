@@ -60,7 +60,6 @@ export default function EnterYourNumber({
 				router.push("/gen1/setupguide/router");
 			}, 1500);
 		} catch (error) {
-			console.error("Error submitting phone number:", error);
 			setSubmitStatus("error");
 		} finally {
 			setIsSubmitting(false);
