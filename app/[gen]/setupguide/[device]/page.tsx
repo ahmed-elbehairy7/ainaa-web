@@ -14,9 +14,12 @@ const deviceMessages: Record<string, string> = {
 };
 
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
-  const dev = (deviceData[params.gen] as deviceParams[]).find(
-    (value) => value.device === params.device
-  ) as deviceParams;
+  const dev =
+    Array.isArray(deviceData[params.gen]) &&
+    deviceData[params.gen].find((value) => value.device === params.device);
+  if (!dev) {
+    return <div>الجهاز غير موجود أو غير مدعوم حالياً.</div>;
+  }
   const genGuide: genSetupGuideData = setupGuideData[params.gen];
   // Only Windows and Android should show the download page
   if (dev.device === "windows" || dev.device === "android") {
