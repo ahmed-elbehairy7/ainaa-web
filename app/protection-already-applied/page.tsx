@@ -35,7 +35,7 @@ export default function ProtectionAlreadyApplied() {
 
             {/* // Todo: Need to add a link for "مقالات تهمك" */}
             <Link
-              href="/about"
+              href="/blogs"
               className="w-40 p-4 rounded-lg  border-4 border-black "
             >
               مقالات تهمك

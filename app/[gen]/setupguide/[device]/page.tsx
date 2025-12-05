@@ -14,9 +14,12 @@ const deviceMessages: Record<string, string> = {
 };
 
 function Page({ params }: { params: { device: deviceName; gen: genName } }) {
-  const dev = (deviceData[params.gen] as deviceParams[]).find(
-    (value) => value.device === params.device
-  ) as deviceParams;
+  const dev =
+    Array.isArray(deviceData[params.gen]) &&
+    deviceData[params.gen].find((value) => value.device === params.device);
+  if (!dev) {
+    return <div>الجهاز غير موجود أو غير مدعوم حالياً.</div>;
+  }
   const genGuide: genSetupGuideData = setupGuideData[params.gen];
   // Only Windows and Android should show the download page
   if (dev.device === "windows" || dev.device === "android") {
@@ -27,9 +30,8 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
             {deviceMessages[dev.device] ?? "تفعيل الحماية"}
           </h1>
           <h2 className="md:text-xl text-lg break-normal max-w-2xl tracking-widest mt-2 mb-10 text-gray-700 ">
-            نوصي بتفعيل الحماية علي جميع الأجهزة وعدم الاكتفاء بجهاز
-            واحد، فلا توجد حماية 100%، ولكنها طبقات متعددة ترفع من
-            مستوي الأمان
+            نوصي بتفعيل الحماية علي جميع الأجهزة وعدم الاكتفاء بجهاز واحد، فلا
+            توجد حماية 100%، ولكنها طبقات متعددة ترفع من مستوي الأمان
           </h2>
         </div>
         <div className="flex flex-col lg:mx-0 mx-5">
@@ -44,10 +46,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
                 <li>• حماية يكاد يستحيل الخروج منها</li>
                 <li>
                   • يسمح لك بحجب{" "}
-                  {dev.device === "windows"
-                    ? "مواقع"
-                    : "تطبيقات"}{" "}
-                  معينة
+                  {dev.device === "windows" ? "مواقع" : "تطبيقات"} معينة
                 </li>
               </ul>
               <div className="flex">
@@ -56,8 +55,8 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
                     dev.device === "windows"
                       ? downloadWindows
                       : dev.device === "android"
-                        ? downloadAndroid
-                        : ""
+                      ? downloadAndroid
+                      : ""
                   }
                   className="text-white py-4 px-14 rounded-xl transition-all duration bg-gradient-to-l
                 from-[#E0462D] to-[#A73826]
@@ -86,8 +85,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
               href="/support"
               className="text-white py-4 px-8 rounded-xl transition-colors"
               style={{
-                background:
-                  "linear-gradient(180deg, #E0462D 0%, #A73826 100%)",
+                background: "linear-gradient(180deg, #E0462D 0%, #A73826 100%)",
                 boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
               }}
             >
@@ -104,9 +102,7 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
               .filter(
                 (device) =>
                   !device.soon &&
-                  ["windows", "router", "android"].includes(
-                    device.device
-                  ) &&
+                  ["windows", "router", "android"].includes(device.device) &&
                   device.device !== dev.device
               )
               .map((device, i, arr) => {
@@ -137,9 +133,8 @@ function Page({ params }: { params: { device: deviceName; gen: genName } }) {
           شرح خطوات الراوتر
         </h1>
         <p className="text-center text-gray-700 w-11/12 md:w-3/4">
-          نوصي بتفعيل الحماية على جميع الأجهزة وعدم الاكتفاء بجهاز
-          واحد، فلا توجد حماية 100%، ولكنها طبقات متعددة ترفع من مستوى
-          الأمان.
+          نوصي بتفعيل الحماية على جميع الأجهزة وعدم الاكتفاء بجهاز واحد، فلا
+          توجد حماية 100%، ولكنها طبقات متعددة ترفع من مستوى الأمان.
         </p>
 
         {/* Video Section */}
