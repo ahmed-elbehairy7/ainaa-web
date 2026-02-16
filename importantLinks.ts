@@ -5,10 +5,8 @@ export const joinUs = "https://mafazaa.com/join";
 export const support_us = "https://mafazaa.com/support_us";
 export const facebookPage = "https://www.facebook.com/ainaa.mafazaa";
 export const messenger = "https://m.me/ainaa.mafazaa";
-export const PrimaryLow = "16.24.111.209";
-export const SecondaryLow = "16.24.202.94";
-export const PrimaryHigh = "15.184.147.40";
-export const SecondaryHigh = "15.184.182.221";
+export const PrimaryHigh = "185.228.168.168";
+export const SecondaryHigh = "185.228.169.168";
 export const downloadWindows =
 	"https://github.com/mafazaa-org/Ainaa-windows/releases/latest/download/default.exe";
 export const downloadAndroid =

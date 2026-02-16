@@ -3,7 +3,6 @@
 import HeroSection from "./_components/HeroSection";
 import OneVideo from "./_components/OneVideo";
 import YourChildren from "./_components/YourChildren";
-import SetupValuesComponent from "./setupvalues/SetupValuesComponent";
 // import { useState } from "react";
 // import Explanation from "./_components/Explanation";
 // import instapay from "@/public/support_us/instapay.png";
@@ -12,23 +11,20 @@ import SetupValuesComponent from "./setupvalues/SetupValuesComponent";
 // import Image from "next/image";
 
 export default function Home() {
-  // const [isOpenExplanation, setIsOpenExplanation] = useState(false);
+	// const [isOpenExplanation, setIsOpenExplanation] = useState(false);
 
-  return (
-    <div>
-      {/* Hero Section */}
-      <HeroSection />
+	return (
+		<div>
+			{/* Hero Section */}
+			<HeroSection />
 
-      {/* Your Children */}
-      <YourChildren />
+			{/* Your Children */}
+			<YourChildren />
 
-      {/* Setup Values */}
-      <SetupValuesComponent />
+			{/* One video */}
+			<OneVideo />
 
-      {/* One video */}
-      <OneVideo />
-
-      {/* {
+			{/* {
         <form action="/support_us/pay" method="post" className="bg-white py-24">
           <div className="flex flex-col justify-center items-center gap-y-[30px] mx-auto px-4 max-w-5xl">
             <h2 className="max-w-xl font-bold text-H4 text-text text-center">
@@ -82,13 +78,13 @@ export default function Home() {
         </form>
       } */}
 
-      {/* Modal for Explanation */}
-      {/* <div className="top-0 left-0 z-50 flex justify-center items-center bg-black/50">
+			{/* Modal for Explanation */}
+			{/* <div className="top-0 left-0 z-50 flex justify-center items-center bg-black/50">
         <Explanation
           isOpen={isOpenExplanation}
           onClose={() => setIsOpenExplanation(false)}
         />
       </div> */}
-    </div>
-  );
+		</div>
+	);
 }

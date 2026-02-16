@@ -1,9 +1,4 @@
-import {
-	PrimaryHigh,
-	PrimaryLow,
-	SecondaryHigh,
-	SecondaryLow,
-} from "@/importantLinks";
+import { PrimaryHigh, SecondaryHigh } from "@/importantLinks";
 import { Steps } from "./stepData";
 
 const routerSteps: { gen1: Steps } = {
@@ -69,24 +64,10 @@ const routerSteps: { gen1: Steps } = {
 					text: "للتواصل عبر ماسنجر 📩",
 				},
 			},
+
 			{
 				type: "text",
-				data: " (اختر مستوى الحماية المناسب لك):",
-			},
-			{
-				type: "text",
-				data: `✅ (حماية منخفضة):\n - (Primary DNS): ${PrimaryLow}\n - (Secondary DNS): ${SecondaryLow}`,
-			},
-			{
-				type: "text",
-				data: `✅ (حماية عالية):\n - (Primary DNS):  ${PrimaryHigh}\n - (Secondary DNS):  ${SecondaryHigh}`,
-			},
-			{
-				type: "link",
-				data: {
-					href: "/setupvalues",
-					text: "لمعرفة المزيد عن أنواع الحماية ➡️",
-				},
+				data: `ادخل البيانات التالية\n - (Primary DNS):  ${PrimaryHigh}\n - (Secondary DNS):  ${SecondaryHigh}`,
 			},
 		],
 	},
